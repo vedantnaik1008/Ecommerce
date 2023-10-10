@@ -12,7 +12,7 @@ const Banner = () => {
     const { onClick } = props;
     return (
       <div
-        className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute left-2 top-1/2"
+        className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute left-2 top-1/2 min-[320px]:hidden md:block"
         onClick={onClick}
       >
         <PiCaretLeftLight />
@@ -23,7 +23,7 @@ const Banner = () => {
     const { onClick } = props;
     return (
       <div
-        className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute right-2 top-1/2"
+        className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute right-2 top-1/2 min-[320px]:hidden md:block"
         onClick={onClick}
       >
         <PiCaretRightLight />
@@ -47,7 +47,7 @@ const Banner = () => {
           <Image
             src={bannerone}
             alt="bannerone"
-            className="w-full h-full relative"
+            className="w-full  min-[320px]:h-[200px] min-[600px]:h-full object-cover md:h-full relative"
             priority
           />
           <BannerText title="Outware Picks" />
@@ -56,7 +56,7 @@ const Banner = () => {
           <Image
             src={bannertwo}
             alt="bannertwo"
-            className="w-full h-full relative"
+            className="w-full  min-[320px]:h-[200px] object-cover min-[600px]:h-full relative"
           />
           <BannerText title="Seasonal Offers" />
         </div>
@@ -64,12 +64,12 @@ const Banner = () => {
           <Image
             src={bannerthree}
             alt="bannerthree"
-            className="w-full h-full relative"
+            className="w-full min-[320px]:h-[200px] object-cover min-[600px]:h-full  relative"
           />
           <BannerText title="Best for men" />
         </div>
       </Slider>
-      <div className="absolute w-full h-44 bg-gradient-to-t from-gray-100 to-transparent bottom-0 left-0 z-10" />
+      <div className="absolute min-[320px]:hidden  min-[600px]:block w-full h-44 bg-gradient-to-t from-gray-100 to-transparent bottom-0 left-0 z-10" />
     </div>
   );
 };
