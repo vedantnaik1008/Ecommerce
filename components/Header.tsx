@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect } from 'react'
 import Nav from './Nav'
-import Search from './Search'
+import Search from '@/components/Search'
 import Link from 'next/link'
 
 const Header = () => {
@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <header className='fixed z-50 w-full flex justify-between items-center p-[10px] bg-white shadow-2xl'>
       <Link href="/" className='text-black font-extrabold text-2xl'>QuickKart</Link>
-      <Search />
+      <Search  />
       <Nav />
     </header>
   )

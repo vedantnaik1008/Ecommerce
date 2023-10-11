@@ -27,7 +27,7 @@ const Products = () => {
 
   return (
     <div className="w-[95%] mx-auto py-[100px]">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-[60px]">
+      <div className="grid grid-cols-1 six:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-[60px]">
         {response.map((res) => (
             <div className="" key={res._id}>
               <Card res={res} />

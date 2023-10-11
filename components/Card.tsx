@@ -20,7 +20,7 @@ const Card = ({res} : Props) => {
   return (
     <div className="p-[20px] bg-white shadow-2xl border-none rounded-xl hover:rounded-none  transition-all duration-300 ease-in-out  h-[90%]">
             <div className="flex items-center flex-col justify-center h-[60%]">
-              <Image src={res.image} alt="items-image" width={"200"} height={"100"} className="hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden object-cover h-full w-full"/>
+              <Image src={res.image} alt="items-image" width={100} height={100} className="md:hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden object-cover h-full w-full"/>
             </div>
             <div className="flex justify-between items-center mt-[20px]">
               <h2 className="text-black font-medium max-w-[200px]">{truncateText(res.title, 20)}</h2>
