@@ -111,7 +111,7 @@ const Footer = () => {
           <Image
             src={payment}
             alt="payment banner image"
-            className="w-full h-10 object-cover"
+            className="w-full  object-cover"
           />
         </div>
       </div>

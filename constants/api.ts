@@ -354,7 +354,7 @@ export const trendingProducts = [
   ];
 
   export const combinedData = [
+    ...productData,
     ...electronicsData,
-    ...productData
   ];
   

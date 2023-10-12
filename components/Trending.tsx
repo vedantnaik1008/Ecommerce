@@ -3,6 +3,7 @@ import { useState } from "react"
 import Image from "next/image"
 import {electronicsData, trendingProducts} from '@/constants/api'
 import RatingStars from "./RatingStars";
+import Link from "next/link";
 
 export interface Electronic{
   id: number;
@@ -16,7 +17,6 @@ export interface Electronic{
 
 const Trending = () => {
   const [response, setResponse] = useState(trendingProducts)
-  
 
   const truncateText = (text: string, maxLength: number) => {
     if (text.length > maxLength) {
@@ -32,7 +32,7 @@ const Trending = () => {
     </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {response.map((res) => (
-            <div className="" key={res._id}>
+            <Link href={`/details/${res._id}?id=${res._id}`} className="" key={res._id}>
               <div className="p-[20px] bg-white shadow-2xl border-none rounded-xl   transition-all duration-300 ease-in-out  h-[440px]">
             <div className="flex items-center flex-col justify-center h-[70%]">
               <Image src={res.image} alt="items-image" width={"200"} height={"100"} className="hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden rounded-sm object-cover w-full h-full"/>
@@ -46,7 +46,7 @@ const Trending = () => {
                           <RatingStars rating={res.rating} />
                         </div>
           </div>
-            </div>
+            </Link>
         ))}
       </div>
       </div>  

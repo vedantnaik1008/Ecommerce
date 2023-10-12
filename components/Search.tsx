@@ -10,7 +10,7 @@ import  { useRouter } from 'next/navigation'
 const Search = () => {
   const router = useRouter();
     const [input, setInput] = useState('')
-    const [iresponse, isetResponse] = useState(electronicsData)
+    const [iresponse, isetResponse] = useState(combinedData)
     const debouncedSearch = useDebounce(input, 500)
 
     useEffect(() => {

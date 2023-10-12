@@ -2,7 +2,7 @@ import React from 'react';
 import { FaStar, FaStarHalf } from 'react-icons/fa'; // You can use any icon library for stars
 
 interface Props {
-    rating: number
+    rating: number 
 }
 
 const RatingStars = ({ rating }: Props) => {

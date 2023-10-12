@@ -91,8 +91,8 @@ const SliderClothes = () => {
         </div>
         <Slider {...settings}>
             {response.map((res) => (
-                <div className="" key={res._id}>
-                    <div className="p-[20px]  bg-white shadow-2xl border-none rounded-xl  transition-all duration-300 ease-in-out  h-[440px] mx-auto md:mx-[20px]">
+                <Link href={`/details/${res._id}?id=${res._id}`} className="" key={res._id}>
+                    <div  className="p-[20px]  bg-white shadow-2xl border-none rounded-xl  transition-all duration-300 ease-in-out  h-[440px] mx-auto md:mx-[20px]">
                         <div className="flex items-center flex-col justify-center h-[60%]">
                           <Image src={res.image} alt="items-image" width={"200"} height={"100"} className="hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden rounded-sm h-full object-cover"/>
                         </div>
@@ -105,7 +105,7 @@ const SliderClothes = () => {
                           <RatingStars rating={res.rating} />
                         </div>
                     </div>
-                </div>
+                </Link>
             ))}
         </Slider>
     </div>

@@ -54,7 +54,7 @@ const Page = () => {
                                             <button className='p-2 rounded-r-lg bg-gray-200'><FaPlus /></button>
                                         </div>
                                         <div>
-                                            <button className='py-2 px-4 rounded-lg border border-gray-500 text-black font-semibold'>Delete</button>
+                                            <button className='py-2 px-4 rounded-lg border border-gray-500 text-black font-semibold hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-300 ease-in-out'>Delete</button>
                                         </div>
                                       </div>
                                   </div>
