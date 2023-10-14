@@ -3,8 +3,8 @@ import { electronicsData } from '@/constants/api'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import {FaMinus, FaPlus} from 'react-icons/fa'
-import {MdDelete} from 'react-icons/md'
 import Link from 'next/link'
+import PriceList from '@/components/PriceList'
 
 const Page = () => {
     const [response, setResponse] = useState(electronicsData)
@@ -15,6 +15,7 @@ const Page = () => {
     }
     return text
   }
+
   return (
     <>
     {response.length === 0 ? (
@@ -28,41 +29,41 @@ const Page = () => {
             </button>
           </Link>
         </div>
-      ) : <><div className="pt-[100px] flex items-center justify-center w-full relative">
-                  <h2 className="text-black text-5xl font-extrabold">Your Cart</h2>
-                  <div className="absolute left-[15%] -bottom-20">
-                      <p className="font-bold text-2xl">Subtotal: <span className="font-bold">$</span></p>
-                      
-                  </div>
-                  {/* <button className="absolute right-2 top-12 bg-red-500 text-white font-bold py-2 px-4 rounded-md">Delete All</button> */}
-              </div>
-              <div className='grid grid-cols-1 my-20 bg-gray-300'>
+      ) : <>
+            <div className="pt-[100px] flex items-center justify-center w-full relative">
+              <h2 className="text-black text-5xl font-extrabold">Your Cart</h2>
+            </div>
+            <div className="relative sm:flex sm:flex-col sm:items-center lg:flex lg:flex-row lg:items-start justify-between  w-[90%] mx-auto my-20">
+              <div className='grid grid-cols-1 bg-gray-300 sm:w-full md:w-full lg:w-[65%]'>
                       {response.map((res) => (
-                          <div className="" key={res._id}>
-                              <div className="p-[20px]  bg-white shadow-2xl rounded-xl  w-[70%] h-[90%] mx-auto my-[30px] flex  justify-between items-center ">
-                                  <div className="flex items-center flex-col justify-center ">
-                                      <Image src={res.image} alt="items-image" width={"200"} height={"100"} className="flex overflow-hidden rounded-sm h-full w-[100%] object-cover" />
-                                  </div>
-                                  <div className="">
-                                      <h2 className=" text-black text-center font-medium">{res.title}</h2>
-                                      
-                                      <div className="flex justify-end items-center gap-4 mt-5">
-                                        <span className="bg-gray-300 py-2 px-4 border-none rounded-md text-black font-bold relative z-20">${res.price}</span>
-                                        <div className="flex border border-gray-500 rounded-lg">
-                                            <button className='p-2 rounded-l-lg bg-gray-200'><FaMinus /></button>
-                                            <span className='border ] py-2 px-8 font-extrabold'>0</span>
-                                            <button className='p-2 rounded-r-lg bg-gray-200'><FaPlus /></button>
-                                        </div>
-                                        <div>
+                        <div className="" key={res._id}>
+                          <div className="p-[20px]  bg-white shadow-2xl rounded-xl  h-[90%]  mb-[30px] flex  justify-between items-center flex-col lg:flex-row">
+                            <div className="flex items-center flex-col justify-center ">
+                              <Image src={res.image} alt="items-image" width={"200"} height={"100"} className="flex overflow-hidden rounded-sm h-full w-[100%] object-cover" />
+                            </div>
+                            <div className="">
+                              <h2 className=" text-black text-center font-medium">{res.title}</h2>
+                              <div className="grid sm:grid-cols-1  sm:justify-items-start four:grid-cols-3 four:justify-items-center gap-4 my-5">
+                                <span className="bg-gray-300 py-2 px-4 border-none rounded-md text-black font-bold relative z-20">${res.price}</span>
+                                <div className="flex border border-gray-500 rounded-lg">
+                                  <button className='p-2 rounded-l-lg bg-gray-200'><FaMinus /></button>
+                                  <span className='border py-2 px-8 font-extrabold'>0</span>
+                                  <button className='p-2 rounded-r-lg bg-gray-200'><FaPlus /></button>
+                                </div>
+                              <div>
                                             <button className='py-2 px-4 rounded-lg border border-gray-500 text-black font-semibold hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-300 ease-in-out'>Delete</button>
                                         </div>
-                                      </div>
-                                  </div>
                               </div>
+                            </div>
                           </div>
+                        </div>
                       ))}
-                  </div></>}
-    
+              </div>
+              <div className="sm:w-full md:w-full lg:w-[30%]">
+                <PriceList />
+              </div>
+            </div></>
+          }         
       </>
   )
 }

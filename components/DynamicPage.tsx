@@ -13,7 +13,6 @@ const DynamicPage = ({product}: Props) => {
   const productImage = connect?.image || ''
   const productRating = connect?.rating || 4
   const productCategory = connect?.category
-  console.log(productCategory);
   
 
   

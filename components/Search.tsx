@@ -38,17 +38,17 @@ const Search = () => {
         <label id='search' className='relative w-full flex items-center gap-3'>
           <input
             value={input} name='search'
-            onChange={Search} className='border-black border rounded-full placeholder-black placeholder:Search p-3 w-full'/>
-            <button className='border border-black px-[20px] py-[12px] text-white font-semibold rounded-full' type='submit'><FcSearch size='26px'/></button>
+            onChange={Search} className='border-black border rounded-sm placeholder-black placeholder:Search p-3 w-full'/>
+            <button className=' px-[20px] py-[11px] text-white font-semibold rounded-l-none absolute right-[0%] top-[1px]' type='submit'><FcSearch size='26px'/></button>
         </label>
 
         {input && iresponse && iresponse.length > 0 ? (
-          <ul className='absolute top-[62px] z-50 bg-white shadow  w-[40%] mx-auto'>
+          <ul className='absolute top-[60px] z-50 bg-white shadow  w-[39.5%] mx-auto rounded-sm'>
             {iresponse.map(item => (
               <li key={item._id} onClick={() => {
                 router.push(`/details/${item._id}?id=${item._id}`); 
                 setInput('')}} 
-                className='p-3 hover:bg-gray-100 border border-black rounded-sm cursor-pointer'>
+                className='p-3 hover:bg-gray-100 cursor-pointer'>
                 {item.title}
               </li>
             ))}
