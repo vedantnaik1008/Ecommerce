@@ -24,27 +24,27 @@ const Footer = () => {
             corporis.
           </p>
           <div className="flex items-center gap-x-4">
-            <a href="https://www.youtube.com/@reactjsBD" target="_blank">
+            <a href="#" target="_blank">
               <span className="socialLink">
                 <BsYoutube />
               </span>
             </a>
-            <a href="https://www.youtube.com/@reactjsBD" target="_blank">
+            <a href="#" target="_blank">
               <span className="socialLink">
                 <BsGithub />
               </span>
             </a>
-            <a href="https://www.youtube.com/@reactjsBD" target="_blank">
+            <a href="#" target="_blank">
               <span className="socialLink">
                 <BsLinkedin />
               </span>
             </a>
-            <a href="https://www.youtube.com/@reactjsBD" target="_blank">
+            <a href="#" target="_blank">
               <span className="socialLink">
                 <BsFacebook />
               </span>
             </a>
-            <a href="https://www.youtube.com/@reactjsBD" target="_blank">
+            <a href="#" target="_blank">
               <span className="socialLink">
                 <BsReddit />
               </span>
@@ -93,17 +93,6 @@ const Footer = () => {
                 Cart
               </li>
             </Link>
-            <Link href={"/about"}>
-              <li className="hover:text-orange-500 cursor-pointer duration-200">
-                About
-              </li>
-            </Link>
-            <li className="hover:text-orange-500 cursor-pointer duration-200">
-              Newsletter
-            </li>
-            <li className="hover:text-orange-500 cursor-pointer duration-200">
-              Contact
-            </li>
           </ul>
         </div>
         <div>
