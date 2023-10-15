@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface Props {
   title: string;
@@ -34,9 +35,9 @@ const BannerText = ({ title }: Props) => {
           <button className="min-[320px]:hidden md:block py-3 px-6 rounded-full bg-slate-200 hover:bg-white duration-200 text-sm uppercase font-semibold">
             Find out more
           </button>
-          <button className="min-[320px]:hidden md:block py-3 px-6 rounded-full bg-slate-200 hover:bg-white duration-200 text-sm uppercase font-semibold">
+          <Link href="/Shop" className="min-[320px]:hidden md:block py-3 px-6 rounded-full bg-slate-200 hover:bg-white duration-200 text-sm uppercase font-semibold">
             Shop Now
-          </button>
+          </Link>
         </motion.div>
       </div>
     </div>

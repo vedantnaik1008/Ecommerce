@@ -4,14 +4,17 @@ import { useDebounce } from '@/hooks/useDebounce'
 import React, { useEffect, useState } from 'react'
 import {FcSearch} from "react-icons/fc"
 import  { useRouter } from 'next/navigation'
+import { useFetch } from '@/hooks/useFetch'
+import Loading from './Loading'
 
 
 
 const Search = () => {
   const router = useRouter();
     const [input, setInput] = useState('')
-    const [iresponse, isetResponse] = useState(combinedData)
+    const { response, loading, setResponse } = useFetch('/fetchData')
     const debouncedSearch = useDebounce(input, 500)
+
 
     useEffect(() => {
       if (debouncedSearch) {
@@ -20,11 +23,11 @@ const Search = () => {
             .toLowerCase()
             .includes(debouncedSearch.toLowerCase())
         })
-        isetResponse(results)
+        setResponse(results)
       } else {
-        isetResponse(combinedData)
+        setResponse(combinedData)
       }
-    }, [debouncedSearch])
+    }, [debouncedSearch, setResponse])
 
     const Search = (e: React.ChangeEvent<HTMLInputElement>) => {
       setInput(e.target.value)
@@ -33,6 +36,9 @@ const Search = () => {
     const Submit = (e: React.ChangeEvent<HTMLFormElement>) => {
       e.preventDefault()
     }
+
+    if (loading) return <Loading />
+
   return (
     <form className='w-[40%] flex justify-center' onSubmit={Submit}>
         <label id='search' className='relative w-full flex items-center gap-3'>
@@ -42,9 +48,9 @@ const Search = () => {
             <button className=' px-[20px] py-[11px] text-white font-semibold rounded-l-none absolute right-[0%] top-[1px]' type='submit'><FcSearch size='26px'/></button>
         </label>
 
-        {input && iresponse && iresponse.length > 0 ? (
+        {input && response && response.length > 0 ? (
           <ul className='absolute top-[60px] z-50 bg-white shadow  w-[39.5%] mx-auto rounded-sm'>
-            {iresponse.map(item => (
+            {response.map(item => (
               <li key={item._id} onClick={() => {
                 router.push(`/details/${item._id}?id=${item._id}`); 
                 setInput('')}} 

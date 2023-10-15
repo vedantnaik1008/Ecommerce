@@ -1,14 +1,18 @@
-import { combinedData } from '@/constants/api';
+'use client'
 import Image from 'next/image';
 import RatingStars from './RatingStars';
 import SimilarProducts from '@/components/SimilarProducts'
+import Loading from './Loading';
+import { useFetch } from '@/hooks/useFetch';
 
 interface Props{
   product: number;
 }
 
 const DynamicPage = ({product}: Props) => {
-  const connect = combinedData.find((res) => res._id === product)
+  const { response, loading } = useFetch('/fetchData')
+    if(loading)return <Loading />
+  const connect = response.find((res) => res._id === product)
   console.log(connect?._id);
   const productImage = connect?.image || ''
   const productRating = connect?.rating || 4
@@ -20,7 +24,7 @@ const DynamicPage = ({product}: Props) => {
     <div className='mx-auto min-[320px]:pt-[70px] md:pt-[100px]  text-black'>
       <div className="bg-white flex min-[320px]:flex-col md:flex-row justify-center items-center gap-8 p-5 min-[320px]:rounded-none md:rounded-xl min-[320px]:w-full md:w-[80%] mx-auto">
         <div className="w-[100%] h-full  ">
-          <Image width={100} height={100} src={productImage} alt={'product-Image'} className='object-cover rounded-lg w-full h-[80%]'/>
+          <Image width={200} height={100} src={productImage} alt={'product-Image'} className='object-cover rounded-lg w-full'/>
         </div>
         <div className='w-full'>
           <h2 className='font-bold mb-5 min-[320px]:text-2xl md:text-4xl'>{connect?.title}</h2>
@@ -33,7 +37,10 @@ const DynamicPage = ({product}: Props) => {
           <div className="mb-8">
             <p className="font-semibold max-w-4xl">{connect?.description}</p>
           </div>
-          <button className="bg-black rounded-[5px] w-full text-white font-semibold py-1 px-4">Add To Cart</button>
+          <div className="flex gap-4 justify-start my-5">
+            <button className="bg-black rounded-lg  text-white font-semibold py-1 px-4">Add To Cart</button>
+            <button className="bg-black rounded-lg  text-white font-semibold py-1 px-4 hover:bg-slate-400">BUY</button>
+          </div>
         </div>
       </div>
       <SimilarProducts categories={productCategory}/>

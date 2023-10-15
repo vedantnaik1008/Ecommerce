@@ -1,6 +1,4 @@
 "use client"
-import { electronicsData, productData } from '@/constants/api'
-import React, { useState } from 'react'
 import Image from 'next/image'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -8,9 +6,14 @@ import 'slick-carousel/slick/slick-theme.css';
 import { PiCaretLeftLight, PiCaretRightLight } from 'react-icons/pi';
 import RatingStars from './RatingStars';
 import Link from 'next/link';
+import { useFetch } from '@/hooks/useFetch';
+import Loading from './Loading';
 
 const SliderClothes = () => {
-    const [response, setResponse] = useState(productData.slice(0, 10))
+    const { response, loading } = useFetch('/fetchData')
+    if(loading)return <Loading />
+
+    const data = response.filter((res) => res.category !== 'electronics').slice(0, 10)
 
     const truncateText = (text: string, maxLength: number) => {
     if (text.length > maxLength) {
@@ -90,7 +93,7 @@ const SliderClothes = () => {
             <Link href={'/Clothes'} className="font-bold hover:underline text-md text-black">Show More</Link>
         </div>
         <Slider {...settings}>
-            {response.map((res) => (
+            {data.map((res) => (
                 <Link href={`/details/${res._id}?id=${res._id}`} className="" key={res._id}>
                     <div  className="p-[20px]  bg-white shadow-2xl border-none rounded-xl  transition-all duration-300 ease-in-out  h-[440px] mx-auto md:mx-[20px]">
                         <div className="flex items-center flex-col justify-center h-[60%]">
