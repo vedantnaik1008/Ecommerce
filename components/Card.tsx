@@ -17,7 +17,7 @@ const Card = ({res} : Props) => {
       }
 
   return (
-    <div className="p-[20px] bg-white shadow-2xl border-none rounded-xl h-[90%]">
+    <div className="p-[20px] bg-white shadow-2xl border-none rounded-xl h-[100%]">
             <div  className="flex items-center flex-col justify-center h-[60%]">
               <Image src={res.image} alt="items-image" width={200} height={100} className="md:hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden object-cover"/>
             </div>

@@ -23,7 +23,7 @@ const Header = () => {
   })
 
   return (
-    <header className='fixed z-50 w-full flex justify-between items-center p-[10px] bg-white shadow-2xl'>
+    <header className='fixed z-50 w-full flex justify-between items-center py-[10px] px-[20px] bg-white shadow-2xl'>
       <Link href="/" className=''><Image src={Img} alt="items-image" width={80} height={100} className='object-cover'/></Link>
       <Search  />
       <Nav />

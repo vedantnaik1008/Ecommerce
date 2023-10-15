@@ -103,7 +103,7 @@ const SliderElectronics = () => {
                           <Image src={res.image} alt="items-image" width={"200"} height={"100"} className="hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden rounded-sm   object-cover"/>
                         </div>
                         <div className="flex justify-between items-center  mt-[20px]">
-                          <h2 className=" text-black font-medium max-w-[200px]">{truncateText(res.title, 20)}</h2>
+                          <h2 className=" text-black font-medium max-w-[200px]">{truncateText(res.title, 18)}</h2>
                           <span className="bg-gray-300 px-2 py-1 border-none rounded-sm text-black font-bold relative z-20">${res.price}</span>
                         </div>
                         <div className="flex justify-between items-center  my-[20px]">
