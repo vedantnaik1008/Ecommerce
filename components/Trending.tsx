@@ -17,14 +17,6 @@ export interface Electronic{
 const Trending = () => {
   const { response, loading } = useFetch('/fetchData')
   const data = response.filter((res) => res.category !== 'electronics').slice(0, 4)
-   
-
-  const truncateText = (text: string, maxLength: number) => {
-    if (text.length > maxLength) {
-      return text.substring(0, maxLength) + '...' // Add ellipsis if text is too long
-    }
-    return text
-  }
 
   if(loading)return <Loading />
 

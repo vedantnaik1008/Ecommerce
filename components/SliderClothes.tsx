@@ -26,7 +26,7 @@ const SliderClothes = () => {
     const { onClick } = props;
     return (
       <div
-        className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute  md:left-[92%] md:-top-14 top-1/2 -left-3"
+        className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute   top-1/2 -left-3"
         onClick={onClick}
       >
         <PiCaretLeftLight />
@@ -37,7 +37,7 @@ const SliderClothes = () => {
     const { onClick } = props;
     return (
       <div
-        className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute md:right-0 md:-top-14 -right-3 top-1/2"
+        className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute  -right-3 top-1/2"
         onClick={onClick}
       >
         <PiCaretRightLight />
@@ -104,7 +104,7 @@ const SliderClothes = () => {
                           <span className="bg-gray-300 px-2 py-1 border-none rounded-sm text-black font-bold relative z-20">${res.price}</span>
                         </div>
                         <div className="flex justify-between items-center  my-[20px]">
-                          <button className="bg-black rounded-[30px] text-white font-semibold py-1 px-4">Add To Cart</button>
+                          <button className="bg-black rounded-[30px] text-white font-semibold py-1 px-4 hover:bg-slate-400">Add To Cart</button>
                           <RatingStars rating={res.rating} />
                         </div>
                     </div>

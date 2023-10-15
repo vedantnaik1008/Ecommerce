@@ -21,7 +21,7 @@ const PriceList = () => {
             <h2 className='text-xl uppercase text-black font-bold'>Total Amount</h2>
             <span className="text-black font-bold">$238329</span>
         </div>
-        <button className="py-2 px-6 bg-black text-white w-full font-semibold my-5 rounded-lg hover:bg-slate-400">Checkout</button>
+        <button className="py-2 px-6 bg-black text-white w-full font-semibold my-5 rounded-lg hover:bg-slate-400">Check Out</button>
     </div>
   )
 }

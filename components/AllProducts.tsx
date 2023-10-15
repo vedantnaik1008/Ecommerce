@@ -1,8 +1,7 @@
 'use client'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Card from './Card'
-import axios from 'axios'
 import Loading from './Loading'
 import { useFetch } from '@/hooks/useFetch'
 
@@ -11,20 +10,12 @@ interface DataFilter {
     name: string;
    }
    
-    interface Product{
-    _id: number;
-    title: string;
-    category: string
-    description: string
-    image: string;
-    price: number;
-    rating: number;
-  }
 
    const dataFilter: DataFilter[] = [
     {id: 1, name: 'men'},
     {id: 2, name: 'women'},  
     {id: 3, name: 'electronics'},
+    {id: 4, name: 'kids'},
    ];
 
 const AllProducts = () => {

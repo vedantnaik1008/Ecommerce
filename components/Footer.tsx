@@ -7,16 +7,16 @@ import {
   BsReddit,
 } from "react-icons/bs";
 import payment from "@/images/payment.png";
-// import Logo from "@/Logo";
 import Link from "next/link";
 import Image from "next/image";
+import Logo from '@/images/quickkart-high-resolution-logo-white-on-black-background.png'
 
 const Footer = () => {
   return (
     <div className="w-full px-[20px] py-[40px] bg-black text-slate-100 ">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div className="flex flex-col gap-y-4">
-        <h1 className='text-white font-extrabold text-2xl'>QuickKart</h1>
+        <Link href="/" className=''><Image src={Logo} alt="items-image" width={100} height={10} className='object-cover'/></Link>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa in
             sint incidunt, minima quos voluptates, nobis autem laborum earum est

@@ -14,12 +14,6 @@ const SimilarProducts = ({categories}: Props) => {
     console.log(data);
     if (loading) return <Loading />
 
-    const truncateText = (text: string, maxLength: number) => {
-        if (text.length > maxLength) {
-          return text.substring(0, maxLength) + '...'
-        }
-        return text
-      }
 
   return (
     <div>
@@ -27,7 +21,7 @@ const SimilarProducts = ({categories}: Props) => {
             <div className="text-center my-[20px]">
                 <h2 className="font-bold min-[320px]:text-3xl md:text-5xl text-black">Similar Products</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-[1500px]:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-[1500px]:grid-cols-4 gap-6 mt-[70px]">
                 {data.map((res) => (
                     <Link href={`/details/${res._id}?id=${res._id}`} className="" key={res._id}>
                         <Card res={res} />
