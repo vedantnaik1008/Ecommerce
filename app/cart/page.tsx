@@ -5,19 +5,16 @@ import Image from 'next/image'
 import {FaMinus, FaPlus} from 'react-icons/fa'
 import Link from 'next/link'
 import PriceList from '@/components/PriceList'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 const Page = () => {
     const [response, setResponse] = useState(electronicsData)
 
-    const truncateText = (text: string, maxLength: number) => {
-    if (text.length > maxLength) {
-      return text.substring(0, maxLength) + '...' // Add ellipsis if text is too long
-    }
-    return text
-  }
 
   return (
     <>
+    <Header />
     {response.length === 0 ? (
         <div className="flex flex-col gap-y-6 items-center justify-center bg-white h-[100vh] px-4">
           <p className="w-full p-2 text-center font-bold">
@@ -63,7 +60,9 @@ const Page = () => {
               <div className="sm:w-full md:w-full lg:w-[30%]">
                 <PriceList />
               </div>
-            </div></>
+            </div>
+            <Footer />
+            </>
           }         
       </>
   )

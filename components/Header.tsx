@@ -1,13 +1,13 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav from './Nav'
-import Search from '@/components/Search'
 import Link from 'next/link'
+import Search from './Search'
 import Image from 'next/image'
 import Img from '@/public/appleLaptops/quickkart-high-resolution-logo-color-on-transparent-background.png'
 
 const Header = () => {
-
+  const [show, setShow] = useState(false)
   useEffect(() => {
     const onScroll = () => {
       const scrollPosition = window.scrollY;
@@ -23,10 +23,18 @@ const Header = () => {
   })
 
   return (
-    <header className='fixed z-50 w-full flex justify-between items-center py-[10px] px-[20px] bg-white shadow-2xl'>
-      <Link href="/" className=''><Image src={Img} alt="items-image" width={80} height={100} className='object-cover'/></Link>
-      <Search  />
-      <Nav />
+    <header className='fixed z-50 w-full  py-[10px] sm:px-[10px] md:px-[20px] bg-white shadow-2xl'>
+      <div className="flex items-center justify-center">
+        <div className="md:hidden w-[90%] mx-auto">
+          <Search  />
+        </div>
+          <div onClick={()=> setShow(!show)} className="absolute right-0 flex flex-col gap-1 min-[320px]-block md:hidden">
+            <span className="bg-black h-1 w-8 rounded-lg ml-1"></span>
+            <span className="bg-black h-1 w-8 rounded-lg ml-3"></span>
+            <span className="bg-black h-1 w-8 rounded-lg ml-1"></span>
+          </div>
+        <Nav show={show} setShow={setShow}/>
+      </div>
     </header>
   )
 }

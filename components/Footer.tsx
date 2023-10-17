@@ -83,7 +83,7 @@ const Footer = () => {
         <div>
           <p className="text-lg">Links</p>
           <ul className="text-base font-medium mt-2 flex flex-col gap-y-2">
-            <Link href={"/"}>
+            <Link href={"/dashboard"}>
               <li className="hover:text-orange-500 cursor-pointer duration-200">
                 Home
               </li>

@@ -40,12 +40,12 @@ const Search = () => {
     if (loading) return <Loading />
 
   return (
-    <form className='w-[40%] flex justify-center' onSubmit={Submit}>
+    <form className='sm:w-[90%] md:w-[40%] flex justify-center' onSubmit={Submit}>
         <label id='search' className='relative w-full flex items-center gap-3'>
           <input
             value={input} name='search'
             onChange={Search} className='border-black border rounded-sm placeholder-black placeholder:Search p-3 w-full'/>
-            <button className=' px-[20px] py-[11px] text-white font-semibold rounded-l-none absolute right-[0%] top-[1px]' type='submit'><FcSearch size='26px'/></button>
+            <button className=' px-[20px] py-[11px] text-white font-semibold rounded-l-none absolute right-[0%] top-[1px] md:top-[5px]' type='submit'><FcSearch size='26px'/></button>
         </label>
 
         {input && response && response.length > 0 ? (
