@@ -4,13 +4,16 @@ import RatingStars from './RatingStars';
 import SimilarProducts from '@/components/SimilarProducts'
 import Loading from './Loading';
 import { useFetch } from '@/hooks/useFetch';
+import { useDispatch } from 'react-redux';
+import { addItem } from './reducers/addItems';
 
 interface Props{
   product: number;
 }
 
 const DynamicPage = ({product}: Props) => {
-  const { response, loading } = useFetch('/fetchData')
+  const dispatch = useDispatch()
+  const { response, loading } = useFetch('/api/fetchData')
     if(loading)return <Loading />
   const connect = response.find((res) => res._id === product)
   console.log(connect?._id);
@@ -38,7 +41,7 @@ const DynamicPage = ({product}: Props) => {
             <p className="font-semibold max-w-4xl">{connect?.description}</p>
           </div>
           <div className="flex gap-4 justify-start my-5">
-            <button className="bg-black rounded-lg  text-white font-semibold py-1 px-4 hover:bg-slate-400">Add To Cart</button>
+            <button onClick={()=> dispatch(addItem(connect!))} className="bg-black rounded-lg  text-white font-semibold py-1 px-4 hover:bg-slate-400">Add To Cart</button>
             <button className="bg-black rounded-lg  text-white font-semibold py-1 px-4 hover:bg-slate-400">BUY</button>
           </div>
         </div>

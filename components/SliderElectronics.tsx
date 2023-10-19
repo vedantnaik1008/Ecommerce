@@ -8,9 +8,12 @@ import RatingStars from './RatingStars';
 import Link from 'next/link';
 import { useFetch } from '@/hooks/useFetch';
 import Loading from './Loading';
+import { useDispatch } from 'react-redux';
+import { addItem } from './reducers/addItems';
 
 const SliderElectronics = () => {
-  const { response, loading } = useFetch('/fetchData')
+  const dispatch = useDispatch()
+  const { response, loading } = useFetch('/api/fetchData')
   
 
   const data = response.filter((res) => res.category === 'electronics').slice(0, 10)
@@ -97,21 +100,23 @@ const SliderElectronics = () => {
         </div>
         <Slider {...settings}>
             {data.map((res) => (
-                <Link href={`/details/${res._id}?id=${res._id}`} className="" key={res._id}>
-                    <div className="p-[20px]  bg-white shadow-2xl border-none rounded-xl  transition-all duration-300 ease-in-out  h-[440px] mx-auto md:mx-[20px]">
-                        <div className="flex items-center flex-col justify-center h-[60%]">
-                          <Image src={res.image} alt="items-image" width={"200"} height={"100"} className="hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden rounded-sm   object-cover"/>
-                        </div>
-                        <div className="flex justify-between items-center  mt-[20px]">
-                          <h2 className=" text-black font-medium max-w-[200px]">{truncateText(res.title, 18)}</h2>
-                          <span className="bg-gray-300 px-2 py-1 border-none rounded-sm text-black font-bold relative z-20">${res.price}</span>
-                        </div>
-                        <div className="flex justify-between items-center  my-[20px]">
-                          <button className="bg-black rounded-[30px] text-white font-semibold py-1 px-4 hover:bg-slate-400">Add To Cart</button>
-                          <RatingStars rating={res.rating} />
-                        </div>
+                    <div key={res._id}>
+                      <div  className="p-[20px]  bg-white shadow-2xl border-none rounded-xl  transition-all duration-300 ease-in-out  h-[440px] s mx-auto md:mx-[20px]">
+                        <Link href={`/details/${res._id}?id=${res._id}`} className="" >
+                          <div className="flex items-center flex-col justify-center h-[60%]">
+                            <Image src={res.image} alt="items-image" width={"200"} height={"100"} className="hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden rounded-sm   object-cover"/>
+                          </div>
+                        </Link>
+                          <div className="flex justify-between items-center  mt-[20px]">
+                            <h2 className=" text-black font-medium max-w-[200px]">{truncateText(res.title, 18)}</h2>
+                            <span className="bg-gray-300 px-2 py-1 border-none rounded-sm text-black font-bold relative z-20">${res.price}</span>
+                          </div>
+                          <div className="flex justify-between items-center  my-[20px]">
+                            <button onClick={()=> dispatch(addItem(res))} className="bg-black rounded-[30px] text-white font-semibold py-1 px-4 hover:bg-slate-400">Add To Cart</button>
+                            <RatingStars rating={res.rating} />
+                          </div>
+                      </div>
                     </div>
-                </Link>
             ))}
         </Slider>
     </div>

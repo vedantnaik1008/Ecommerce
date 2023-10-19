@@ -27,5 +27,5 @@ export function LogoutBtn() {
     }
   };
  
-  return <button onClick={logout} className="text-black pt-[30px] font-bold text-left">Logout</button>;
+  return <button onClick={logout} className="text-white mt-[30px] px-4 py-2 font-bold text-left bg-black rounded-md hover:bg-slate-400 transition-all duration-300 ease-in-out">Logout</button>;
 }

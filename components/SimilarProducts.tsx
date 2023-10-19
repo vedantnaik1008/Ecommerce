@@ -9,7 +9,7 @@ interface Props{
 }
 
 const SimilarProducts = ({categories}: Props) => {
-    const { response, loading, setResponse } = useFetch('/fetchData')
+    const { response, loading, setResponse } = useFetch('/api/fetchData')
     const data = response.filter(res => res.category === categories).slice(0,4)
     console.log(data);
     if (loading) return <Loading />
@@ -23,9 +23,9 @@ const SimilarProducts = ({categories}: Props) => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-[1500px]:grid-cols-4 gap-6 mt-[70px]">
                 {data.map((res) => (
-                    <Link href={`/details/${res._id}?id=${res._id}`} className="" key={res._id}>
+                    <div  key={res._id}>
                         <Card res={res} />
-                    </Link>
+                    </div>
                 ))}
             </div>
         </div>  

@@ -19,7 +19,7 @@ interface DataFilter {
    ];
 
 const AllProducts = () => {
-    const { response, loading } = useFetch('/fetchData')
+    const { response, loading } = useFetch('/api/fetchData')
     const [filter, setFilter] = useState<number | null>(null)
     if(loading)return <Loading />
 
@@ -46,9 +46,9 @@ const AllProducts = () => {
         </div>
       <div className="grid grid-cols-1 six:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-[50px]">
         {filteredData.map((res) => (
-            <Link href={`/details/${res._id}?id=${res._id}`} className="" key={res._id}>
+            <div key={res._id}>
               <Card res={res} />
-            </Link>
+            </div>
         ))}
       </div>
     </div>

@@ -23,16 +23,12 @@ const Header = () => {
   })
 
   return (
-    <header className='fixed z-50 w-full  py-[10px] sm:px-[10px] md:px-[20px] bg-white shadow-2xl'>
+    <header className='fixed z-50 w-full  py-[10px] sm:px-[10px] md:px-[20px] bg-white shadow-2xl '>
       <div className="flex items-center justify-center">
         <div className="md:hidden w-[90%] mx-auto">
           <Search  />
         </div>
-          <div onClick={()=> setShow(!show)} className="absolute right-0 flex flex-col gap-1 min-[320px]-block md:hidden">
-            <span className="bg-black h-1 w-8 rounded-lg ml-1"></span>
-            <span className="bg-black h-1 w-8 rounded-lg ml-3"></span>
-            <span className="bg-black h-1 w-8 rounded-lg ml-1"></span>
-          </div>
+         
         <Nav show={show} setShow={setShow}/>
       </div>
     </header>

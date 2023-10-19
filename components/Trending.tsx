@@ -15,7 +15,7 @@ export interface Electronic{
 }
 
 const Trending = () => {
-  const { response, loading } = useFetch('/fetchData')
+  const { response, loading } = useFetch('/api/fetchData')
   const data = response.filter((res) => res.category !== 'electronics').slice(0, 4)
 
   if(loading)return <Loading />
@@ -27,9 +27,9 @@ const Trending = () => {
     </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-10">
         {data.map((res) => (
-            <Link href={`/details/${res._id}?id=${res._id}`} className="" key={res._id}>
-              <Card res={res} />
-            </Link>
+              <div key={res._id}>
+                <Card res={res} />
+              </div>
         ))}
       </div>
       </div>  

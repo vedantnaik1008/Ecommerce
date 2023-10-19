@@ -1,6 +1,10 @@
+import { RootState } from '@/store'
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+
 
 const PriceList = () => {
+    
   return (
     <div className='bg-white p-[20px] rounded-lg'>
         <h2 className='text-xl uppercase text-black font-bold'>Price Details</h2>

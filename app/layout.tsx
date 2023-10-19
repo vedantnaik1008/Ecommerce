@@ -1,8 +1,8 @@
-import Header from '@/components/Header'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Roboto } from 'next/font/google'
+import ProviderComponent from '@/components/Provider'
  
 const roboto = Roboto({
   weight: '400',
@@ -23,10 +23,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <ProviderComponent>
     <html lang="en">
-      <body className={`${roboto.className} bg-gray-300`}>        
-        {children}
+      <body className={`${roboto.className} bg-gray-300`}>  
+      
+          {children}
+        
       </body>
     </html>
+    </ProviderComponent> 
   )
 }

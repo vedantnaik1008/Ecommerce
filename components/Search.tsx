@@ -12,9 +12,10 @@ import Loading from './Loading'
 const Search = () => {
   const router = useRouter();
     const [input, setInput] = useState('')
-    const { response, loading, setResponse } = useFetch('/fetchData')
+    const { response, loading, setResponse } = useFetch('/api/fetchData')
     const debouncedSearch = useDebounce(input, 500)
 
+   
 
     useEffect(() => {
       if (debouncedSearch) {
@@ -40,7 +41,7 @@ const Search = () => {
     if (loading) return <Loading />
 
   return (
-    <form className='sm:w-[90%] md:w-[40%] flex justify-center' onSubmit={Submit}>
+    <form className='sm:w-[100%] md:w-[40%] flex justify-center' onSubmit={Submit}>
         <label id='search' className='relative w-full flex items-center gap-3'>
           <input
             value={input} name='search'
@@ -49,7 +50,7 @@ const Search = () => {
         </label>
 
         {input && response && response.length > 0 ? (
-          <ul className='absolute top-[60px] z-50 bg-white shadow  w-[39.5%] mx-auto rounded-sm'>
+          <ul className='absolute top-[60px] z-50 bg-white shadow  sm:w-[88%] md:w-[39%] mx-auto rounded-sm'>
             {response.map(item => (
               <li key={item._id} onClick={() => {
                 router.push(`/details/${item._id}?id=${item._id}`); 

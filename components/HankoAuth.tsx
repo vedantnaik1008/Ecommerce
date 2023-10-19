@@ -1,15 +1,16 @@
 "use client"
-
 import { useCallback, useEffect, useState } from "react";
 import { Hanko, register } from "@teamhanko/hanko-elements";
 import { useRouter } from "next/navigation";
 
 const hankoApi = process.env.NEXT_PUBLIC_HANKO_API_URL!;
 
-export default function HankoAuth() {
+export default  function HankoAuth() {
     const router = useRouter();
  
     const [hanko, setHanko] = useState<Hanko>();
+
+   
    
     useEffect(() => {
       import("@teamhanko/hanko-elements").then(({ Hanko }) =>
