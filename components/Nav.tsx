@@ -8,7 +8,7 @@ import {IoCloseOutline} from 'react-icons/io5'
 
 const items = [{id: 1, name: "Home", link: '/dashboard'},
 {id: 2, name: "Shop", link: '/Shop'},
-{id: 3, name: "User", link: '/user'},]
+{id: 3, name: "Profile", link: '/user'},]
 
 interface Props{
   show: boolean;

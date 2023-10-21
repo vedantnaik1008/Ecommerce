@@ -15,6 +15,7 @@ const UserData = () => {
             const hankoApi = process.env.NEXT_PUBLIC_HANKO_API_URL!;
             const hanko = new Hanko(hankoApi);
             const user = await hanko.user.getCurrent();
+            
             if(user && user.id){
                 redirect('/dashboard');  
             }
@@ -34,6 +35,4 @@ const UserData = () => {
 export default UserData
 
 
-// const {id, email} = await hanko.user.getCurrent();
-// console.log(`user-id: ${id}, email: ${email}`);
 

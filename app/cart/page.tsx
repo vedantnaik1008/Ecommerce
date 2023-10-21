@@ -1,6 +1,4 @@
 'use client'
-import { electronicsData } from '@/constants/api'
-import React, { useState } from 'react'
 import Image from 'next/image'
 import {FaMinus, FaPlus} from 'react-icons/fa'
 import Link from 'next/link'
