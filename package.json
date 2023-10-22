@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^5.4.2",
     "@reduxjs/toolkit": "^1.9.7",
     "@teamhanko/hanko-elements": "^0.8.4",
     "axios": "^1.5.1",
