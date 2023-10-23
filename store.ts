@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import addItems from '@/components/reducers/addItems'
+import formClick from "./components/reducers/formClick";
 
 export const store = configureStore({
     reducer: {
-        addToCart: addItems
+        addToCart: addItems,
+        form: formClick,
     },
 })
 

@@ -16,7 +16,7 @@ export default function SuccessPage() {
 				<h5 className="italic">Have a wonderfull day!</h5>
 
 				<button className="border border-blue-500 px-4 py-2 rounded mt-8 capitalize group bg-blue-500 font-medium">
-					<Link href='/'>go back to home </Link>
+					<Link href='/dashboard'>go back to home </Link>
 					<span className="group-hover:inline-flex  hidden">
 						&rarr;
 					</span>{" "}

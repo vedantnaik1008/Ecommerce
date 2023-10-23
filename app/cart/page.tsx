@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 import { RootState } from '@/store'
 import { useSelector, useDispatch } from 'react-redux'
 import { clearItems, decreaseQuantity, increaseQuantity, removeItem } from '@/components/reducers/addItems'
+import Form from '@/components/Form'
 
 const Page = () => {
     const products = useSelector((state: RootState)=> state.addToCart.product)
@@ -62,8 +63,9 @@ const Page = () => {
                         </div>
                       ))}
               </div>
-              <div className="sm:w-full md:w-full lg:w-[30%]">
+              <div className="sm:w-full md:w-full lg:w-[30%] flex flex-col  gap-y-5 relative">
                 <PriceList />
+                <Form />
               </div>
             </div>
             <Footer />
