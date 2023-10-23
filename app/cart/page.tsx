@@ -37,7 +37,7 @@ const Page = () => {
                       {products.map((res) => (
                         <div className="" key={res._id}>
                           <button onClick={()=> dispatch(clearItems())} className="py-2 px-4 rounded-lg border  font-semibold bg-red-500 text-white border-red-500 absolute -top-[60px] left-0">Clear All</button>
-                          <div  className="sm:p-[15px] four:p-[20px]  bg-white shadow-2xl rounded-xl  h-[90%]  mb-[30px] flex  justify-between items-center flex-col lg:flex-row">
+                          <div  className="sm:p-[15px] four:p-[20px]  bg-white shadow-2xl rounded-xl    mb-[30px] flex  justify-between items-center flex-col lg:flex-row">
                             <Link href={`/details/${res._id}?id=${res._id}`}>
                               <div className="flex items-center flex-col justify-center ">
                                 <Image src={res.image} alt="items-image" width={"200"} height={"100"} className="flex overflow-hidden rounded-sm h-full w-[100%] object-cover" />

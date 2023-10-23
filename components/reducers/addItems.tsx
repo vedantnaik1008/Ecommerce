@@ -12,7 +12,7 @@ const initialState: AllItems = {
     totalPrice: 0
    };
 
-   const storageState = localStorage.getItem('cart') 
+const storageState = localStorage.getItem('cart') 
 if (storageState) {
  const parsedState = JSON.parse(storageState)
  initialState.product = parsedState.product

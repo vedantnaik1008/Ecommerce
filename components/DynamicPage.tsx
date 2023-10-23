@@ -40,9 +40,8 @@ const DynamicPage = ({product}: Props) => {
           <div className="mb-8">
             <p className="font-semibold max-w-4xl">{connect?.description}</p>
           </div>
-          <div className="flex gap-4 justify-start my-5">
+          <div className=" my-5">
             <button onClick={()=> dispatch(addItem(connect!))} className="bg-black rounded-lg  text-white font-semibold py-1 px-4 hover:bg-slate-400">Add To Cart</button>
-            <button className="bg-black rounded-lg  text-white font-semibold py-1 px-4 hover:bg-slate-400">BUY</button>
           </div>
         </div>
       </div>
