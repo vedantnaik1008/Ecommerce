@@ -1,7 +1,6 @@
-import { Product } from '@/hooks/useFetch';
+'use client'
 import { RootState } from '@/store'
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 
 const PriceList = () => {

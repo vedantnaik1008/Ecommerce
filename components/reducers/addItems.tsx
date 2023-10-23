@@ -7,16 +7,30 @@ interface AllItems{
     totalPrice: number;
 }
 
+
+
 const initialState: AllItems = {
     product: [] ,
     totalPrice: 0
    };
+
+
+
 
    const calculateTotalPrice = (products: Product[]): number => {
     return products.reduce((total, product) => {
       return total + product.price * product.quantity;
     }, 0);
   };
+
+
+  
+const storageState = localStorage.getItem('cartItems') 
+if (storageState) {
+ const parsedState = JSON.parse(storageState)
+ initialState.product = parsedState.product
+ initialState.totalPrice = parsedState.totalPrice
+}
 
 const addItems = createSlice({
     name: "addToCart",  
@@ -28,14 +42,17 @@ const addItems = createSlice({
             state.product.push(action.payload) 
             }
             state.totalPrice = calculateTotalPrice(state.product);
+            localStorage.setItem("cartItems", JSON.stringify(state));
         },
         removeItem: (state, action: PayloadAction<number>) => {
             state.product = state.product.filter(item => item._id !== action.payload)
             state.totalPrice = calculateTotalPrice(state.product);
+            localStorage.setItem("cartItems", JSON.stringify(state));
         },
         clearItems: (state) => {
             state.product = []
             state.totalPrice = calculateTotalPrice(state.product);
+            localStorage.removeItem("cartItems");
         },
         increaseQuantity: (state, action: PayloadAction<{ id: number, quantity: number }>) => {
             const item = state.product.find(item => item._id === action.payload.id)
@@ -44,6 +61,7 @@ const addItems = createSlice({
               } 
             item.quantity += action.payload.quantity
             state.totalPrice = calculateTotalPrice(state.product);
+            localStorage.setItem("cartItems", JSON.stringify(state));
         },
         decreaseQuantity: (state, action: PayloadAction<{ id: number, quantity: number }>) => {
             const item = state.product.find(item => item._id === action.payload.id)
@@ -55,6 +73,7 @@ const addItems = createSlice({
               }
             item.quantity -= action.payload.quantity
             state.totalPrice = calculateTotalPrice(state.product);
+            localStorage.setItem("cartItems", JSON.stringify(state));
         },
         
       } 
