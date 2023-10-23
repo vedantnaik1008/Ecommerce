@@ -12,6 +12,7 @@
     "@reduxjs/toolkit": "^1.9.7",
     "@teamhanko/hanko-elements": "^0.8.4",
     "axios": "^1.5.1",
+    "framer-motion": "^10.16.4",
     "jose": "^4.15.4",
     "next": "13.5.4",
     "react": "^18.2.0",
