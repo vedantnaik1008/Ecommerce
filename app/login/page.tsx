@@ -1,9 +1,10 @@
-import UserData from '@/components/userData';
+import UserData from '../../components/userData';
 
 
-export default  function LoginPage() {
-   
+const LoginPage = () => {
  return (
         <UserData />
  );
 }
+
+export default  LoginPage

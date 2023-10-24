@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import Lottie from 'lottie-react';
-import successAnimation from '@/public/Animation - 1698122931837.json';
+import successAnimation from '../public/Animation - 1698122931837.json';
 
 export const SuccessPage = () => {
  

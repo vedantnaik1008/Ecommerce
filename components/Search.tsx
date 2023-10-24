@@ -1,10 +1,10 @@
 "use client"
-import { combinedData, electronicsData } from '@/constants/api'
-import { useDebounce } from '@/hooks/useDebounce'
+import { combinedData  } from '../constants/api'
+import { useDebounce } from '../hooks/useDebounce'
 import React, { useEffect, useState } from 'react'
 import {FcSearch} from "react-icons/fc"
 import  { useRouter } from 'next/navigation'
-import { useFetch } from '@/hooks/useFetch'
+import { useFetch } from '../hooks/useFetch'
 import Loading from './Loading'
 
 

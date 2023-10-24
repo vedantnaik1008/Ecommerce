@@ -1,9 +1,9 @@
-import Electronics from '@/components/Electronics'
+import Electronics from '../../components/Electronics'
 import React from 'react'
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
+import Footer from '../../components/Footer'
+import Header from '../../components/Header'
 
-const page = () => {
+const Page = () => {
   return (
     <div>
       <Header />
@@ -13,4 +13,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

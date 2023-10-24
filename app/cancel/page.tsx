@@ -1,9 +1,9 @@
 'use client';
 import Link from "next/link";
 import Lottie from 'lottie-react';
-import cancelAnimation from '@/public/Animation - 1698125045976.json';
+import cancelAnimation from '../../public/Animation - 1698125045976.json';
 
-export default function CancelPage() {
+ const Page = () => {
 	return (
 		<section className="grid place-items-center h-screen w-full bg-white">
 			<div className="font-bold p-4 flex flex-col justify-center items-center">
@@ -18,3 +18,5 @@ export default function CancelPage() {
 		</section>
 	);
 }
+
+export default Page;

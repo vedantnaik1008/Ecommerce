@@ -2,13 +2,13 @@
 import Image from 'next/image'
 import {FaMinus, FaPlus} from 'react-icons/fa'
 import Link from 'next/link'
-import PriceList from '@/components/PriceList'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import PriceList from '../../components/PriceList'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import { RootState } from '@/store'
 import { useSelector, useDispatch } from 'react-redux'
-import { clearItems, decreaseQuantity, increaseQuantity, removeItem } from '@/components/reducers/addItems'
-import Form from '@/components/Form'
+import { clearItems, decreaseQuantity, increaseQuantity, removeItem } from '../../components/reducers/addItems'
+import Form from '../../components/Form'
 
 const Page = () => {
     const products = useSelector((state: RootState)=> state.addToCart.product)

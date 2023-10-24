@@ -1,5 +1,4 @@
-import { Product } from '@/hooks/useFetch';
-import { RootState } from '@/store'
+import { RootState } from '../store'
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { openForm } from './reducers/formClick';

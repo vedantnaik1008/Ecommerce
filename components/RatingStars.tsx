@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaStar, FaStarHalf } from 'react-icons/fa'; // You can use any icon library for stars
+import { FaStar, FaStarHalf } from 'react-icons/fa'; 
 
 interface Props {
     rating: number 
@@ -7,7 +7,7 @@ interface Props {
 
 const RatingStars = ({ rating }: Props) => {
   const stars = [];
-  const roundedRating = Math.round(rating * 2) / 2; // Round to the nearest 0.5
+  const roundedRating = Math.round(rating * 2) / 2;
 
   for (let i = 1; i <= 5; i++) {
     if (i <= roundedRating) {

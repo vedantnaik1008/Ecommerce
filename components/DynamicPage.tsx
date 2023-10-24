@@ -1,9 +1,9 @@
 'use client'
 import Image from 'next/image';
 import RatingStars from './RatingStars';
-import SimilarProducts from '@/components/SimilarProducts'
+import SimilarProducts from '../components/SimilarProducts'
 import Loading from './Loading';
-import { useFetch } from '@/hooks/useFetch';
+import { useFetch } from '../hooks/useFetch';
 import { useDispatch } from 'react-redux';
 import { addItem } from './reducers/addItems';
 

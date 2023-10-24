@@ -1,10 +1,10 @@
-import Cart from '@/components/Cart'
+import dynamic from 'next/dynamic'
+const Cart = dynamic(() => import('../components/Cart'), { ssr: false })
 import Link from 'next/link'
-import React, { useState } from 'react'
-import Search from '@/components/Search'
+import Search from '../components/Search'
 import Image from 'next/image'
-import Img from '@/public/appleLaptops/quickkart-high-resolution-logo-color-on-transparent-background.png'
-import {IoCloseOutline} from 'react-icons/io5'
+import Img from '../public/appleLaptops/quickkart-high-resolution-logo-color-on-transparent-background.png'
+
 
 const items = [{id: 1, name: "Home", link: '/dashboard'},
 {id: 2, name: "Shop", link: '/Shop'},

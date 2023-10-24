@@ -1,6 +1,6 @@
 import { NextResponse, NextRequest } from "next/server";
 import Stripe from "stripe";
-import { Product } from "@/hooks/useFetch";
+import { Product } from "../../../hooks/useFetch";
 
 export const POST = async (request: NextRequest) => {
   // @ts-ignore

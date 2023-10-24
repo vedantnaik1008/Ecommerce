@@ -1,4 +1,4 @@
-import { Product } from "@/hooks/useFetch";
+import { Product } from "../../hooks/useFetch";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 
@@ -11,14 +11,6 @@ const initialState: AllItems = {
     product: [] ,
     totalPrice: 0
    };
-
-const storageState = localStorage.getItem('cart') 
-if (storageState) {
- const parsedState = JSON.parse(storageState)
- initialState.product = parsedState.product
- initialState.totalPrice = parsedState.totalPrice
-}
-
 
 
    const calculateTotalPrice = (products: Product[]): number => {
@@ -37,17 +29,14 @@ const addItems = createSlice({
             state.product.push(action.payload) 
             }
             state.totalPrice = calculateTotalPrice(state.product);
-            localStorage.setItem('cart', JSON.stringify(state))
         },
         removeItem: (state, action: PayloadAction<number>) => {
             state.product = state.product.filter(item => item._id !== action.payload)
             state.totalPrice = calculateTotalPrice(state.product);
-            localStorage.setItem('cart', JSON.stringify(state))
         },
         clearItems: (state) => {
             state.product = []
             state.totalPrice = calculateTotalPrice(state.product);
-            localStorage.removeItem('cart')
         },
         increaseQuantity: (state, action: PayloadAction<{ id: number, quantity: number }>) => {
             const item = state.product.find(item => item._id === action.payload.id)
@@ -56,7 +45,6 @@ const addItems = createSlice({
               } 
             item.quantity += action.payload.quantity
             state.totalPrice = calculateTotalPrice(state.product);
-            localStorage.setItem('cart', JSON.stringify(state))
         },
         decreaseQuantity: (state, action: PayloadAction<{ id: number, quantity: number }>) => {
             const item = state.product.find(item => item._id === action.payload.id)
@@ -68,17 +56,14 @@ const addItems = createSlice({
               }
             item.quantity -= action.payload.quantity
             state.totalPrice = calculateTotalPrice(state.product);
-            localStorage.setItem('cart', JSON.stringify(state))
         },
         saveOrder: (state, action: PayloadAction<Product[]>) => {
           state.product = action.payload
           state.totalPrice = calculateTotalPrice(state.product);
-          localStorage.setItem('cart', JSON.stringify(state))
         },
         resetOrder: (state) => {
           state.product = []
           state.totalPrice = calculateTotalPrice(state.product);
-          localStorage.removeItem('cart')
       },
         
       } 

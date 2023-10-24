@@ -1,10 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import Nav from './Nav'
-import Link from 'next/link'
 import Search from './Search'
-import Image from 'next/image'
-import Img from '@/public/appleLaptops/quickkart-high-resolution-logo-color-on-transparent-background.png'
 
 const Header = () => {
   const [show, setShow] = useState(false)

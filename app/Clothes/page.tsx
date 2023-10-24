@@ -1,9 +1,9 @@
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
-import Products from '@/components/Products'
+import Footer from '../../components/Footer'
+import Header from '../../components/Header'
+import Products from '../../components/Products'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <div>
       <Header />
@@ -13,4 +13,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

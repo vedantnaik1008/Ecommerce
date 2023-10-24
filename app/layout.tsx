@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Roboto } from 'next/font/google'
 import ProviderComponent from '@/components/Provider'
+import ProviderRedux from '@/components/ProviderRedux'
  
 const roboto = Roboto({
   weight: '400',
@@ -26,9 +27,9 @@ export default function RootLayout({
     <ProviderComponent>
     <html lang="en">
       <body className={`${roboto.className} bg-gray-300`}>  
-      
+        <ProviderRedux>
           {children}
-        
+        </ProviderRedux>
       </body>
     </html>
     </ProviderComponent> 

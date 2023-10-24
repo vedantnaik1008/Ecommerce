@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Image from "next/image"
-import { Product } from '@/hooks/useFetch';
+import { Product } from '../hooks/useFetch';
 import RatingStars from './RatingStars';
 import { useDispatch } from 'react-redux';
 import { addItem } from './reducers/addItems';

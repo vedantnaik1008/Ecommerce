@@ -1,4 +1,4 @@
-import { combinedData } from "@/constants/api";
+import { combinedData } from "../../../constants/api";
 
 import { NextResponse } from "next/server";
 

@@ -1,4 +1,4 @@
-import { SuccessPage } from '@/components/Success';
+import { SuccessPage } from '../../components/Success';
 import React from 'react'
 
 export const metadata = {

@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import { useFetch } from "@/hooks/useFetch";
+import { useFetch } from "../hooks/useFetch";
 import Loading from "./Loading";
 import Card from "./Card";
 

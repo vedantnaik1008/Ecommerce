@@ -1,9 +1,8 @@
 'use client'
-import Link from 'next/link'
 import { useState } from 'react'
 import Card from './Card'
 import Loading from './Loading'
-import { useFetch } from '@/hooks/useFetch'
+import { useFetch } from '../hooks/useFetch'
 
 interface DataFilter {
     id: number;

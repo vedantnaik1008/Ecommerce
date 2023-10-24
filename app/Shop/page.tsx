@@ -1,12 +1,16 @@
-import AllProducts from '@/components/AllProducts'
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
+import AllProducts from '../../components/AllProducts'
+import Footer from '../../components/Footer'
+import Header from '../../components/Header'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
-    <><Header /><AllProducts /><Footer /></>
+    <>
+      <Header />
+      <AllProducts />
+      <Footer />
+    </>
   )
 }
 
-export default page
+export default Page

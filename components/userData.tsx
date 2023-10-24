@@ -2,9 +2,6 @@
 
 import { Hanko } from "@teamhanko/hanko-elements";
 import { redirect } from "next/navigation";
-
-
-
 import React, { useEffect } from 'react'
 import HankoAuth from "./HankoAuth";
 

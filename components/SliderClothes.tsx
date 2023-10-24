@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { PiCaretLeftLight, PiCaretRightLight } from 'react-icons/pi';
 import RatingStars from './RatingStars';
 import Link from 'next/link';
-import { useFetch } from '@/hooks/useFetch';
+import { useFetch } from '../hooks/useFetch';
 import Loading from './Loading';
 import { useDispatch } from 'react-redux';
 import { addItem } from './reducers/addItems';
@@ -101,7 +101,7 @@ const SliderClothes = () => {
                 <div  className="p-[20px]  bg-white shadow-2xl border-none rounded-xl  transition-all duration-300 ease-in-out  h-[440px] s mx-auto md:mx-[20px]">
                   <Link href={`/details/${res._id}?id=${res._id}`} className="" >
                     <div className="flex items-center flex-col justify-center h-[60%]">
-                      <Image src={res.image} alt="items-image" width={"200"} height={"100"} className="hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden rounded-sm   object-cover"/>
+                      <Image src={res.image} alt="items-image" width={200} height={200} className="hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden rounded-sm   object-cover"/>
                     </div>
                   </Link>
                     <div className="flex justify-between items-center  mt-[20px]">
