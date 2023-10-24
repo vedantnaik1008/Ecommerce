@@ -33,7 +33,7 @@ const Form = () => {
       const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
       const handleCheckout = async() => {
         const stripe = await stripePromise
-        const response = await fetch(`https://ecommerce-umber-nu-77.vercel.app/api/checkout`,{
+        const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/checkout`,{
           method: "POST",
           headers: {"Content-Type" : "application/json"},
           body: JSON.stringify({
