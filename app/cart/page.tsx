@@ -41,7 +41,7 @@ const Page = () => {
                           <div  className="sm:p-[15px] four:p-[20px]  bg-white shadow-2xl rounded-xl    mb-[30px] flex  justify-between items-center flex-col lg:flex-row">
                             <Link href={`/details/${res._id}?id=${res._id}`}>
                               <div className="flex items-center flex-col justify-center ">
-                                <Image src={res.image} alt="items-image" width={"200"} height={"100"} className="flex overflow-hidden rounded-sm h-full w-[100%] object-cover" />
+                                <Image src={res.image} alt="items-image" width={"200"} height={"200"} className="flex overflow-hidden rounded-sm h-full w-[100%] object-cover" />
                               </div>
                             </Link>
                             <div className="">
