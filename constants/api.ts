@@ -357,4 +357,3 @@ export const trendingProducts = [
     ...productData,
     ...electronicsData,
   ];
-  

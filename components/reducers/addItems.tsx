@@ -70,10 +70,20 @@ const addItems = createSlice({
             state.totalPrice = calculateTotalPrice(state.product);
             localStorage.setItem('cart', JSON.stringify(state))
         },
+        saveOrder: (state, action: PayloadAction<Product[]>) => {
+          state.product = action.payload
+          state.totalPrice = calculateTotalPrice(state.product);
+          localStorage.setItem('cart', JSON.stringify(state))
+        },
+        resetOrder: (state) => {
+          state.product = []
+          state.totalPrice = calculateTotalPrice(state.product);
+          localStorage.removeItem('cart')
+      },
         
       } 
 })
 
-export const {addItem, removeItem, clearItems, increaseQuantity, decreaseQuantity} = addItems.actions
+export const {addItem, removeItem, clearItems, increaseQuantity, decreaseQuantity, saveOrder, resetOrder} = addItems.actions
 
 export default addItems.reducer;

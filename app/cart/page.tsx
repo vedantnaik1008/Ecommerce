@@ -57,7 +57,7 @@ const Page = () => {
                                   <button onClick={()=> dispatch(removeItem(res._id))} className='py-2 px-4 rounded-lg border border-gray-500 text-black font-semibold hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-300 ease-in-out'>Delete</button>
                                 </div>
                               </div>
-                              <div className=""><button className="py-2 px-6 bg-black text-white w-full font-semibold my-3 rounded-lg hover:bg-slate-400">Buy</button></div>
+                              {/* <div className=""><button className="py-2 px-6 bg-black text-white w-full font-semibold my-3 rounded-lg hover:bg-slate-400">Buy</button></div> */}
                             </div>
                           </div>
                         </div>
