@@ -28,8 +28,8 @@ export const POST = async (request: NextRequest) => {
       payment_method_types: ["card"],
       line_items: extractingItems,
       mode: "payment",
-      success_url: `https://ecommerce-umber-nu-77.vercel.app/success`,
-      cancel_url: `https://ecommerce-umber-nu-77.vercel.app/checkout`
+      success_url: `https://quickkart3.netlify.app/success`,
+      cancel_url: `https://quickkart3.netlify.app/checkout`
     });
 
     return NextResponse.json({
