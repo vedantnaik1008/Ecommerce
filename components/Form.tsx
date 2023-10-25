@@ -46,7 +46,7 @@ const Form = () => {
           stripe?.redirectToCheckout({ sessionId: data.id })
           dispatch(resetOrder())
         }else{
-          throw new Error("Failed to create stripe payment")
+          alert("Try to buy less products")
         }
       }
 
