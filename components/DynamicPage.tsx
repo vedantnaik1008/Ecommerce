@@ -25,8 +25,8 @@ const DynamicPage = ({product}: Props) => {
   
   return (
     <div className='mx-auto min-[320px]:pt-[70px] md:pt-[100px]  text-black'>
-      <div className="bg-white flex min-[320px]:flex-col md:flex-row justify-center items-center gap-8 p-5 min-[320px]:rounded-none md:rounded-xl min-[320px]:w-full md:w-[80%] mx-auto">
-        <div className="w-[100%] h-full  ">
+      <div className="bg-white flex min-[320px]:flex-col md:flex-row justify-center items-center gap-14 p-5 min-[320px]:rounded-none md:rounded-xl min-[320px]:w-full md:w-[80%] mx-auto">
+        <div className="w-[70%]">
           <Image width={600} height={600} src={productImage} alt={'product-Image'} className='object-cover rounded-lg w-full'/>
         </div>
         <div className='w-full'>

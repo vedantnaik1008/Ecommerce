@@ -23,7 +23,7 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "women",
       image:
-        "https://img.freepik.com/free-photo/portrait-beautiful-face-young-woman-with-long-brown-hair_186202-4331.jpg?size=626&ext=jpg&ga=GA1.1.453157835.1694346094&semt=sph",
+        "https://m.media-amazon.com/images/I/41L4Eaht0zL.jpg",
       rating: 4,
       quantity: 1,
     },
@@ -37,7 +37,7 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "women",
       image:
-        "https://img.freepik.com/free-photo/studio-close-up-portrait-young-fresh-blonde-woman-brown-straw-poncho-wool-black-trendy-hat-round-glasses-looking-camera-green-leather-had-bag_273443-1121.jpg?size=626&ext=jpg&ga=GA1.2.453157835.1694346094&semt=sph",
+        "https://m.media-amazon.com/images/I/71fpHGiDxrL._UY741_.jpg",
       rating: 3,
       quantity: 1,
     },
@@ -51,13 +51,13 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "women",
       image:
-        "https://img.freepik.com/free-photo/young-woman-fluffy-jacket-red-sunglasses-looking-into-camera_197531-15044.jpg?size=626&ext=jpg&ga=GA1.2.453157835.1694346094&semt=sph",
+        "https://m.media-amazon.com/images/I/41Zf1+rmL0L._UX679_.jpg",
       rating: 3,
       quantity: 1,
     },
     {
       _id: 4,
-      title: "Blue jins",
+      title: "Blue jeans",
       isNew: true,
       oldPrice: "70",
       price: 50,
@@ -65,7 +65,7 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "women",
       image:
-        "https://img.freepik.com/free-photo/fashionable-woman-pink-coat-black-hat-posing_273443-2429.jpg?size=626&ext=jpg&ga=GA1.1.453157835.1694346094&semt=sph",
+        "https://m.media-amazon.com/images/I/61kBiRSFWgL._UY879_.jpg",
       rating: 3,
       quantity: 1,
     },
@@ -79,7 +79,7 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "women",
       image:
-        "https://img.freepik.com/free-photo/curly-woman-elegant-hat-looking-camera-studio-shot-fascinating-blonde-girl-striped-shirt_197531-13243.jpg?size=626&ext=jpg&ga=GA1.2.453157835.1694346094&semt=ais",
+        "https://m.media-amazon.com/images/I/610sSMZDBDL._UX679_.jpg",
       rating: 5,
       quantity: 1,
     },
@@ -93,7 +93,7 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "men",
       image:
-        "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://m.media-amazon.com/images/I/71HLzkQvV-L._UX679_.jpg",
       rating: 4,
       quantity: 1,
     },
@@ -107,7 +107,7 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "women",
       image:
-        "https://images.pexels.com/photos/2010812/pexels-photo-2010812.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://m.media-amazon.com/images/I/51VHATON2UL._UY879_.jpg",
       rating: 2,
       quantity: 1,
     },
@@ -121,13 +121,13 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "women",
       image:
-        "https://images.pexels.com/photos/2233703/pexels-photo-2233703.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://m.media-amazon.com/images/I/51FaghMJAQL._UX679_.jpg",
       rating: 3,
       quantity: 1,
     },
     {
       _id: 9,
-      title: "Pink beauty",
+      title: "Dream Beauty Fashion Women's V-Neck Full Sleeve Crop Top Baati",
       isNew: false,
       oldPrice: "150",
       price: 100,
@@ -135,7 +135,7 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "women",
       image:
-        "https://images.pexels.com/photos/2065195/pexels-photo-2065195.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://m.media-amazon.com/images/I/61TqPSaoFiL._UY741_.jpg",
       rating: 3,
       quantity: 1,
     },
@@ -149,7 +149,7 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "men",
       image:
-        "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://m.media-amazon.com/images/I/61G1ZLzdBeS._UX679_.jpg",
       rating: 5,
       quantity: 1,
     },
@@ -163,7 +163,7 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "women",
       image:
-        "https://img.freepik.com/premium-photo/woman-yellow-shirt-with-word-love-it_873925-155207.jpg?size=626&ext=jpg&ga=GA1.2.453157835.1694346094&semt=ais",
+        "https://m.media-amazon.com/images/I/51jv4aO1hkL._UY741_.jpg",
       rating: 4,
       quantity: 1,
     },
@@ -177,7 +177,7 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "men",
       image:
-        "https://images.pexels.com/photos/983497/pexels-photo-983497.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://m.media-amazon.com/images/I/61D2ou4BoaL._UY879_.jpg",
       rating: 3,
       quantity: 1,
     },
@@ -191,13 +191,13 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "women",
       image:
-        "https://images.pexels.com/photos/3672825/pexels-photo-3672825.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://m.media-amazon.com/images/I/51u9oc1gDlL._UX679_.jpg",
       rating: 4,
       quantity: 1,
     },
     {
       _id: 14,
-      title: "Kids choice",
+      title: "Mother's Choice Baby Boys' Clothing Set",
       isNew: false,
       oldPrice: "80",
       price: 50,
@@ -205,13 +205,13 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "kids",
       image:
-        "https://img.freepik.com/free-photo/small-girl-stands-near-table_8353-5344.jpg?size=626&ext=jpg&ga=GA1.2.453157835.1694346094&semt=ais",
+        "https://m.media-amazon.com/images/I/81N-Es0RPmL._UY741_.jpg",
       rating: 2,
       quantity: 1,
     },
     {
       _id: 15,
-      title: "Stylish jeans in lightblue",
+      title: "jannon Women's Solid Stretchable High Waist Slim Fit Jeans",
       isNew: false,
       oldPrice: "120",
       price: 100,
@@ -219,21 +219,21 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "women",
       image:
-        "https://images.pexels.com/photos/2738792/pexels-photo-2738792.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://m.media-amazon.com/images/I/61x+w7lNNtL._UX679_.jpg",
       rating: 4,
       quantity: 1,
     },
     {
       _id: 16,
-      title: "Unknown horizon",
+      title: "Aradhana Fashion Women's Engrossing Readymade Cotton Nauvari Saree",
       isNew: false,
       oldPrice: "400",
       price: 350,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
-      category: "men",
+      category: "women",
       image:
-        "https://images.pexels.com/photos/2866077/pexels-photo-2866077.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://m.media-amazon.com/images/I/71MltIpH47L._UY879_.jpg",
       rating: 4,
       quantity: 1,
     },
@@ -247,7 +247,7 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "women",
       image:
-        "https://images.pexels.com/photos/2010925/pexels-photo-2010925.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://m.media-amazon.com/images/I/61Gc4lqignL._UY741_.jpg",
       rating: 3,
       quantity: 1,
     },
@@ -261,7 +261,7 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "women",
       image:
-        "https://images.pexels.com/photos/3054973/pexels-photo-3054973.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://m.media-amazon.com/images/I/61Te9UNzSxL._UY741_.jpg",
       rating: 4,
       quantity: 1,
     },
@@ -275,7 +275,7 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "women",
       image:
-        "https://images.pexels.com/photos/2693849/pexels-photo-2693849.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://m.media-amazon.com/images/I/518aR0Pb13L._UY879_.jpg",
       rating: 3,
       quantity: 1,
     },
@@ -289,7 +289,7 @@ export const productData = [
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
       category: "men",
       image:
-        "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://m.media-amazon.com/images/I/71Jwe2kb5pL._UY879_.jpg",
       rating: 5,
       quantity: 1,
     },
