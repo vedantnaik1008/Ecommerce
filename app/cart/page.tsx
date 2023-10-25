@@ -13,6 +13,12 @@ import Form from '../../components/Form'
 const Page = () => {
     const products = useSelector((state: RootState)=> state.addToCart.product)
     const dispatch = useDispatch()
+    const truncateText = (text: string, maxLength: number) => {
+      if (text.length > maxLength) {
+        return text.substring(0, maxLength) + '...' // Add ellipsis if text is too long
+      }
+      return text
+    }
 
   return (
     <>
@@ -41,11 +47,11 @@ const Page = () => {
                           <div  className="sm:p-[15px] four:p-[20px]  bg-white shadow-2xl rounded-xl    mb-[30px] flex  justify-between items-center flex-col lg:flex-row">
                             <Link href={`/details/${res._id}?id=${res._id}`}>
                               <div className="flex items-center flex-col justify-center ">
-                                <Image src={res.image} alt="items-image" width={"200"} height={"200"} className="flex overflow-hidden rounded-sm h-full w-[100%] object-cover" />
+                                <Image src={res.image} alt="items-image" width={"200"} height={"200"} className="flex overflow-hidden rounded-sm  object-cover" />
                               </div>
                             </Link>
                             <div className="">
-                              <h2 className=" text-black text-center font-medium">{res.title}</h2>
+                              <h2 className=" text-black  text-center font-medium">{truncateText(res.title, 20)}</h2>
                               <div className="flex gap-4 my-5 max-four:flex-wrap max-four:items-center">
                                 <span className="bg-gray-300 py-2 px-4 border-none rounded-md text-black font-bold relative z-20">${res.price}</span>
                                 <div className="flex border border-gray-500 rounded-lg">

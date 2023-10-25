@@ -295,8 +295,7 @@ export const productData = [
     },
 ];
 
-
-  export const combinedData = [
+export const combinedData = [
     ...productData,
     ...electronicsData,
-  ];
+];
