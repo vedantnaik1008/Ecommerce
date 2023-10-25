@@ -15,8 +15,6 @@ export const POST = async (request: NextRequest) => {
           currency: "usd",
           product_data: {
             name: item.title,
-            description: item.description,
-            images: [item.image],
           },
           unit_amount: item.price * 100,
         },
