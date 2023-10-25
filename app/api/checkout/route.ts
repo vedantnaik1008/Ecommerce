@@ -27,7 +27,7 @@ export const POST = async (request: NextRequest) => {
       line_items: extractingItems,
       mode: "payment",
       success_url: `https://quickkart3.netlify.app/success`,
-      cancel_url: `https://quickkart3.netlify.app/checkout`
+      cancel_url: `https://quickkart3.netlify.app/cancel`
     });
 
     return NextResponse.json({

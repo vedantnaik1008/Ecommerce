@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -75,7 +75,7 @@ hanko-profile {
 
 hanko-auth::part(container),
 hanko-profile::part(container) {
-  border: solid 1px #d8dee3;
+  border: solid 1px white;
   border-radius: 6px;
 }
 
