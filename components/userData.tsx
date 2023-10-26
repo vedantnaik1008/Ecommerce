@@ -1,9 +1,11 @@
 'use client'
-
+import dynamic from 'next/dynamic'
+const DynamicHankoAuth = dynamic(() => import('./HankoAuth'), {
+ ssr: false
+})
 import { Hanko } from "@teamhanko/hanko-elements";
 import { redirect } from "next/navigation";
 import React, { useEffect } from 'react'
-import HankoAuth from "./HankoAuth";
 import { Cookie } from "next/font/google";
 
 const CookieFont = Cookie({
@@ -31,7 +33,7 @@ const UserData = () => {
    },[])
   return (
     <div className={`${CookieFont.variable} flex min-h-screen flex-col items-center justify-center px-4`}>
-        <HankoAuth />
+        <DynamicHankoAuth />
     </div>
   )
 }
