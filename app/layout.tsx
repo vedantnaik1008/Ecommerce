@@ -1,6 +1,5 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import { Roboto } from 'next/font/google'
 import ProviderComponent from '@/components/Provider'
 import ProviderRedux from '@/components/ProviderRedux'
@@ -11,7 +10,6 @@ const roboto = Roboto({
   display: 'swap',
 })
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
