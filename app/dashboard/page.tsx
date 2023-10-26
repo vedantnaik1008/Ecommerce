@@ -1,20 +1,30 @@
-import Banner from "../../components/Banner";
-import SliderClothes from "../../components/SliderClothes";
-import SliderElectronics from "../../components/SliderElectronics";
+'use client'
+import dynamic from 'next/dynamic'
+const DynamicSLiderCLothes = dynamic(() => import('@/components/SliderClothes'), {
+ ssr: false
+})
+const DynamicSLiderElectronics = dynamic(() => import('@/components/SliderElectronics'), {
+  ssr: false
+ })
+ const DynamicBanner = dynamic(() => import('@/components/Banner'), {
+  ssr: false
+ })
+ const DynamicHeader = dynamic(() => import('@/components/Header'), {
+  ssr: false
+ })
 import Trending from "../../components/Trending";
 import Footer from '../../components/Footer'
-import Header from '../../components/Header'
 
 const Dashboard = () => {
 
   return (
     <>
       <div className="bg-gray-300">
-        <Header />
-        <Banner />
+        <DynamicHeader />
+        <DynamicBanner />
         <Trending />
-        <SliderClothes />
-        <SliderElectronics />
+        <DynamicSLiderCLothes />
+        <DynamicSLiderElectronics />
         <Footer />
       </div>
     </>

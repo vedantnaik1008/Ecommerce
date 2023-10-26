@@ -1,11 +1,14 @@
 "use client";
+import dynamic from 'next/dynamic'
+const DynamicBannerText = dynamic(() => import('@/components/BannerText'), {
+  ssr: false
+ })
 import Slider from "react-slick";
 import bannerone from "../images/bannerone.jpg";
 import bannertwo from "../images/bannertwo.jpg";
 import bannerthree from "../images/bannerthree.jpg";
 import { PiCaretLeftLight, PiCaretRightLight } from "react-icons/pi";
 import Image from "next/image";
-import BannerText from "./BannerText";
 
 const Banner = () => {
   const NextArrow = (props: any) => {
@@ -50,7 +53,7 @@ const Banner = () => {
             className="w-full  min-[320px]:h-[200px] min-[600px]:h-full object-cover md:h-full relative"
             priority
           />
-          <BannerText title="Outware Picks" />
+          <DynamicBannerText title="Outware Picks" />
         </div>
         <div className="w-full h-full relative">
           <Image
@@ -58,7 +61,7 @@ const Banner = () => {
             alt="bannertwo"
             className="w-full  min-[320px]:h-[200px] object-cover min-[600px]:h-full relative"
           />
-          <BannerText title="Seasonal Offers" />
+          <DynamicBannerText title="Seasonal Offers" />
         </div>
         <div className="w-full h-full relative">
           <Image
@@ -66,7 +69,7 @@ const Banner = () => {
             alt="bannerthree"
             className="w-full min-[320px]:h-[200px] object-cover min-[600px]:h-full  relative"
           />
-          <BannerText title="Best for men" />
+          <DynamicBannerText title="Best for men" />
         </div>
       </Slider>
       <div className="absolute min-[320px]:hidden  min-[600px]:block w-full h-44 bg-gradient-to-t from-gray-100 to-transparent bottom-0 left-0 z-10" />

@@ -5,14 +5,13 @@ import React, { useEffect, useState } from 'react'
 import {FcSearch} from "react-icons/fc"
 import  { useRouter } from 'next/navigation'
 import { useFetch } from '../hooks/useFetch'
-import Loading from './Loading'
 
 
 
 const Search = () => {
   const router = useRouter();
     const [input, setInput] = useState('')
-    const { response, loading, setResponse } = useFetch('/api/fetchData')
+    const { response,  setResponse } = useFetch('/api/fetchData')
     const debouncedSearch = useDebounce(input, 500)
 
    
@@ -38,7 +37,7 @@ const Search = () => {
       e.preventDefault()
     }
 
-    if (loading) return <Loading />
+    
 
   return (
     <form className='sm:w-[100%] md:w-[40%] flex justify-center' onSubmit={Submit}>
