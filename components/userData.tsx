@@ -24,7 +24,7 @@ const UserData = () => {
                 redirect('/dashboard');  
             }
         } catch(error) {
-            console.log(error);
+            console.log(error, "error");
         } 
     }
     userData()
