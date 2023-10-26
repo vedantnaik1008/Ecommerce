@@ -84,7 +84,6 @@ hanko-auth::part(headline2),
 hanko-profile::part(headline2) {
   color: #1f2328;
   line-height: 36px;
-  font-family: "Cookie", cursive;
   text-align: center;
 }
 
