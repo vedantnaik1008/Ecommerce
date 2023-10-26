@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 
 const hankoApi = process.env.NEXT_PUBLIC_HANKO_API_URL!;
 
+
 export default  function HankoAuth() {
     const router = useRouter();
  

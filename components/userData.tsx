@@ -4,7 +4,14 @@ import { Hanko } from "@teamhanko/hanko-elements";
 import { redirect } from "next/navigation";
 import React, { useEffect } from 'react'
 import HankoAuth from "./HankoAuth";
+import { Cookie } from "next/font/google";
 
+const CookieFont = Cookie({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-family',
+    weight: "400"
+  })
 const UserData = () => {
    useEffect(()=> {
     const userData = async() => {
@@ -23,7 +30,7 @@ const UserData = () => {
     userData()
    },[])
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center px-4">
+    <div className={`${CookieFont.variable} flex min-h-screen flex-col items-center justify-center px-4`}>
         <HankoAuth />
     </div>
   )
