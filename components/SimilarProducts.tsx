@@ -8,7 +8,7 @@ interface Props{
 }
 
 const SimilarProducts = ({categories}: Props) => {
-    const { response, loading, setResponse } = useFetch('/api/fetchData')
+    const { response, loading } = useFetch('/api/fetchData')
     const data = response.filter(res => res.category === categories).slice(0,4)
     console.log(data);
     if (loading) return <Loading />

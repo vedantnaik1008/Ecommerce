@@ -1,14 +1,12 @@
-import { SuccessPage } from '../../components/Success';
-import React from 'react'
+import Success from "@/components/Success";
 
 export const metadata = {
 	title: "Success | QuickKart",
-	description:
-		"It will show the success page after doing successfull payment method",
 };
+
 const Page = () => {
   return (
-	<SuccessPage />
+	<Success />
   )
 }
 

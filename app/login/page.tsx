@@ -1,6 +1,5 @@
 import UserData from '../../components/userData';
 
-
 const LoginPage = () => {
  return (
         <UserData />

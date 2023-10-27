@@ -1,14 +1,17 @@
 'use client'
 import Link from "next/link";
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic'
+const DynamicLottie = dynamic(() => import('lottie-react'), {
+ ssr: false
+})
 import successAnimation from '../public/Animation - 1698122931837.json';
 
-export const SuccessPage = () => {
+const Success = () => {
  
 	return (
 		<section className="grid place-items-center h-screen w-full bg-white">
 			<div className="p-4 flex flex-col items-center justify-center">
-				<Lottie animationData={successAnimation} loop={false} className="w-64 mx-auto"/>
+				<DynamicLottie animationData={successAnimation} loop={false} className="w-64 mx-auto"/>
 				<h1 className="font-bold">Your payment was successfull</h1>
 				<h4 className="font-bold">
 					Thanks for showing interests in our products
@@ -22,3 +25,5 @@ export const SuccessPage = () => {
 		</section>
 	);
 }
+
+export default Success
