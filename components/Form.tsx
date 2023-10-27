@@ -20,8 +20,7 @@ const Form = () => {
       const dispatch = useDispatch()
             
       function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-        const { name, value } = e.target
-        setAddress(prev => ({ ...prev, [name]: value }))  
+        setAddress(prev => ({ ...prev, [e.target.name]: e.target.value }))  
         checkValidation()
       }
 
@@ -34,7 +33,6 @@ const Form = () => {
         e.preventDefault()
         
         console.log(address)
-        // setAddress({ name: '', street: '', phone: '',city: '', pincode: '', state: '' })
       }
 
       
@@ -65,40 +63,40 @@ const Form = () => {
             <button onClick={() => dispatch(closeForm())} className="py-2 px-6 bg-black text-white  font-semibold my-5 rounded-md ">CLose</button>
         </div>
       <form onSubmit={handleSubmit} className="flex flex-col">
-      <input placeholder="Full Name" 
+      <input required placeholder="Full Name" 
           type="text"
           name="name"
           value={address.name}
           onChange={handleChange}
           className="mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black"
         />
-        <input placeholder="Street" 
+        <input required placeholder="Street" 
           type="text"
           name="street"
           value={address.street}
           onChange={handleChange}
           className="mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black"
         />
-        <input placeholder="City" 
+        <input required placeholder="City" 
           type="text" 
           name="city"
           value={address.city} 
           onChange={handleChange} 
           className="mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black"
         />
-        <input placeholder="Pincode" 
+        <input required placeholder="Pincode" 
           type="number" 
           name="pincode"
           value={address.pincode}
           onChange={handleChange}
           className="mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black" />    
-        <input placeholder="Contact Number" 
+        <input required placeholder="Contact Number" 
           type="number" 
           name="phone"
           value={address.phone}
           onChange={handleChange}
           className="mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black" />   
-        <input placeholder="State" 
+        <input required placeholder="State" 
           type="text" 
           name="state"  
           value={address.state}
@@ -107,7 +105,7 @@ const Form = () => {
         />  
         <button disabled={!isValid} onClick={handleCheckout}
           type="submit" 
-          className="py-2 px-6 bg-black text-white w-full font-semibold my-5 rounded-lg hover:bg-slate-400"
+          className={isValid ?   "py-2 px-6 bg-black text-white w-full font-semibold my-5 rounded-lg" : "bg-slate-400 py-2 px-6  text-white w-full font-semibold my-5 rounded-lg"}
         >
           Place Order
         </button>      
