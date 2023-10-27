@@ -6,6 +6,7 @@ Welcome to the Ecommerce project! This project is designed to showcase an ecomme
 
 - [Getting Started](#getting-started)
 - [Features](#features)
+- [Technology && library Used](#technology--library-used)
 - [Installation](#installation)
 - [Usage](#usage)
 
@@ -23,6 +24,25 @@ To get started with the Ecommerce project, follow the instructions below.
 - Deleting Cart Items: Allow users to remove items from their shopping cart.
 - Redux and Redux Persist: Utilize Redux and Redux Persist to manage and persist cart items across sessions.
 - Quantity-based Price Update: Automatically update the price of a product when the quantity is increased in the shopping cart.
+
+## Technology && library Used
+
+- HTML
+- CSS
+- JavaScript
+- React.js
+- Next.js
+- Tailwind CSS
+- Redux
+- Redux Persist
+- Hanko Authentication
+- TypeScript
+- Axios
+- React Slick
+- Framer Motion
+- Lottie React
+- React Icons
+- Stripe
 
 ## Installation
 
