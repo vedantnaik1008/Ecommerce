@@ -15,16 +15,24 @@ const Form = () => {
         pincode: '',
         state: ''
       })
+      const [isValid, setIsValid] = useState(false)
       const isOpen = useSelector((state: RootState) => state.form.isOpen)
       const dispatch = useDispatch()
             
       function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         const { name, value } = e.target
         setAddress(prev => ({ ...prev, [name]: value }))  
+        checkValidation()
+      }
+
+      function checkValidation() {
+        const allFields = Object.values(address).every(field => field)
+        setIsValid(allFields)
       }
       
       function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
+        
         console.log(address)
         // setAddress({ name: '', street: '', phone: '',city: '', pincode: '', state: '' })
       }
@@ -97,7 +105,7 @@ const Form = () => {
           onChange={handleChange}  
           className="mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black"
         />  
-        <button onClick={handleCheckout}
+        <button disabled={!isValid} onClick={handleCheckout}
           type="submit" 
           className="py-2 px-6 bg-black text-white w-full font-semibold my-5 rounded-lg hover:bg-slate-400"
         >
