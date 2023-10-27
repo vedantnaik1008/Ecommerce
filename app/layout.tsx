@@ -14,9 +14,6 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: 'QickKart',
   description: 'Ecommerce website built with Next.js',
-  icons: {
-    icon: '../public/favicon-32x32.png'
-  }
 }
 
 export default function RootLayout({
