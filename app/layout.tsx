@@ -24,7 +24,6 @@ export default function RootLayout({
   return (
     <ProviderComponent>
     <html lang="en">
-    
       <body className={`${roboto.className} bg-gray-300`}>  
         <ProviderRedux>
           {children}

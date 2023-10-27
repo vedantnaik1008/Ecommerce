@@ -8,7 +8,7 @@ import { redirect } from "next/navigation";
 import React, { useEffect } from 'react'
 import { Cookie } from "next/font/google";
 
-const CookieFont = Cookie({
+export const CookieFont = Cookie({
     subsets: ['latin'],
     display: 'swap',
     variable: '--font-family',
