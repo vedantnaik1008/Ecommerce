@@ -27,7 +27,7 @@ const DynamicPage = ({product}: Props) => {
     <div className='mx-auto min-[320px]:pt-[70px] md:pt-[100px]  text-black'>
       <div className="bg-white flex min-[320px]:flex-col md:flex-row justify-center items-center gap-14 p-5 min-[320px]:rounded-none md:rounded-xl min-[320px]:w-full md:w-[80%] mx-auto">
         <div className="w-[70%]">
-          <Image width={600} height={600} src={productImage} alt={'product-Image'} className='object-cover rounded-lg w-full'/>
+          <Image width={435} height={905} src={productImage} alt={'product-Image'} className='object-cover rounded-lg w-full' sizes='(min-width: 780px) calc(32.97vw - 40px), (min-width: 340px) calc(70vw - 28px), calc(900vw - 2684px)'/>
         </div>
         <div className='w-full'>
           <h2 className='font-bold mb-5 min-[320px]:text-2xl md:text-4xl'>{connect?.title}</h2>

@@ -25,7 +25,7 @@ const Card = ({res} : Props) => {
     <div className="p-[20px] bg-white shadow-2xl border-none rounded-xl h-full">
           <Link href={`/details/${res._id}?id=${res._id}`} className="" key={res._id}>
             <div  className="flex items-center flex-col justify-center h-[60%]">
-              <Image src={res.image} alt="items-image" width={200} height={200} className="md:hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden object-cover"/>
+              <Image src={res.image} sizes='200px' alt="items-image" width={200} height={245} className="md:hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden object-cover"/>
             </div>
             </Link>  
             <div className="flex justify-between items-center mt-[20px] h-[10%]">
