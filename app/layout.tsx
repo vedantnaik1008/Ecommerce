@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import ProviderComponent from '@/components/Provider'
 import ProviderRedux from '@/components/ProviderRedux'
-import Head from 'next/head'
  
 const roboto = Roboto({
   weight: '400',
@@ -15,6 +14,9 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: 'QickKart',
   description: 'Ecommerce website built with Next.js',
+  icons: {
+    icon: '../public/favicon-32x32.png'
+  }
 }
 
 export default function RootLayout({
@@ -25,9 +27,7 @@ export default function RootLayout({
   return (
     <ProviderComponent>
     <html lang="en">
-      <Head>
-        <link rel="icon" href="../public/appleLaptops/android-chrome-192x192.png" />
-      </Head>
+    
       <body className={`${roboto.className} bg-gray-300`}>  
         <ProviderRedux>
           {children}
