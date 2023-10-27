@@ -1,7 +1,8 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import Nav from './Nav'
-import Search from './Search'
+import dynamic from 'next/dynamic'
+const Search = dynamic(() => import('../components/Search'), { ssr: false })
 
 const Header = () => {
   const [show, setShow] = useState(false)

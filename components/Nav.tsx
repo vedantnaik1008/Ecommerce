@@ -1,7 +1,8 @@
+"use client"
 import dynamic from 'next/dynamic'
 const Cart = dynamic(() => import('../components/Cart'), { ssr: false })
 import Link from 'next/link'
-import Search from '../components/Search'
+const Search = dynamic(() => import('../components/Search'), { ssr: false })
 import Image from 'next/image'
 import Img from '../public/appleLaptops/quickkart-high-resolution-logo-color-on-transparent-background.png'
 
