@@ -50,7 +50,7 @@ const Form = () => {
       const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
       const handleCheckout = async() => {
         const stripe = await stripePromise
-        const response = await fetch(`http://localhost:3000/api/checkout`,{
+        const response = await fetch(`${process.env.NEXT_PUBLIC_URL}` + `/api/checkout`,{
           method: "POST",
           headers: {"Content-Type" : "application/json"},
           body: JSON.stringify({
@@ -61,7 +61,7 @@ const Form = () => {
 
         if(response.ok){
           dispatch(saveOrder(products))
-          const res = await axios.post('http://localhost:3000/api/order', ordering)
+          const res = await axios.post(`${process.env.NEXT_PUBLIC_URL}` + `/api/order`, ordering)
           console.log(res.data)
           stripe?.redirectToCheckout({ sessionId: data.id })
           dispatch(resetOrder())
