@@ -7,9 +7,12 @@ import Image from 'next/image'
 import Img from '../public/appleLaptops/quickkart-high-resolution-logo-color-on-transparent-background.png'
 
 
-const items = [{id: 1, name: "Home", link: '/dashboard'},
-{id: 2, name: "Shop", link: '/Shop'},
-{id: 3, name: "Profile", link: '/user'},]
+const items = [
+  {id: 1, name: "Home", link: '/dashboard'},
+  {id: 2, name: "Shop", link: '/Shop'},
+  {id: 3, name: "Profile", link: '/user'},
+  {id: 3, name: "Order", link: '/order'}
+]
 
 interface Props{
   show: boolean;

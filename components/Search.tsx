@@ -45,7 +45,7 @@ const Search = () => {
           <input
             value={input} name='search'
             onChange={Search} className='border-black border rounded-sm placeholder-black placeholder:Search p-3 w-full'/>
-            <button className=' px-[20px] py-[11px] text-white font-semibold rounded-l-none absolute right-[0%] top-[1px] md:top-[5px]' type='submit'><FcSearch size='26px'/></button>
+            <button className='px-[20px] py-[11px] text-white font-semibold rounded-l-none absolute right-[0%] top-[1px] md:top-[5px]' type='submit'><FcSearch size='26px'/></button>
         </label>
 
         {input && response && response.length > 0 ? (

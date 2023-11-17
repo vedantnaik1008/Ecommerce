@@ -1,3 +1,6 @@
+import { prisma } from "@/lib/db/prisma";
+import { Order } from "@prisma/client";
+
 export const electronicsData = [
     {_id: 21, price: 1382, rating: 4.5, title: "Apple MacBook Air with M2 Chip", image: "https://m.media-amazon.com/images/I/31t8zcyvapL._SY445_SX342_QL70_FMwebp_.jpg", 
     description: "Apple MacBook Air (M2, 2022) is a macOS laptop with a 13.60-inch display. It is powered by a Apple M2 processor and it comes with 8GB of RAM. The Apple MacBook Air (M2, 2022) packs 512GB of SSD storage.",quantity: 1, category: "electronics"}, 
@@ -299,3 +302,7 @@ export const combinedData = [
     ...productData,
     ...electronicsData,
 ];
+
+export const createOrder = async (orderData: Order) => {
+  return prisma.order.create({ data: orderData })
+}

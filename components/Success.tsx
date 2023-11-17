@@ -7,7 +7,6 @@ const DynamicLottie = dynamic(() => import('lottie-react'), {
 import successAnimation from '../public/Animation - 1698122931837.json';
 
 const Success = () => {
- 
 	return (
 		<section className="grid place-items-center h-screen w-full bg-white">
 			<div className="p-4 flex flex-col items-center justify-center">

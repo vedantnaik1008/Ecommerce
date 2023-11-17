@@ -28,3 +28,16 @@ export const useFetch = (url: string) => {
 
   return { response, loading, setResponse }
 }
+
+// const Orders = prisma.order.create({
+//   data: {
+//     title: 'my phone',
+//     category: 'electronics',
+//     description: 'phone is good',
+//     image: 'https://m.media-amazon.com/images/I/61jup8h--XL._SX679_.jpg',
+//     price: 232,
+//     rating: 4,
+//     quantity: 1
+//   }
+// })
+

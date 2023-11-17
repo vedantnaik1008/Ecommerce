@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { closeForm } from './reducers/formClick'
 import { loadStripe } from '@stripe/stripe-js'
 import { resetOrder, saveOrder } from './reducers/addItems'
+import axios from 'axios'
+
 const Form = () => {
     const products = useSelector((state: RootState)=> state.addToCart.product)
     const [address, setAddress] = useState({
@@ -35,11 +37,20 @@ const Form = () => {
         console.log(address)
       }
 
+      const ordering = products.map((res) => ({
+        title: res.title,
+        category: res.category,
+        description: res.description,
+        image: res.image,
+        price: res.price,
+        rating: res.rating,
+        quantity: res.quantity,
+      }))
       
       const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
       const handleCheckout = async() => {
         const stripe = await stripePromise
-        const response = await fetch(`https://quickkart3.netlify.app/api/checkout`,{
+        const response = await fetch(`http://localhost:3000/api/checkout`,{
           method: "POST",
           headers: {"Content-Type" : "application/json"},
           body: JSON.stringify({
@@ -47,8 +58,11 @@ const Form = () => {
           })
         })
         const data = await response.json()
+
         if(response.ok){
-          await dispatch(saveOrder(products))
+          dispatch(saveOrder(products))
+          const res = await axios.post('http://localhost:3000/api/order', ordering)
+          console.log(res.data)
           stripe?.redirectToCheckout({ sessionId: data.id })
           dispatch(resetOrder())
         }else{
