@@ -10,7 +10,6 @@ export async function POST(req: Request) {
 
   const orders = body
 
-      // Loop through each order and create it
       for (const order of orders) {
         const {title, category, description, image, price, rating, quantity} = order
 
