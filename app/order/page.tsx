@@ -1,5 +1,5 @@
 import { prisma } from '@/lib/db/prisma'
-import React from 'react'
+import React from 'react';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
