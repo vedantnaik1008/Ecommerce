@@ -7,7 +7,7 @@ import Button from '@/components/Button';
 import Link from 'next/link';
 
 const Order = async() => {
-    const order = await prisma.order.findMany()
+    const order = await prisma.order.findMany();
    
   return (
     <>
