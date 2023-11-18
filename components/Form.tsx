@@ -38,13 +38,13 @@ const Form = () => {
       }
 
       const ordering = products.map((res) => ({
-        title: res.title,
-        category: res.category,
-        description: res.description,
-        image: res.image,
-        price: res.price,
-        rating: res.rating,
-        quantity: res.quantity,
+        title: res.toObject().title,  
+        category: res.toObject().category,
+        description: res.toObject().description,
+        image: res.toObject().image,  
+        price: res.toObject().price,
+        rating: res.toObject().rating,  
+        quantity: res.toObject().quantity, 
       }))
       
       const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)

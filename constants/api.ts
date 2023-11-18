@@ -1,5 +1,4 @@
-import { prisma } from "@/lib/db/prisma";
-import { Order } from "@prisma/client";
+
 
 export const electronicsData = [
     {_id: 21, price: 1382, rating: 4.5, title: "Apple MacBook Air with M2 Chip", image: "https://m.media-amazon.com/images/I/31t8zcyvapL._SY445_SX342_QL70_FMwebp_.jpg", 
@@ -303,6 +302,3 @@ export const combinedData = [
     ...electronicsData,
 ];
 
-export const createOrder = async (orderData: Order) => {
-  return prisma.order.create({ data: orderData })
-}

@@ -3,7 +3,7 @@ import React from 'react'
 import { IoClose } from "react-icons/io5";
 import { useRouter } from 'next/navigation';
 
-type Orders = {
+export type Orders = {
     id: string;
     title: string;
     category: string

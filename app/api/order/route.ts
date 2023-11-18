@@ -1,11 +1,10 @@
-import { prisma } from "@/lib/db/prisma";
 import { NextResponse } from "next/server";
-
-
-
+import { Ecommerce } from "@/models/ecommerce";
+import dbConnect from "@/lib/mongodb";
 export async function POST(req: Request) {
+  await dbConnect();
   try {
-
+    
   const body = await req.json()
 
   const orders = body
@@ -13,7 +12,7 @@ export async function POST(req: Request) {
       for (const order of orders) {
         const {title, category, description, image, price, rating, quantity} = order
 
-        await prisma.order.create({ 
+        await Ecommerce.create({ 
           data: {
             title,
             category,
@@ -32,4 +31,5 @@ export async function POST(req: Request) {
     console.log("[ORDER_ERROR]", error);
     return new NextResponse("Internal Error", { status: 500 });
   }
+
 };

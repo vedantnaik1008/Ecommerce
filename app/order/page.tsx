@@ -1,13 +1,22 @@
-import { prisma } from '@/lib/db/prisma'
 import React from 'react'
 import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Button from '@/components/Button';
 import Link from 'next/link';
-
+import { Ecommerce } from '@/models/ecommerce';
+type Order = {
+  id: string;
+  title: string;
+  category: string
+  description: string
+  image: string;
+  price: number;
+  rating: number;
+  quantity: number
+}
 const Order = async() => {
-    const order = await prisma.order.findMany()
+    const order: Order[] = await Ecommerce.find()
    
   return (
     <>
