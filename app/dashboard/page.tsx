@@ -1,30 +1,21 @@
 'use client'
-import dynamic from 'next/dynamic'
-const DynamicSLiderCLothes = dynamic(() => import('@/components/SliderClothes'), {
- ssr: false
-})
-const DynamicSLiderElectronics = dynamic(() => import('@/components/SliderElectronics'), {
-  ssr: false
- })
- const DynamicBanner = dynamic(() => import('@/components/Banner'), {
-  ssr: false
- })
- const DynamicHeader = dynamic(() => import('@/components/Header'), {
-  ssr: false
- })
 import Trending from "../../components/Trending";
 import Footer from '../../components/Footer'
+import Banner from '@/components/Banner'
+import Header from '@/components/Header'
+import SliderElectronics from "@/components/SliderElectronics";
+import SliderClothes from "@/components/SliderClothes";
 
 const Dashboard = () => {
 
   return (
     <>
       <div className="bg-gray-300">
-        <DynamicHeader />
-        <DynamicBanner />
+        <Header />
+        <Banner />
         <Trending />
-        <DynamicSLiderCLothes />
-        <DynamicSLiderElectronics />
+        <SliderClothes />
+        <SliderElectronics />
         <Footer />
       </div>
     </>
