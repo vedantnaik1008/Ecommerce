@@ -18,8 +18,6 @@ const DynamicHeader = dynamic(() => import('@/components/Header'), {
  const DynamicFooter = dynamic(() => import('@/components/Footer'), {
   ssr: false
  })
- 
-import Trending from "../../components/Trending";
 
 const Dashboard = () => {
 
