@@ -51,6 +51,7 @@ const Form = () => {
       
       const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
       const handleCheckout = async() => {
+        try {
         const stripe = await stripePromise
         const response = await fetch(`${process.env.NEXT_PUBLIC_URL}` + `/api/checkout`,{
           method: "POST",
@@ -71,6 +72,10 @@ const Form = () => {
           alert("Try to buy less products")
           dispatch(saveOrder(products))
         }
+        } catch (error) {
+          console.log("payment failed", error);
+        }
+        
       }
 
   return (

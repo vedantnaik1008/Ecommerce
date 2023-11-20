@@ -25,10 +25,11 @@ const OrderDetail = () => {
    
     const fetchData = async () => {
             try {
-                setLoading(true)
-                const res = await axios.get('/api/getOrder');
-                setOrder(res.data);
-                setLoading(false)
+              setLoading(true)
+              const res = await fetch(`/api/getOrder`, { cache: 'no-store' });
+              const data = await res.json();
+              setOrder(data);
+              setLoading(false)
             } catch (error) {
                 console.log("getOrder fetch error" ,error);
             }
