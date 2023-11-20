@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { closeForm } from './reducers/formClick'
 import { loadStripe } from '@stripe/stripe-js'
-import { resetOrder, saveOrder } from './reducers/addItems'
+import { clearItems, resetOrder, saveOrder } from './reducers/addItems'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 
@@ -61,19 +61,14 @@ const Form = () => {
           })
         })
         const data = await response.json()
-
-        if(response.ok){
-          dispatch(saveOrder(products))
-          const res = await axios.post(`${process.env.NEXT_PUBLIC_URL}` + `/api/order`, ordering)
-          console.log(res.data)
-          stripe?.redirectToCheckout({ sessionId: data.id })
-          dispatch(resetOrder())
-        }else{
-          alert("Try to buy less products")
-          dispatch(saveOrder(products))
-        }
+        stripe?.redirectToCheckout({ sessionId: data.id })
+        const res = await axios.post(`${process.env.NEXT_PUBLIC_URL}` + `/api/order`, ordering)
+        console.log(res.data)
+        dispatch(clearItems())
         } catch (error) {
           console.log("payment failed", error);
+        }finally{
+          router.refresh()
         }
         
       }
