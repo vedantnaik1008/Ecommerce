@@ -65,12 +65,11 @@ const Form = () => {
           dispatch(saveOrder(products))
           const res = await axios.post(`${process.env.NEXT_PUBLIC_URL}` + `/api/order`, ordering)
           console.log(res.data)
-          router.refresh()
           stripe?.redirectToCheckout({ sessionId: data.id })
           dispatch(resetOrder())
         }else{
           alert("Try to buy less products")
-          router.refresh()
+          dispatch(saveOrder(products))
         }
       }
 
