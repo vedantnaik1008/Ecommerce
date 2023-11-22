@@ -67,10 +67,7 @@ const Form = () => {
         dispatch(clearItems())
         } catch (error) {
           console.log("payment failed", error);
-        }finally{
-          router.refresh()
         }
-        
       }
 
   return (

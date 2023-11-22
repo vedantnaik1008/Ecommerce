@@ -4,9 +4,9 @@ import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Link from 'next/link';
-import axios from 'axios';
 import { IoClose } from 'react-icons/io5';
 import Loading from './Loading';
+import { useRouter } from 'next/navigation';
 
 interface Order{
   id: string;
@@ -22,7 +22,8 @@ interface Order{
 const OrderDetail = () => {
     const [order, setOrder] =  useState<Order[]>([])
     const [loading, setLoading] = useState(false)
-   
+    const router = useRouter()
+    
     const fetchData = async () => {
             try {
               setLoading(true)
@@ -32,19 +33,24 @@ const OrderDetail = () => {
               setLoading(false)
             } catch (error) {
                 console.log("getOrder fetch error" ,error);
+            }finally{
+              router.refresh()
             }
     }
 
     const deleteOrder = async (id: string) => {
         try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_URL}` + `/api/deleteOrder/${id}`, {
-            method: "DELETE"
+            method: "DELETE",
+            cache: 'no-store' 
         })
         if(res.ok){
             alert("Your order canceled successfully")
         }
         } catch (error) {
             alert("failed to cancel your order")
+        }finally{
+          router.refresh()
         }
         fetchData()
     }
