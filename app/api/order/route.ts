@@ -10,11 +10,10 @@ export async function POST(req: Request) {
   const orders = body
 
       for (const order of orders) {
-        const {id, title, category, description, image, price, rating, quantity} = order
+        const {title, category, description, image, price, rating, quantity} = order
 
         await prisma.order.create({ 
           data: {
-            id,
             title,
             category,
             description,
