@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { closeForm } from './reducers/formClick'
 import { loadStripe } from '@stripe/stripe-js'
-import { clearItems, resetOrder, saveOrder } from './reducers/addItems'
+import { clearItems } from './reducers/addItems'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 
