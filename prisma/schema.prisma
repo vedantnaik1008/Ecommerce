@@ -20,6 +20,7 @@ model Product {
 
 model Order {
   id String @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @unique
   title String
   category String
   description String
