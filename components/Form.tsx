@@ -48,6 +48,18 @@ const Form = () => {
         rating: res.rating,
         quantity: res.quantity,
       }))
+
+      const handlePost = async() => {
+        try {
+          const res = await axios.post(`${process.env.NEXT_PUBLIC_URL}` + `/api/order`, ordering)
+          const data = res.data
+          console.log(data);
+        } catch (error) {
+          console.log(error);
+        }finally{
+          router.refresh()
+        }
+      } 
       
       const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
       const handleCheckout = async() => {
@@ -62,8 +74,7 @@ const Form = () => {
         })
         const data = await response.json()
         stripe?.redirectToCheckout({ sessionId: data.id })
-        const res = await axios.post(`${process.env.NEXT_PUBLIC_URL}` + `/api/order`, ordering)
-        console.log(res.data)
+        await handlePost()
         dispatch(clearItems())
         } catch (error) {
           console.log("payment failed", error);
