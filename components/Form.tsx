@@ -51,12 +51,8 @@ const Form = () => {
 
       const handlePost = async() => {
         try {
-          const res = await fetch(`${process.env.NEXT_PUBLIC_URL}` + `/api/order`, {
-            method: "POST",
-          headers: {"Content-Type" : "application/json"},
-          body: JSON.stringify(ordering)
-          })
-          const data = res.json()
+          const res = await axios.post(`${process.env.NEXT_PUBLIC_URL}` + `/api/order`, ordering)
+          const data = res.data
           console.log(data);
         } catch (error) {
           console.log(error);
@@ -78,7 +74,8 @@ const Form = () => {
         })
         const data = await response.json()
         stripe?.redirectToCheckout({ sessionId: data.id })
-        handlePost()
+        await handlePost()
+        dispatch(clearItems())
         } catch (error) {
           console.log("payment failed", error);
         }
