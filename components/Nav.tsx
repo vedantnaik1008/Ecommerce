@@ -11,7 +11,7 @@ const items = [
   {id: 1, name: "Home", link: '/dashboard'},
   {id: 2, name: "Shop", link: '/Shop'},
   {id: 3, name: "Profile", link: '/user'},
-  {id: 3, name: "Order", link: '/order'}
+  {id: 4, name: "Order", link: '/order'}
 ]
 
 interface Props{
