@@ -6,7 +6,7 @@ async function fetchData ()  {
     throw new Error('failed to fetch GetOrders')
   }
 
-return res.json()
+  return res.json()
 }
 
 

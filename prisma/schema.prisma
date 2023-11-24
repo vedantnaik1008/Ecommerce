@@ -7,35 +7,21 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Product {
+model Cart {
   id String @id @default(auto()) @map("_id") @db.ObjectId
-  title String
-  category String
-  description String
-  image String
-  price Int
-  rating Int
-  quantity Int
 }
 
 model Order {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  title String
-  category String
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  category    String
   description String
-  image String
-  price Int
-  rating Int
-  quantity Int
+  image       String
+  price       BigInt
+  quantity    BigInt
+  rating      BigInt
+  title       String
 }
 
-model Cart {
+model Product {
   id String @id @default(auto()) @map("_id") @db.ObjectId
-  title String
-  category String
-  description String
-  image String
-  price Int
-  rating Int
-  quantity Int
 }

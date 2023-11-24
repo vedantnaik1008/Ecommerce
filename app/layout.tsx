@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import ProviderComponent from '@/components/Provider'
 import ProviderRedux from '@/components/ProviderRedux'
+import { ClerkProvider } from '@clerk/nextjs'
  
 const roboto = Roboto({
   weight: '400',
@@ -22,6 +23,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <ClerkProvider>
     <ProviderComponent>
     <html lang="en">
       <body className={`${roboto.className} bg-gray-300`}>  
@@ -31,5 +33,6 @@ export default function RootLayout({
       </body>
     </html>
     </ProviderComponent> 
+    </ClerkProvider>
   )
 }
