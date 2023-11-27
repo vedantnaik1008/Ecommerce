@@ -7,6 +7,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+
+
 model Cart {
   id String @id @default(auto()) @map("_id") @db.ObjectId
 }
@@ -16,9 +18,9 @@ model Order {
   category    String
   description String
   image       String
-  price       BigInt
-  quantity    BigInt
-  rating      BigInt
+  price       Int
+  quantity    Int
+  rating      Int
   title       String
 }
 
