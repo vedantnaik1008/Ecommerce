@@ -7,10 +7,8 @@ export async function POST(req: Request) {
   
   const body = await req.json()
 
-  const orders = body
-
-      for (const order of orders) {
-        const {id} = order
+  
+        const {id} = body
 
         const createOrder = await prisma.user.findUnique({
           where: {
@@ -18,7 +16,6 @@ export async function POST(req: Request) {
           }
         })
         return NextResponse.json(createOrder)
-      }
 
         
     
