@@ -9,8 +9,9 @@ datasource db {
 
 
 
-model Cart {
+model User {
   id String @id @default(auto()) @map("_id") @db.ObjectId
+  order Order[]
 }
 
 model Order {
@@ -22,8 +23,14 @@ model Order {
   quantity    Int
   rating      Int
   title       String
+  userId String @db.ObjectId
+  User User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Product {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model Cart {
   id String @id @default(auto()) @map("_id") @db.ObjectId
 }

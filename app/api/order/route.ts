@@ -10,22 +10,17 @@ export async function POST(req: Request) {
   const orders = body
 
       for (const order of orders) {
-        const {title, category, description, image, price, rating, quantity} = order
+        const {id} = order
 
-        await prisma.order.create({ 
-          data: {
-            title,
-            category,
-            description,
-            image,
-            price,
-            rating,
-            quantity,
+        const createOrder = await prisma.user.findUnique({
+          where: {
+            id
           }
-        }) 
+        })
+        return NextResponse.json(createOrder)
       }
 
-        return NextResponse.json(orders)
+        
     
   } catch (error) {
     console.log("[ORDER_ERROR]", error);

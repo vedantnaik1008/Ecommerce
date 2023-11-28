@@ -5,6 +5,7 @@ import Link from 'next/link'
 const Search = dynamic(() => import('../components/Search'), { ssr: false })
 import Image from 'next/image'
 import Img from '../public/appleLaptops/quickkart-high-resolution-logo-color-on-transparent-background.png'
+import UserProfileAcc  from '@/components/UserProfileAcc'
 
 
 const items = [
@@ -30,6 +31,7 @@ const Nav = ({show, setShow} : Props) => {
               <Link href={item.link}>{item.name}</Link>
             </li>
           ))}
+        <UserProfileAcc />
         <Cart />
   </ul>  
 </div>
