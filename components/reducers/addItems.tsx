@@ -5,11 +5,13 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 interface AllItems{
     product: Product[];
     totalPrice: number;
+    orderData: [];
 }
 
 const initialState: AllItems = {
     product: [] ,
-    totalPrice: 0
+    totalPrice: 0,
+    orderData: []
    };
 
 
@@ -57,13 +59,13 @@ const addItems = createSlice({
             item.quantity -= action.payload.quantity
             state.totalPrice = calculateTotalPrice(state.product);
         },
-        saveOrder: (state, action: PayloadAction<Product[]>) => {
-          state.product = action.payload
-          state.totalPrice = calculateTotalPrice(state.product);
+        saveOrder: (state, action) => {
+          state.orderData = action.payload
+          state.totalPrice = calculateTotalPrice(state.orderData);
         },
         resetOrder: (state) => {
-          state.product = []
-          state.totalPrice = calculateTotalPrice(state.product);
+          state.orderData = []
+          state.totalPrice = calculateTotalPrice(state.orderData);
       },
         
       } 

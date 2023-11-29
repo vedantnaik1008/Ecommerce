@@ -10,7 +10,7 @@ import Img from '../public/appleLaptops/quickkart-high-resolution-logo-color-on-
 const items = [{id: 1, name: "Home", link: '/dashboard'},
 {id: 2, name: "Shop", link: '/Shop'},
 {id: 3, name: "Profile", link: '/user'},
-// {id: 4, name: "Order", link: '/order'},
+{id: 4, name: "Order", link: '/order'},
 ]
 
 interface Props{

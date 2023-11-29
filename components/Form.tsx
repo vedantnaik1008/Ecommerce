@@ -38,8 +38,9 @@ const Form = () => {
       
       const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
       const handleCheckout = async() => {
-        const stripe = await stripePromise
-        const response = await fetch(`https://quickkart3.netlify.app/api/checkout`,{
+        try {
+          const stripe = await stripePromise
+        const response = await fetch(`${process.env.NEXT_PUBLIC_URL}`+`/api/checkout`,{
           method: "POST",
           headers: {"Content-Type" : "application/json"},
           body: JSON.stringify({
@@ -48,11 +49,14 @@ const Form = () => {
         })
         const data = await response.json()
         if(response.ok){
-          await dispatch(saveOrder(products))
           stripe?.redirectToCheckout({ sessionId: data.id })
-          dispatch(resetOrder())
+          dispatch(saveOrder(products))
         }else{
           alert("Try to buy less products")
+        }
+        } catch (error) {
+          console.log(error);
+          dispatch(resetOrder())
         }
       }
 
