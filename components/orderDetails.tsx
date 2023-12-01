@@ -14,8 +14,8 @@ const OrderDetails = () => {
     <div className="h-[100dvh] w-[90%] mx-auto">
       {order.length > 0 ? (
         <div>
-          <div className="pt-48 grid grid-cols-5 uppercase text-sm font-medium  border-b-[1px] border-b-gray-300">
-            <p className="col-span-3">Items</p>
+          <div className="pt-48 grid grid-cols-4 uppercase text-sm font-medium  border-b-[1px] border-b-gray-300 ">
+            <p className="col-span-2">Items</p>
             <p className="flex items-center justify-center">Quantity</p>
             <p className="flex items-center justify-center">Amount</p>
             <p>{order.length}</p>
@@ -24,9 +24,9 @@ const OrderDetails = () => {
             {order.map((item: Product) => (
               <div
                 key={item._id}
-                className="py-2 border-b-[1px] border-gray-300 grid grid-cols-5 items-center"
+                className="py-2 border-b-[1px] border-gray-300 grid grid-cols-4 items-center"
               >
-                <div className="col-span-3 flex items-start gap-2 text-sm">
+                <div className="col-span-2 flex items-start gap-2 text-sm">
                   <Image
                     src={item.image}
                     alt="product image"
@@ -34,11 +34,11 @@ const OrderDetails = () => {
                     height={500}
                     className="w-12 h-12 object-cover"
                   />
-                  <div>
+                  {/* <div>
                     <h3 className="text-base font-semibold mb-.5">
                       {item.title}
                     </h3>
-                  </div>
+                  </div> */}
                 </div>
                 <p className="flex items-center justify-center">
                   {item.quantity}
@@ -53,13 +53,13 @@ const OrderDetails = () => {
             <p>Payment Details</p>
           </div>
           <p className="py-2">
-            Total Paid {totalPrice}
+            Total Paid ${totalPrice.toFixed(0)}
             <span className="text-xl font-semibold">
             </span>
           </p>
           <button
             onClick={() => dispatch(resetOrder())}
-            className="mt-5 border-[1px] border-gray-500 py-1 px-4 font-medium rounded-md hover:border-orange-600 cursor-pointer duration-200"
+            className="mt-5  text-white bg-black py-1 px-4 font-semibold rounded-md cursor-pointer duration-200"
           >
             Reset Order
           </button>
