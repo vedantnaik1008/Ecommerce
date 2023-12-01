@@ -3,23 +3,20 @@ import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
     const body = await req.json();
-    const {
-        order, category, description, image, price, quantity, rating, title, userId
-    } = body;
+    const {title, image, description, price, quantity, rating, category, User} = body
     try {
+        
         const order = await prisma.order.create({
             data: {
-              User: {
-                connect: { id: userId } 
-              },  
-              category,
-              description,
-              image, 
-              price,   
-              quantity,   
-              rating,   
-              title  
-            },
+                title,
+                image,
+                description,
+                price,
+                quantity,
+                rating,
+                category,
+                User
+            }
           });
 
        
