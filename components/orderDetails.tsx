@@ -8,7 +8,7 @@ import { Product } from "@/hooks/useFetch";
 
 const OrderDetails = () => {
   const order = useSelector((state: RootState) => state.addToCart.orderData)
-  const totalPrice = useSelector((state: RootState) => state.addToCart.totalPrice);
+  const totalPrice = useSelector((state: RootState) => state.addToCart.totalOrderPrice);
   const dispatch = useDispatch();
   return (
     <div className="h-[100dvh] w-[90%] mx-auto">
