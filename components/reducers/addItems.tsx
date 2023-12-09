@@ -1,19 +1,16 @@
 import { Product } from "../../hooks/useFetch";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-
 interface AllItems{
     product: Product[];
     totalPrice: number;
-    orderData: [];
-    totalOrderPrice: number;
+    orderData: Product[];
 }
 
 const initialState: AllItems = {
     product: [] ,
     totalPrice: 0,
-    orderData: [],
-    totalOrderPrice: 0
+    orderData: []
    };
 
 
@@ -61,13 +58,20 @@ const addItems = createSlice({
             item.quantity -= action.payload.quantity
             state.totalPrice = calculateTotalPrice(state.product);
         },
-        saveOrder: (state, action) => {
-          state.orderData = action.payload
-          state.totalOrderPrice= calculateTotalPrice(state.orderData);
+        saveOrder: (state, action: PayloadAction<Product[]>) => {
+          action.payload.forEach((item) => {
+            const existingItem = state.orderData.find((orderItem) => orderItem._id === item._id);
+            if (existingItem) {
+              existingItem.quantity += item.quantity;
+            } else {
+              state.orderData.push(item);
+            }
+          })
+          state.totalPrice = calculateTotalPrice(state.orderData);
         },
         resetOrder: (state) => {
           state.orderData = []
-          state.totalOrderPrice = calculateTotalPrice(state.orderData);
+          state.totalPrice = calculateTotalPrice(state.orderData);
       },
         
       } 

@@ -2,18 +2,18 @@
 import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
 import Link from "next/link";
-import addItems, { resetOrder } from "./reducers/addItems";
+import { resetOrder } from "./reducers/addItems";
 import { RootState } from "@/store";
 import { Product } from "@/hooks/useFetch";
 
 const OrderDetails = () => {
   const order = useSelector((state: RootState) => state.addToCart.orderData)
-  const totalPrice = useSelector((state: RootState) => state.addToCart.totalOrderPrice);
+  const totalPrice = useSelector((state: RootState) => state.addToCart.totalPrice);
   const dispatch = useDispatch();
   return (
-    <div className="h-[100dvh] w-[90%] mx-auto">
+    <div className="h-full w-[90%] mx-auto">
       {order.length > 0 ? (
-        <div>
+        <div className="">
           <div className="pt-48 grid grid-cols-4 uppercase text-sm font-medium  border-b-[1px] border-b-gray-300 ">
             <p className="col-span-2">Items</p>
             <p className="flex items-center justify-center">Quantity</p>

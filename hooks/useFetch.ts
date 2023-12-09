@@ -28,3 +28,4 @@ export const useFetch = (url: string) => {
 
   return { response, loading, setResponse }
 }
+

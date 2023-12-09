@@ -6,7 +6,7 @@ import { closeForm } from './reducers/formClick'
 import { loadStripe } from '@stripe/stripe-js'
 import { resetOrder, saveOrder } from './reducers/addItems'
 const Form = () => {
-    const products = useSelector((state: RootState)=> state.addToCart.product)
+    const { product } = useSelector((state: RootState)=> state.addToCart)
     const [address, setAddress] = useState({
         name: '',
         street: '',
@@ -34,7 +34,6 @@ const Form = () => {
         
         console.log(address)
       }
-
       
       const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
       const handleCheckout = async() => {
@@ -44,13 +43,13 @@ const Form = () => {
           method: "POST",
           headers: {"Content-Type" : "application/json"},
           body: JSON.stringify({
-            items: products,
+            items: product,
           })
         })
         const data = await response.json()
         if(response.ok){
           stripe?.redirectToCheckout({ sessionId: data.id })
-          dispatch(saveOrder(products))
+          dispatch(saveOrder(product))
         }else{
           alert("Try to buy less products")
         }
