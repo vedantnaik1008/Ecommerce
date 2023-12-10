@@ -5,12 +5,14 @@ interface AllItems{
     product: Product[];
     totalPrice: number;
     orderData: Product[];
+    totalOrderPrice: number;
 }
 
 const initialState: AllItems = {
     product: [] ,
     totalPrice: 0,
-    orderData: []
+    orderData: [],
+    totalOrderPrice: 0
    };
 
 
@@ -67,7 +69,7 @@ const addItems = createSlice({
               state.orderData.push(item);
             }
           })
-          state.totalPrice = calculateTotalPrice(state.orderData);
+          state.totalOrderPrice = calculateTotalPrice(state.orderData);
         },
         resetOrder: (state) => {
           state.orderData = []
