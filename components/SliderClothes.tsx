@@ -87,7 +87,7 @@ const SliderClothes = () => {
 
   return (
       <div className="my-[70px] w-[90%] mx-auto">
-        <div className="flex min-[320px]:justify-between md:justify-normal gap-3 items-end mb-5">
+        <div className="flex min-[320px]:justify-between gap-3 items-end mb-5">
             <h3 className="font-bold text-2xl text-black">
                 Clothes
             </h3>
