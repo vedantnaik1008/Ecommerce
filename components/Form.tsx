@@ -4,16 +4,16 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { closeForm } from './reducers/formClick'
 import { loadStripe } from '@stripe/stripe-js'
-import { resetOrder, saveOrder } from './reducers/addItems'
+import { resetOrder, saveOrder, Address } from './reducers/addItems'
 
 const Form = () => {
     const { product } = useSelector((state: RootState)=> state.addToCart)
     const [address, setAddress] = useState({
         name: '',
         street: '',
-        phone: '',
+        phone: 0,
         city: '',
-        pincode: '',
+        pincode: 0,
         state: ''
       })
       const [isValid, setIsValid] = useState(false)
@@ -32,7 +32,7 @@ const Form = () => {
       
       function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
-        
+        dispatch(Address(address))
         console.log(address)
       }
       

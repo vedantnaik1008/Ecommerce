@@ -1,18 +1,36 @@
 import { Product } from "../../hooks/useFetch";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
+type Address = {
+  name: string;
+  city: string;
+  street: string;
+  state: string;
+  phone: number;
+  pincode: number;
+}
+
 interface AllItems{
     product: Product[];
     totalPrice: number;
     orderData: Product[];
     totalOrderPrice: number;
+    saveAddress: Address;
 }
 
 const initialState: AllItems = {
     product: [] ,
     totalPrice: 0,
     orderData: [],
-    totalOrderPrice: 0
+    totalOrderPrice: 0,
+    saveAddress: {
+        name: "",
+        city: "",
+        street: "",
+        state: "",
+        phone: 0,
+        pincode: 0
+    }
    };
 
 
@@ -75,10 +93,12 @@ const addItems = createSlice({
           state.orderData = []
           state.totalPrice = calculateTotalPrice(state.orderData);
       },
-        
-      } 
+      Address: (state, action: PayloadAction<Address>) => {
+        state.saveAddress = action.payload
+      }
+    } 
 })
 
-export const {addItem, removeItem, clearItems, increaseQuantity, decreaseQuantity, saveOrder, resetOrder} = addItems.actions
+export const {addItem, Address ,removeItem, clearItems, increaseQuantity, decreaseQuantity, saveOrder, resetOrder} = addItems.actions
 
 export default addItems.reducer;
