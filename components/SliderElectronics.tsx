@@ -1,8 +1,6 @@
 "use client"
 import Image from 'next/image'
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import { PiCaretLeftLight, PiCaretRightLight } from 'react-icons/pi';
 import RatingStars from './RatingStars';
 import Link from 'next/link';

@@ -5,6 +5,8 @@ import ProviderComponent from '@/components/Provider'
 import ProviderRedux from '@/components/ProviderRedux'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
  
 const roboto = Roboto({
   weight: '400',

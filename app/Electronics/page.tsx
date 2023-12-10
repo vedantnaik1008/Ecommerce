@@ -1,4 +1,8 @@
-import Electronics from '../../components/Electronics'
+'use client'
+import dynamic from 'next/dynamic'
+const Electronics = dynamic(() => import('@/components/Electronics'), {
+  ssr: false
+})
 
 const Page = () => {
   return (

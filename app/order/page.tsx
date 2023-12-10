@@ -1,14 +1,13 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import OrderDetails from "@/components/orderDetails";
-import React from "react";
+'use client'
+import dynamic from 'next/dynamic'
+const OrderDetails = dynamic(() => import('@/components/orderDetails'), {
+  ssr: false
+})
 
 const OrderPage = () => {
   return (
     <>
-        <Header />
-            <OrderDetails />
-        <Footer />    
+      <OrderDetails />
     </>
   );
 };

@@ -1,10 +1,8 @@
-import { Metadata } from 'next'
-import AllProducts from '../../components/AllProducts'
-
-const metadata: Metadata = {
-  title: 'QickKart',
-  description: 'Ecommerce website built with Next.js',
-}
+'use client'
+import dynamic from 'next/dynamic'
+const AllProducts = dynamic(() => import('@/components/AllProducts'), {
+  ssr: false
+})
 
 const Page = () => {
   return (

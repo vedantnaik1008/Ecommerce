@@ -6,8 +6,10 @@ const DynamicSLiderCLothes = dynamic(() => import('@/components/SliderClothes'),
 const DynamicSLiderElectronics = dynamic(() => import('@/components/SliderElectronics'), {
   ssr: false
 })
+const Trending = dynamic(() => import('@/components/Trending'), {
+  ssr: false
+})
 import Banner from '@/components/Banner'
-import Trending from "../../components/Trending";
 
 const Dashboard = () => {
 

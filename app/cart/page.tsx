@@ -3,21 +3,15 @@ import dynamic from 'next/dynamic'
 const DynamicForm = dynamic(() => import('@/components/Form'), {
  ssr: false
 })
-
+const DynamicPriceList = dynamic(() => import('@/components/PriceList'), {
+  ssr: false
+ })
 import Image from 'next/image'
 import {FaMinus, FaPlus} from 'react-icons/fa'
 import Link from 'next/link'
-import PriceList from '../../components/PriceList'
 import { RootState } from '@/store'
 import { useSelector, useDispatch } from 'react-redux'
 import { clearItems, decreaseQuantity, increaseQuantity, removeItem } from '../../components/reducers/addItems'
-import { Metadata } from 'next'
-
-const metadata: Metadata = {
-  title: 'QickKart',
-  description: 'Ecommerce website built with Next.js',
-}
-
 
 const Page = () => {
     const products = useSelector((state: RootState)=> state.addToCart.product)
@@ -71,14 +65,13 @@ const Page = () => {
                                   <button onClick={()=> dispatch(removeItem(res._id))} className='py-2 px-4 rounded-lg border border-gray-500 text-black font-semibold hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-300 ease-in-out'>Delete</button>
                                 </div>
                               </div>
-                              {/* <div className=""><button className="py-2 px-6 bg-black text-white w-full font-semibold my-3 rounded-lg hover:bg-slate-400">Buy</button></div> */}
                             </div>
                           </div>
                         </div>
                       ))}
               </div>
               <div className="sm:w-full md:w-full lg:w-[30%] flex flex-col  gap-y-5 relative">
-                <PriceList />
+                <DynamicPriceList />
                 <DynamicForm />
               </div>
             </div>
