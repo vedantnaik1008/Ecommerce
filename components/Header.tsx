@@ -26,7 +26,6 @@ const Header = () => {
         <div className="md:hidden w-[90%] mx-auto">
           <Search  />
         </div>
-         
         <Nav show={show} setShow={setShow}/>
       </div>
     </header>

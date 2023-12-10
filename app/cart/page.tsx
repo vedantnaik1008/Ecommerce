@@ -3,12 +3,11 @@ import dynamic from 'next/dynamic'
 const DynamicForm = dynamic(() => import('@/components/Form'), {
  ssr: false
 })
+
 import Image from 'next/image'
 import {FaMinus, FaPlus} from 'react-icons/fa'
 import Link from 'next/link'
 import PriceList from '../../components/PriceList'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
 import { RootState } from '@/store'
 import { useSelector, useDispatch } from 'react-redux'
 import { clearItems, decreaseQuantity, increaseQuantity, removeItem } from '../../components/reducers/addItems'
@@ -32,7 +31,6 @@ const Page = () => {
 
   return (
     <>
-    <Header />
     {products.length === 0 ? (
         <div className="flex flex-col gap-y-6 items-center justify-center bg-white h-[100vh] px-4">
           <p className="w-full p-2 text-center font-bold">
@@ -84,7 +82,6 @@ const Page = () => {
                 <DynamicForm />
               </div>
             </div>
-            <Footer />
             </>
           }         
       </>

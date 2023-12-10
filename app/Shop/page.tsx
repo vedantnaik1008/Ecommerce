@@ -1,8 +1,5 @@
 import { Metadata } from 'next'
 import AllProducts from '../../components/AllProducts'
-import Footer from '../../components/Footer'
-import Header from '../../components/Header'
-import React from 'react'
 
 const metadata: Metadata = {
   title: 'QickKart',
@@ -12,9 +9,7 @@ const metadata: Metadata = {
 const Page = () => {
   return (
     <>
-      <Header />
       <AllProducts />
-      <Footer />
     </>
   )
 }
