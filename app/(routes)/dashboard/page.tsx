@@ -16,19 +16,15 @@ const Trending = dynamic(() => import('@/components/Trending'), {
     ssr: false,
 });
 import Banner from '@/components/Banner';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 const Dashboard = () => {
     return (
         <>
             <div className='bg-gray-300'>
-                <Header />
                 <Banner />
                 <Trending />
                 <DynamicSLiderCLothes />
                 <DynamicSLiderElectronics />
-                <Footer />
             </div>
         </>
     );

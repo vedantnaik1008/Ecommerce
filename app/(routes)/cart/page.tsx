@@ -11,7 +11,7 @@ import {FaMinus, FaPlus} from 'react-icons/fa'
 import Link from 'next/link'
 import { RootState } from '@/store'
 import { useSelector, useDispatch } from 'react-redux'
-import { clearItems, decreaseQuantity, increaseQuantity, removeItem } from '../../components/reducers/addItems'
+import { clearItems, decreaseQuantity, increaseQuantity, removeItem } from '../../../components/reducers/addItems'
 
 const Page = () => {
     const products = useSelector((state: RootState)=> state.addToCart.product)
