@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { closeForm } from './reducers/formClick'
 import { loadStripe } from '@stripe/stripe-js'
 import { resetOrder, saveOrder } from './reducers/addItems'
+
 const Form = () => {
     const { product } = useSelector((state: RootState)=> state.addToCart)
     const [address, setAddress] = useState({
@@ -18,7 +19,7 @@ const Form = () => {
       const [isValid, setIsValid] = useState(false)
       const isOpen = useSelector((state: RootState) => state.form.isOpen)
       const dispatch = useDispatch()
-            
+
       function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         setAddress(prev => ({ ...prev, [e.target.name]: e.target.value }))  
         checkValidation()
@@ -58,6 +59,8 @@ const Form = () => {
           dispatch(resetOrder())
         }
       }
+     
+     
 
   return (
     <div className={isOpen ? 'bg-white rounded-lg p-[20px] absolute top-0 left-0 z-10 w-full' :'hidden' }>

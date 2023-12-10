@@ -11,7 +11,7 @@ const OrderDetails = () => {
   const totalPrice = useSelector((state: RootState) => state.addToCart.totalPrice);
   const dispatch = useDispatch();
   return (
-    <div className="h-full w-[90%] mx-auto">
+    <div className="h-full w-[90%] mx-auto pb-40">
       {order.length > 0 ? (
         <div className="">
           <div className="pt-48 grid grid-cols-4 uppercase text-sm font-medium  border-b-[1px] border-b-gray-300 ">
@@ -34,11 +34,6 @@ const OrderDetails = () => {
                     height={500}
                     className="w-12 h-12 object-cover"
                   />
-                  {/* <div>
-                    <h3 className="text-base font-semibold mb-.5">
-                      {item.title}
-                    </h3>
-                  </div> */}
                 </div>
                 <p className="flex items-center justify-center">
                   {item.quantity}
