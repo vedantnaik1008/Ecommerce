@@ -20,7 +20,7 @@ const OrderDetails = () => {
         <div className="pt-48 w-[90%] mx-auto">
           <div className="flex flex-col justify-center items-center mb-20">
             <h2 className="text-orange-600 text-3xl md:text-5xl lg:text-6xl mb-5">Thanks for shopping!</h2>
-            <p className="text-black text-center font-medium">Hi {saveAddress.name}, we have recieved your orderData and are getting it ready to be shipped. <br className=""/> We will notify you when it&apos;s on its way!</p>
+            <p className="text-black text-center font-medium">Hi {saveAddress.name}, we have recieved your order and are getting it ready to be shipped. <br className=""/> We will notify you when it&apos;s on its way!</p>
           </div>
           <div className="flex sm:flex-col md:flex-row justify-between items-center w-full md:mx-auto md:w-[70%] mb-28 relative">
             <hr className="bg-gray-400 sm:w-[70%] four:w-[50%] six:w-[40%] overflow-hidden md:w-[90%] sm:rotate-90 md:rotate-180 top-[40%] z-[1] sm:bottom-0 md:right-[22px] h-[2px] absolute" />
@@ -72,9 +72,10 @@ const OrderDetails = () => {
           <div className="text-lg font-medium py-2 border-t-[1px] border-b-gray-500">
            <PaymentAddressDetails />
           </div>
-          <p className="py-2">
-            Total Paid ${totalOrderPrice.toFixed(0)}
-            <span className="text-xl font-semibold">
+          <p className="text-[17px] font-bold">
+            Total Paid $
+            <span className="font-semibold">
+            {totalOrderPrice.toFixed(0)}
             </span>
           </p>
           <button
@@ -91,7 +92,7 @@ const OrderDetails = () => {
         <div className='h-[100dvh] mx-auto w-[90%] flex flex-col justify-center items-center'>
         <p className="font-extrabold text-center text-xl mb-5">You haven&apos;t placed any orders yet. Get shopping!</p>
         <Link href={"/Shop"}>
-          <button className="text-white py-2 px-6 rounded-md bg-black duration-200">
+          <button className="text-white py-4 px-6 rounded-md bg-black duration-200">
             Return to Shop
           </button>
         </Link>
