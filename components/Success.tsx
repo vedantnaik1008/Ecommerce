@@ -19,7 +19,7 @@ const Success = () => {
 				<h5 className="font-bold">Have a wonderfull day!</h5>
 
 				<button className="border  px-4 py-2 rounded-md text-white mt-4 capitalize group bg-black font-semibold">
-					<Link href='/dashboard'>Go back to home</Link>
+					<Link href='/order'>View Orders</Link>
 				</button>
 			</div>
 		</section>

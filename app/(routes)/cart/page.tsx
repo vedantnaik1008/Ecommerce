@@ -26,7 +26,7 @@ const Page = () => {
   return (
     <>
     {products.length === 0 ? (
-        <div className="flex flex-col gap-y-6 items-center justify-center bg-white h-[100vh] px-4">
+        <div className="flex flex-col gap-y-2 items-center justify-center bg-white h-[100vh] px-4">
           <p className="w-full p-2 text-center font-bold">
             Your product cart is currently empty
           </p>
