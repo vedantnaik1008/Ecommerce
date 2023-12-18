@@ -114,7 +114,7 @@ const OrderDetails = () => {
                     <p className='font-extrabold text-center text-xl mb-5'>
                         You haven&apos;t placed any orders yet. Get shopping!
                     </p>
-                    <Link href={'/shop'}>
+                    <Link href={'/Shop'}>
                         <button className='text-white py-4 px-6 rounded-md bg-black duration-200'>
                             Return to Shop
                         </button>

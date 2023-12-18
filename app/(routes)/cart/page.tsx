@@ -35,7 +35,7 @@ const Page = () => {
                     <p className='w-full p-2 text-center font-bold'>
                         Your product cart is currently empty
                     </p>
-                    <Link href={'/shop'}>
+                    <Link href={'/Shop'}>
                         <button className='text-white py-2 px-6 rounded-md bg-black duration-200'>
                             Return to Shop
                         </button>

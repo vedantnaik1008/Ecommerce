@@ -19,7 +19,7 @@ const Cancel = () => {
                 <h4 className=''>Want to buy your desired products!</h4>
 
                 <button className=' px-4 py-2 text-white rounded-md mt-8 capitalize group bg-black'>
-                    <Link href='/shop'>click here</Link>
+                    <Link href='/Shop'>click here</Link>
                 </button>
             </div>
         </section>

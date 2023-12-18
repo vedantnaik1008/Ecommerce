@@ -11,7 +11,7 @@ const SliderClothes = () => {
         .slice(0, 10);
 
     return (
-        <SliderPresentational data={data} link='/clothes' heading={'Clothes'} />
+        <SliderPresentational data={data} link={'/Clothes'} heading={'Clothes'} />
     );
 };
 

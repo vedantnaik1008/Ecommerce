@@ -11,7 +11,7 @@ const SliderElectronics = () => {
     if (loading) return <Loading />;
 
     return (
-        <SliderPresentational data={data} link={'electronics'} heading={'Electronics'} />
+        <SliderPresentational data={data} link={'/Electronics'} heading={'Electronics'} />
     );
 };
 

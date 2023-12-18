@@ -10,16 +10,11 @@ import { RootState } from '@/redux/store';
 
 const items = [
     { id: 1, name: 'Home', link: '/dashboard' },
-    { id: 2, name: 'Shop', link: '/shop' },
+    { id: 2, name: 'Shop', link: '/Shop' },
     { id: 3, name: 'Profile', link: '/user' },
 ];
 
-interface Props {
-    show: boolean;
-    setShow: (show: boolean) => void;
-}
-
-const Nav = ({ show, setShow }: Props) => {
+const Nav = () => {
     const order = useSelector((state: RootState) => state.addToCart.orderData);
     const orderLink = (
         <li className='text-black hover:underline underline-offset-1 font-bold'>
