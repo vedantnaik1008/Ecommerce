@@ -8,116 +8,15 @@ import { useFetch } from '../hooks/useFetch';
 import Loading from './ui/Loading';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../redux/reducers/addItems';
+import SliderPresentational from './SliderPresentational';
 
 const SliderElectronics = () => {
-  const dispatch = useDispatch()
   const { response, loading } = useFetch('/api/fetchData')
-  
-
   const data = response.filter((res) => res.category === 'electronics').slice(0, 10)
-
-    const truncateText = (text: string, maxLength: number) => {
-    if (text.length > maxLength) {
-      return text.substring(0, maxLength) + '...' 
-    }
-    return text
-  }
-
-  const NextArrow = (props: any) => {
-    const { onClick } = props;
-    return (
-      <div
-        className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute  top-1/2 -left-3 "
-        onClick={onClick}
-      >
-        <PiCaretLeftLight />
-      </div>
-    );
-  };
-  const PrevArrow = (props: any) => {
-    const { onClick } = props;
-    return (
-      <div
-        className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute  -right-3 top-1/2 "
-        onClick={onClick}
-      >
-        <PiCaretRightLight />
-      </div>
-    );
-  };
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    arrows: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1440,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false
-        }
-      }
-    ]
-  };
-
   if(loading)return <Loading />
 
   return (
-    
-      <div className="my-[70px] w-[90%] mx-auto">
-        <div className="flex min-[320px]:justify-between gap-3 items-end mb-5">
-            <h3 className="font-bold text-2xl text-black">
-                Electronics
-            </h3>
-            <Link href={'/electronics'} className="font-bold hover:underline text-md text-black">Show More</Link>
-        </div>
-        <Slider {...settings}>
-            {data.map((res) => (
-                    <div key={res._id}>
-                      <div  className="p-[20px]  bg-white shadow-2xl border-none rounded-xl  transition-all duration-300 ease-in-out  h-[440px] s mx-auto md:mx-[20px]">
-                        <Link href={`/details/${res._id}?id=${res._id}`} className="" >
-                          <div className="flex items-center flex-col justify-center h-[60%]">
-                            <Image src={res.image} alt="items-image" width={200} height={200} className="hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden rounded-sm   object-cover"/>
-                          </div>
-                        </Link>
-                          <div className="flex justify-between items-center  mt-[20px]">
-                            <h2 className=" text-black font-medium max-w-[200px]">{truncateText(res.title, 18)}</h2>
-                            <span className="bg-gray-300 px-2 py-1 border-none rounded-sm text-black font-bold relative z-20">${res.price}</span>
-                          </div>
-                          <div className="flex justify-between items-center  my-[20px]">
-                            <button onClick={()=> dispatch(addItem(res))} className="bg-black rounded-[30px] text-white font-semibold py-1 px-4 hover:bg-slate-400">Add To Cart</button>
-                            <RatingStars rating={res.rating} />
-                          </div>
-                      </div>
-                    </div>
-            ))}
-        </Slider>
-    </div>
+    <SliderPresentational data={data} link={'electronics'} heading={'Electronics'}/>
   )
 }
 
