@@ -105,3 +105,19 @@ hanko-auth::part(divider) {
 .left{
     left: -12px
 }
+
+.top{
+    top: 50%;
+}
+
+.banner-left{
+    left: 8px;
+}
+
+.banner-right{
+    right: 8px;
+}
+
+.color-white{
+    background: rgba(241, 245, 249, 1);
+}
