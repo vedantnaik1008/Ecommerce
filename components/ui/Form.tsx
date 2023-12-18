@@ -29,7 +29,6 @@ const Form = () => {
         const allFields = Object.values(address).every((field) => field);
         setIsValid(allFields);
     }
-
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         dispatch(Address(address));
