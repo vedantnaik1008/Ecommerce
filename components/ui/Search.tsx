@@ -42,6 +42,7 @@ const Search = () => {
                 className='relative w-full flex items-center gap-3'>
                 <input
                     value={input}
+                    type="text"
                     name='search'
                     onChange={Search}
                     className='border-black border rounded-sm placeholder-black placeholder:Search p-3 w-full'
