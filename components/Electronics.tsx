@@ -1,6 +1,6 @@
 'use client'
-import Card from "./Card";
-import Loading from "./Loading";
+import Card from "./ui/Card";
+import Loading from "./ui/Loading";
 import { useFetch } from "../hooks/useFetch";
 
 

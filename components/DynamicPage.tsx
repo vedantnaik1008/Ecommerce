@@ -1,14 +1,14 @@
 'use client'
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import Loading from './Loading';
+import Loading from './ui/Loading';
 import { useFetch } from '../hooks/useFetch';
 import { useDispatch } from 'react-redux';
-import { addItem } from './reducers/addItems';
+import { addItem } from '../redux/reducers/addItems';
 const SimilarProducts = dynamic(() => import('@/components/SimilarProducts'), {
   ssr: false
 })
-const RatingStars = dynamic(() => import('@/components/RatingStars'), {
+const RatingStars = dynamic(() => import('@/components/ui/RatingStars'), {
   ssr: false
 })
 

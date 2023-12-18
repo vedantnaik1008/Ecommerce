@@ -1,7 +1,7 @@
 'use client'
 import { useFetch } from "../hooks/useFetch";
-import Loading from "./Loading";
-import Card from "./Card";
+import Loading from "./ui/Loading";
+import Card from "./ui/Card";
 
 export interface Electronic{
   id: number;

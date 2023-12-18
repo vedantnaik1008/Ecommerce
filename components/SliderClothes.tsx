@@ -2,12 +2,12 @@
 import Image from 'next/image'
 import Slider from 'react-slick';
 import { PiCaretLeftLight, PiCaretRightLight } from 'react-icons/pi';
-import RatingStars from './RatingStars';
+import RatingStars from './ui/RatingStars';
 import Link from 'next/link';
 import { useFetch } from '../hooks/useFetch';
-import Loading from './Loading';
+import Loading from './ui/Loading';
 import { useDispatch } from 'react-redux';
-import { addItem } from './reducers/addItems';
+import { addItem } from '../redux/reducers/addItems';
 
 const SliderClothes = () => {
     const dispatch = useDispatch()
@@ -91,7 +91,7 @@ const SliderClothes = () => {
             <h3 className="font-bold text-2xl text-black">
                 Clothes
             </h3>
-            <Link href={'/Clothes'} className="font-bold hover:underline text-md text-black">Show More</Link>
+            <Link href={'/clothes'} className="font-bold hover:underline text-md text-black">Show More</Link>
         </div>
         <Slider {...settings}>
             {data.map((res) => (

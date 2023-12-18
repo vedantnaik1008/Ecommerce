@@ -1,9 +1,9 @@
 'use client'
 
-import { persistor } from "@/store"
+import { persistor } from "@/redux/store"
 import { PersistGate } from "redux-persist/integration/react"
 
-export default function ProviderComponent({children}: {children: React.ReactNode}) {
+export default function PersistorProvider({children}: {children: React.ReactNode}) {
    return(
     <PersistGate persistor={persistor}>{children}</PersistGate>
    )

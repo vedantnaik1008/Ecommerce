@@ -2,12 +2,12 @@
 import Image from 'next/image'
 import Slider from 'react-slick';
 import { PiCaretLeftLight, PiCaretRightLight } from 'react-icons/pi';
-import RatingStars from './RatingStars';
+import RatingStars from './ui/RatingStars';
 import Link from 'next/link';
 import { useFetch } from '../hooks/useFetch';
-import Loading from './Loading';
+import Loading from './ui/Loading';
 import { useDispatch } from 'react-redux';
-import { addItem } from './reducers/addItems';
+import { addItem } from '../redux/reducers/addItems';
 
 const SliderElectronics = () => {
   const dispatch = useDispatch()
@@ -94,7 +94,7 @@ const SliderElectronics = () => {
             <h3 className="font-bold text-2xl text-black">
                 Electronics
             </h3>
-            <Link href={'/Electronics'} className="font-bold hover:underline text-md text-black">Show More</Link>
+            <Link href={'/electronics'} className="font-bold hover:underline text-md text-black">Show More</Link>
         </div>
         <Slider {...settings}>
             {data.map((res) => (

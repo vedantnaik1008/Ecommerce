@@ -1,7 +1,7 @@
-import { RootState } from '../store'
+import { RootState } from '../redux/store'
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { openForm } from './reducers/formClick';
+import { openForm } from '../redux/reducers/formClick';
 
 
 const PriceList = () => {

@@ -15,7 +15,7 @@ import cancelAnimation from '@/public/Animation - 1698125045976.json';
 				<h4 className="">Want to buy your desired products!</h4>
 
 				<button className=" px-4 py-2 text-white rounded-md mt-8 capitalize group bg-black">
-					<Link href="/Shop">click here</Link>
+					<Link href="/shop">click here</Link>
 				</button>
 			</div>
 		</section>

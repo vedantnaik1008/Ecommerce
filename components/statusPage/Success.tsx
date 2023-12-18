@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 const DynamicLottie = dynamic(() => import('lottie-react'), {
  ssr: false
 })
-import successAnimation from '../public/Animation - 1698122931837.json';
+import successAnimation from '../../public/Animation - 1698122931837.json';
 
 const Success = () => {
  

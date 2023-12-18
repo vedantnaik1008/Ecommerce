@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Nav from './Nav'
 import dynamic from 'next/dynamic'
-const Search = dynamic(() => import('../components/Search'), { ssr: false })
+const Search = dynamic(() => import('./Search'), { ssr: false })
 
 const Header = () => {
   const [show, setShow] = useState(false)

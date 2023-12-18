@@ -1,6 +1,6 @@
 'use client'
 import dynamic from 'next/dynamic'
-const DynamicForm = dynamic(() => import('@/components/Form'), {
+const DynamicForm = dynamic(() => import('@/components/ui/Form'), {
  ssr: false
 })
 const DynamicPriceList = dynamic(() => import('@/components/PriceList'), {
@@ -9,9 +9,9 @@ const DynamicPriceList = dynamic(() => import('@/components/PriceList'), {
 import Image from 'next/image'
 import {FaMinus, FaPlus} from 'react-icons/fa'
 import Link from 'next/link'
-import { RootState } from '@/store'
+import { RootState } from '@/redux/store'
 import { useSelector, useDispatch } from 'react-redux'
-import { clearItems, decreaseQuantity, increaseQuantity, removeItem } from '../../../components/reducers/addItems'
+import { clearItems, decreaseQuantity, increaseQuantity, removeItem } from '../../../redux/reducers/addItems'
 
 const Page = () => {
     const products = useSelector((state: RootState)=> state.addToCart.product)
@@ -30,7 +30,7 @@ const Page = () => {
           <p className="w-full p-2 text-center font-bold">
             Your product cart is currently empty
           </p>
-          <Link href={"/Shop"}>
+          <Link href={"/shop"}>
             <button className="text-white py-2 px-6 rounded-md bg-black duration-200">
               Return to Shop
             </button>

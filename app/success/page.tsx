@@ -1,4 +1,4 @@
-import Success from "@/components/Success";
+import Success from "@/components/statusPage/Success";
 
 export const metadata = {
 	title: "Success | QuickKart",

@@ -1,8 +1,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
-import ProviderComponent from '@/components/Provider';
-import ProviderRedux from '@/components/ProviderRedux';
+import StoreProvider from '@/provider/StoreProvider';
+import PersistorProvider from '@/provider/PersistorProvider';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -23,12 +23,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <ProviderComponent>
+        <StoreProvider>
             <html lang='en'>
                 <body className={`${roboto.className} bg-gray-300`}>
-                    <ProviderRedux>{children}</ProviderRedux>
+                    <PersistorProvider>{children}</PersistorProvider>
                 </body>
             </html>
-        </ProviderComponent>
+        </StoreProvider>
     );
 }

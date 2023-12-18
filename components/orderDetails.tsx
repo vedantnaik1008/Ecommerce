@@ -2,8 +2,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
 import Link from "next/link";
-import { resetOrder } from "./reducers/addItems";
-import { RootState } from "@/store";
+import { resetOrder } from "../redux/reducers/addItems";
+import { RootState } from "@/redux/store";
 import { Product } from "@/hooks/useFetch";
 import { useRouter } from "next/navigation";
 import { FaBox, FaTruck } from "react-icons/fa";
@@ -91,7 +91,7 @@ const OrderDetails = () => {
       ) : (
         <div className='h-[100dvh] mx-auto w-[90%] flex flex-col justify-center items-center'>
         <p className="font-extrabold text-center text-xl mb-5">You haven&apos;t placed any orders yet. Get shopping!</p>
-        <Link href={"/Shop"}>
+        <Link href={"/shop"}>
           <button className="text-white py-4 px-6 rounded-md bg-black duration-200">
             Return to Shop
           </button>

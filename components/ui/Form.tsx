@@ -1,10 +1,10 @@
 'use client'
-import { RootState } from '../store'
+import { RootState } from '../../redux/store'
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { closeForm } from './reducers/formClick'
+import { closeForm } from '../../redux/reducers/formClick'
 import { loadStripe } from '@stripe/stripe-js'
-import { resetOrder, saveOrder, Address } from './reducers/addItems'
+import { resetOrder, saveOrder, Address } from '../../redux/reducers/addItems'
 
 const Form = () => {
     const { product } = useSelector((state: RootState)=> state.addToCart)

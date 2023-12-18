@@ -1,4 +1,4 @@
-import Cancel from "@/components/Cancel";
+import Cancel from "@/components/statusPage/Cancel";
 
 export const metadata = {
 	title: "Cancel | QuickKart",

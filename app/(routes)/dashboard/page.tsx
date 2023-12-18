@@ -15,7 +15,7 @@ const DynamicSLiderElectronics = dynamic(
 const Trending = dynamic(() => import('@/components/Trending'), {
     ssr: false,
 });
-import Banner from '@/components/Banner';
+import Banner from '@/components/ui/Banner';
 
 const Dashboard = () => {
     return (

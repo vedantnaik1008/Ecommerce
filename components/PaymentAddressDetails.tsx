@@ -1,6 +1,6 @@
 'use client'
 
-import { RootState } from "@/store"
+import { RootState } from "@/redux/store"
 import { useSelector } from "react-redux"
 
 const PaymentAddressDetails = () => {

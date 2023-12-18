@@ -1,16 +1,16 @@
 'use client';
 import dynamic from 'next/dynamic';
-const Cart = dynamic(() => import('../components/Cart'), { ssr: false });
+const Cart = dynamic(() => import('./Cart'), { ssr: false });
 import Link from 'next/link';
-const Search = dynamic(() => import('../components/Search'), { ssr: false });
+const Search = dynamic(() => import('./Search'), { ssr: false });
 import Image from 'next/image';
-import Img from '../public/appleLaptops/quickkart-high-resolution-logo-color-on-transparent-background.png';
+import Img from '@/public/appleLaptops/quickkart-high-resolution-logo-color-on-transparent-background.png';
 import { useSelector } from 'react-redux';
-import { RootState } from '@/store';
+import { RootState } from '@/redux/store';
 
 const items = [
     { id: 1, name: 'Home', link: '/dashboard' },
-    { id: 2, name: 'Shop', link: '/Shop' },
+    { id: 2, name: 'Shop', link: '/shop' },
     { id: 3, name: 'Profile', link: '/user' },
 ];
 

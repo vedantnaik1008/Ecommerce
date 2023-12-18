@@ -1,12 +1,12 @@
 "use client";
 import dynamic from 'next/dynamic'
-const DynamicBannerText = dynamic(() => import('@/components/BannerText'), {
+const DynamicBannerText = dynamic(() => import('@/components/ui/BannerText'), {
   ssr: false
  })
 import Slider from "react-slick";
-import bannerone from "../images/bannerone.jpg";
-import bannertwo from "../images/bannertwo.jpg";
-import bannerthree from "../images/bannerthree.jpg";
+import bannerone from "@/images/bannerone.jpg";
+import bannertwo from "@/images/bannertwo.jpg";
+import bannerthree from "@/images/bannerthree.jpg";
 import { PiCaretLeftLight, PiCaretRightLight } from "react-icons/pi";
 import Image from "next/image";
 

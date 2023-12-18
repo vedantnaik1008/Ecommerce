@@ -22,7 +22,7 @@ const BannerText = ({ title }: Props) => {
           <button className="min-[320px]:hidden md:block py-3 px-6 rounded-full bg-slate-200 hover:bg-white duration-200 text-sm uppercase font-semibold">
             Find out more
           </button>
-          <Link href="/Shop" className="min-[320px]:hidden md:block py-3 px-6 rounded-full bg-slate-200 hover:bg-white duration-200 text-sm uppercase font-semibold">
+          <Link href="/shop" className="min-[320px]:hidden md:block py-3 px-6 rounded-full bg-slate-200 hover:bg-white duration-200 text-sm uppercase font-semibold">
             Shop Now
           </Link>
         </div>

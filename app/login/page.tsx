@@ -1,4 +1,4 @@
-import UserData from '../../components/userData';
+import UserData from '../../components/authentication/userData';
 
 const LoginPage = () => {
  return (

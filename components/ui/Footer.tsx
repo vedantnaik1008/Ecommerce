@@ -6,10 +6,10 @@ import {
   BsFacebook,
   BsReddit,
 } from "react-icons/bs";
-import payment from "../images/payment.png";
+import payment from "@/images/payment.png";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from '../images/quickkart-high-resolution-logo-white-on-black-background.png'
+import Logo from '@/images/quickkart-high-resolution-logo-white-on-black-background.png'
 
 const Footer = () => {
   return (

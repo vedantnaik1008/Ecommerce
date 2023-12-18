@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import addItems from '@/components/reducers/addItems'
-import formClick from "./components/reducers/formClick";
+import addItems from '@/redux/reducers/addItems'
+import formClick from "./reducers/formClick";
 import {
     persistStore,
     persistReducer,
