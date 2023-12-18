@@ -1,11 +1,10 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Nav from './Nav';
 import dynamic from 'next/dynamic';
 const Search = dynamic(() => import('./Search'), { ssr: false });
 
 const Header = () => {
-    const [show, setShow] = useState(false);
     useEffect(() => {
         const onScroll = () => {
             const scrollPosition = window.scrollY;
@@ -26,7 +25,7 @@ const Header = () => {
                 <div className='md:hidden w-[90%] mx-auto'>
                     <Search />
                 </div>
-                <Nav show={show} setShow={setShow} />
+                <Nav />
             </div>
         </header>
     );
