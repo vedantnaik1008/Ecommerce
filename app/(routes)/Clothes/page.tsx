@@ -1,15 +1,15 @@
-'use client'
-import dynamic from 'next/dynamic'
+'use client';
+import dynamic from 'next/dynamic';
 const Products = dynamic(() => import('@/components/Products'), {
-  ssr: false
-})
+    ssr: false,
+});
 
 const Page = () => {
-  return (
-    <div>
-      <Products />
-    </div>
-  )
-}
+    return (
+        <div>
+            <Products />
+        </div>
+    );
+};
 
-export default Page
+export default Page;

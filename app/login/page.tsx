@@ -1,9 +1,7 @@
 import UserData from '../../components/authentication/userData';
 
 const LoginPage = () => {
- return (
-        <UserData />
- );
-}
+    return <UserData />;
+};
 
-export default  LoginPage
+export default LoginPage;

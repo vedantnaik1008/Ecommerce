@@ -1,13 +1,11 @@
-import Success from "@/components/statusPage/Success";
+import Success from '@/components/statusPage/Success';
 
 export const metadata = {
-	title: "Success | QuickKart",
+    title: 'Success | QuickKart',
 };
 
 const Page = () => {
-  return (
-	<Success />
-  )
-}
+    return <Success />;
+};
 
-export default Page
+export default Page;

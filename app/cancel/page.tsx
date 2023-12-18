@@ -1,12 +1,10 @@
-import Cancel from "@/components/statusPage/Cancel";
+import Cancel from '@/components/statusPage/Cancel';
 
 export const metadata = {
-	title: "Cancel | QuickKart",
+    title: 'Cancel | QuickKart',
 };
- const Page = () => {
-	return (
-		<Cancel />
-	);
-}
+const Page = () => {
+    return <Cancel />;
+};
 
 export default Page;
