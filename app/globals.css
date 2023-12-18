@@ -98,3 +98,10 @@ hanko-auth::part(secondary-button) {
 hanko-auth::part(divider) {
     margin: 24px 0;
 }
+
+.right{
+    right: -12px
+}
+.left{
+    left: -12px
+}
