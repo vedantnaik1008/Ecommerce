@@ -8,12 +8,12 @@ import bannerone from '@/images/bannerone.jpg';
 import bannertwo from '@/images/bannertwo.jpg';
 import bannerthree from '@/images/bannerthree.jpg';
 import Image from 'next/image';
-import { setting } from '@/services/bannerSetting';
+import { settings } from '@/services/bannerSetting';
 
 const Banner = () => {
     return (
         <div className='relative pt-[71px]'>
-            <Slider {...setting}>
+            <Slider {...settings}>
                 <div className='w-full h-full relative'>
                     <Image
                         src={bannerone}

@@ -20,7 +20,7 @@ const PrevArrow = (props: any) => {
         </div>
     );
 };
-export const setting = {
+export const settings = {
     dots: false,
     infinite: true,
     autoplay: true,
