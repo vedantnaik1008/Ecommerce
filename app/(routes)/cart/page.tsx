@@ -17,16 +17,11 @@ import {
     increaseQuantity,
     removeItem,
 } from '../../../redux/reducers/addItems';
+import { truncateText } from '@/utils/TruncateText';
 
 const Page = () => {
     const products = useSelector((state: RootState) => state.addToCart.product);
     const dispatch = useDispatch();
-    const truncateText = (text: string, maxLength: number) => {
-        if (text.length > maxLength) {
-            return text.substring(0, maxLength) + '...'; // Add ellipsis if text is too long
-        }
-        return text;
-    };
 
     return (
         <>

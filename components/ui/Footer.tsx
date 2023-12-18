@@ -13,7 +13,7 @@ import Logo from '@/images/quickkart-high-resolution-logo-white-on-black-backgro
 
 const Footer = () => {
     return (
-        <div className='w-full px-[20px] py-[40px] bg-black text-slate-100 '>
+        <footer className='w-full px-[20px] py-[40px] bg-black text-slate-100 '>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
                 <div className='flex flex-col gap-y-4'>
                     <Link href='/' className=''>
@@ -122,7 +122,7 @@ const Footer = () => {
                     />
                 </div>
             </div>
-        </div>
+        </footer>
     );
 };
 

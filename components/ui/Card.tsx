@@ -6,6 +6,7 @@ import RatingStars from './RatingStars';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../redux/reducers/addItems';
 import Link from 'next/link';
+import { truncateText } from '@/utils/TruncateText';
 
 interface Props {
     res: Product;
@@ -13,12 +14,6 @@ interface Props {
 
 const Card = ({ res }: Props) => {
     const dispatch = useDispatch();
-    const truncateText = (text: string, maxLength: number) => {
-        if (text.length > maxLength) {
-            return text.substring(0, maxLength) + '...'; // Add ellipsis if text is too long
-        }
-        return text;
-    };
 
     return (
         <div className='p-[20px] bg-white shadow-2xl border-none rounded-xl h-full'>
