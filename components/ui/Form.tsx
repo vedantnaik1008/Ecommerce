@@ -1,10 +1,39 @@
 'use client';
+import { Address } from '@/redux/reducers/addItems';
+import { RootState } from '@/redux/store';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { useSelector, useDispatch } from 'react-redux';
 import { closeForm } from '../../redux/reducers/formClick';
 import PaymentButton from '../PaymentButton';
-import useForm from '@/hooks/useForm';
+
+import { z } from "zod";
+
+export const adressSchema = z.object({
+    name: z.string(),
+    street: z.string(),
+    phone: z.number(),
+    city: z.string(),
+    pincode: z.number(),
+    state: z.string(),
+})
+
+export type TAddressSchema = z.infer<typeof adressSchema>;
 
 const Form = () => {
-   const { handleSubmit, handleChange, isValid, isOpen, address, dispatch } = useForm()
+    const {
+        register,
+        handleSubmit,
+        formState: { errors, isValid },
+    } = useForm<TAddressSchema>({
+        resolver: zodResolver(adressSchema),
+    });
+    const isOpen = useSelector((state: RootState) => state.form.isOpen);
+    const dispatch = useDispatch();
+
+    const onSubmit = (data: TAddressSchema) => {
+        dispatch(Address(data));
+    };
     
     return (
         <div
@@ -23,61 +52,65 @@ const Form = () => {
                     CLose
                 </button>
             </div>
-            <form onSubmit={handleSubmit} className='flex flex-col'>
-                <input
-                    required
+            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
+            <input
+                    {...register('name')}
                     placeholder='Full Name'
-                    type='text'
-                    name='name'
-                    value={address.name}
-                    onChange={handleChange}
+                    type='name'
                     className='mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black'
                 />
+                {errors.name && (
+                    <p className='text-red-500'>{errors.name.message}</p>
+                )}
+
                 <input
-                    required
+                    {...register('street')}
                     placeholder='Street'
-                    type='text'
-                    name='street'
-                    value={address.street}
-                    onChange={handleChange}
+                    type='street'
                     className='mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black'
                 />
+                {errors.street && (
+                    <p className='text-red-500'>{errors.street.message}</p>
+                )}
+
                 <input
-                    required
+                    {...register('city')}
                     placeholder='City'
-                    type='text'
-                    name='city'
-                    value={address.city}
-                    onChange={handleChange}
+                    type='city'
                     className='mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black'
                 />
+                {errors.city && (
+                    <p className='text-red-500'>{errors.city.message}</p>
+                )}
+
                 <input
-                    required
+                    {...register('pincode', { valueAsNumber: true })}
                     placeholder='Pincode'
-                    type='number'
-                    name='pincode'
-                    value={address.pincode}
-                    onChange={handleChange}
+                    type='pincode'
                     className='mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black'
                 />
+                {errors.pincode && (
+                    <p className='text-red-500'>{errors.pincode.message}</p>
+                )}
+
                 <input
-                    required
+                    {...register('phone', { valueAsNumber: true })}
                     placeholder='Contact Number'
-                    type='number'
-                    name='phone'
-                    value={address.phone}
-                    onChange={handleChange}
+                    type='phone'
                     className='mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black'
                 />
+                {errors.phone && (
+                    <p className='text-red-500'>{errors.phone.message}</p>
+                )}
                 <input
-                    required
+                    {...register('state')}
                     placeholder='State'
-                    type='text'
-                    name='state'
-                    value={address.state}
-                    onChange={handleChange}
+                    type='state'
                     className='mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black'
                 />
+                {errors.state && (
+                    <p className='text-red-500'>{errors.state.message}</p>
+                )}
                 <PaymentButton isValid={isValid} />
             </form>
         </div>

@@ -53,7 +53,7 @@ const Payment = ({ isValid }: Props) => {
                         ? 'py-2 px-6 bg-black text-white w-full font-semibold my-5 rounded-lg'
                         : 'bg-slate-400 py-2 px-6  text-white w-full font-semibold my-5 rounded-lg'
                 }>
-                Place Order
+                Place order
             </button>
         </>
     );
