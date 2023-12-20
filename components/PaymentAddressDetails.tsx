@@ -1,5 +1,4 @@
 'use client';
-
 import { RootState } from '@/redux/store';
 import { useSelector } from 'react-redux';
 
@@ -13,13 +12,13 @@ const PaymentAddressDetails = () => {
                     Payment method: <span className='font-medium'>Card</span>
                 </p>
                 <p className='mt-2 font-bold'>
-                    Delivered to:{' '}
+                    Delivered to:
                     <span className='font-medium'>{saveAddress.name}</span>
                 </p>
                 <p className='mt-2 font-bold'>
-                    Delivery Address:{' '}
+                    Delivery Address:
                     <span className='font-medium'>
-                        {saveAddress.street}, {saveAddress.city},{' '}
+                        {saveAddress.street}, {saveAddress.city},
                         {saveAddress.state}
                     </span>
                 </p>

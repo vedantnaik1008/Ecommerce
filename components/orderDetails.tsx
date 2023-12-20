@@ -26,7 +26,7 @@ const OrderDetails = () => {
                         </h2>
                         <p className='text-black text-center font-medium'>
                             Hi {saveAddress.name}, we have recieved your order
-                            and are getting it ready to be shipped.{' '}
+                            and are getting it ready to be shipped.
                             <br className='' /> We will notify you when
                             it&apos;s on its way!
                         </p>

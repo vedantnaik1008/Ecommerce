@@ -3,7 +3,6 @@ import { RootState } from '@/redux/store';
 import { loadStripe } from '@stripe/stripe-js';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Loading from './ui/Loading';
 
 type Props = {
     isValid: boolean;
@@ -11,7 +10,6 @@ type Props = {
 
 const Payment = ({ isValid }: Props) => {
     const { product } = useSelector((state: RootState) => state.addToCart);
-    const [isLoading, setIsLoading] = React.useState(false);
     const dispatch = useDispatch();
 
     const stripePromise = loadStripe(
@@ -19,7 +17,6 @@ const Payment = ({ isValid }: Props) => {
     );
     const handleCheckout = async () => {
         try {
-            setIsLoading(true);
             const stripe = await stripePromise;
             const response = await fetch(
                 `${process.env.NEXT_PUBLIC_URL}` + `/api/checkout`,
@@ -31,6 +28,7 @@ const Payment = ({ isValid }: Props) => {
                     }),
                 }
             );
+            
             const data = await response.json();
             if (response.ok) {
                 stripe?.redirectToCheckout({ sessionId: data.id });
@@ -38,14 +36,11 @@ const Payment = ({ isValid }: Props) => {
             } else {
                 alert('Try to buy less products');
             }
-            setIsLoading(false);
         } catch (error) {
             console.log(error);
             dispatch(resetOrder());
         }
     };
-
-    if (isLoading) return <div className='text-center py-2 px-6 bg-black text-white w-full font-semibold my-5 rounded-lg'>Loading...</div>;
 
     return (
         <>
