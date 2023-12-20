@@ -1,49 +1,21 @@
 'use client';
-import { combinedData } from '../../services/api';
-import { useDebounce } from '../../hooks/useDebounce';
-import React, { useEffect, useState } from 'react';
 import { FcSearch } from 'react-icons/fc';
+import useSearch from '@/hooks/useSearch';
 import { useRouter } from 'next/navigation';
-import { useFetch } from '../../hooks/useFetch';
 
 const Search = () => {
-    const router = useRouter();
-    const [input, setInput] = useState('');
-    const { response, setResponse } = useFetch('/api/fetchData');
-    const debouncedSearch = useDebounce(input, 500);
-
-    useEffect(() => {
-        if (debouncedSearch) {
-            const results = combinedData.filter((item) => {
-                return JSON.stringify(item)
-                    .toLowerCase()
-                    .includes(debouncedSearch.toLowerCase());
-            });
-            setResponse(results);
-        } else {
-            setResponse(combinedData);
-        }
-    }, [debouncedSearch, setResponse]);
-
-    const Search = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setInput(e.target.value);
-    };
-
-    const Submit = (e: React.ChangeEvent<HTMLFormElement>) => {
-        e.preventDefault();
-    };
+    const router = useRouter()
+    const {Search, Submit, input, setInput, response} = useSearch()
 
     return (
         <form
             className='sm:w-[100%] md:w-[40%] flex justify-center'
             onSubmit={Submit}>
-            <label
-                id='search'
+            <div
                 className='relative w-full flex items-center gap-3'>
                 <input
                     value={input}
                     type="text"
-                    name='search'
                     onChange={Search}
                     className='border-black border rounded-sm placeholder-black placeholder:Search p-3 w-full'
                 />
@@ -52,7 +24,7 @@ const Search = () => {
                     type='submit'>
                     <FcSearch size='26px' />
                 </button>
-            </label>
+            </div>
 
             {input && response && response.length > 0 ? (
                 <ul className='absolute top-[60px] z-50 bg-white shadow  sm:w-[88%] md:w-[39%] mx-auto rounded-sm'>
