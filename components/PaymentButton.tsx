@@ -5,10 +5,10 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 type Props = {
-    isValid: boolean;
+    isSubmitting: boolean;
 }
 
-const Payment = ({ isValid }: Props) => {
+const Payment = ({ isSubmitting }: Props) => {
     const { product } = useSelector((state: RootState) => state.addToCart);
     const dispatch = useDispatch();
 
@@ -44,14 +44,11 @@ const Payment = ({ isValid }: Props) => {
     return (
         <>
             <button
-                disabled={!isValid}
+                disabled={isSubmitting}
                 onClick={handleCheckout}
                 type='submit'
-                className={
-                    isValid
-                        ? 'py-2 px-6 bg-black text-white w-full font-semibold my-5 rounded-lg'
-                        : 'bg-slate-400 py-2 px-6  text-white w-full font-semibold my-5 rounded-lg'
-                }>
+                className={`${isSubmitting ? 'bg-slate-400' : 'bg-black'} py-2 px-6  text-white w-full font-semibold my-5 rounded-lg`}
+                >
                 Place Order
             </button>
         </>

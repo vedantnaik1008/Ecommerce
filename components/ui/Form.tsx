@@ -1,39 +1,28 @@
 'use client';
 import { RootState } from '../../redux/store';
-import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeForm } from '../../redux/reducers/formClick';
 import { Address } from '../../redux/reducers/addItems';
 import PaymentButton from '../PaymentButton';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { TAddressSchema, adressSchema } from '@/lib/types';
 
 const Form = () => {
-    const [address, setAddress] = useState({
-        name: '',
-        street: '',
-        phone: 0,
-        city: '',
-        pincode: 0,
-        state: '',
+    const {
+        register,
+        handleSubmit,
+        formState: { errors, isSubmitting },
+    } = useForm<TAddressSchema>({
+        resolver: zodResolver(adressSchema),
     });
-    const [isValid, setIsValid] = useState(false);
     const isOpen = useSelector((state: RootState) => state.form.isOpen);
     const dispatch = useDispatch();
 
-    function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-        setAddress((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-        checkValidation();
-    }
+    const onSubmit = (data: TAddressSchema) => {
+        dispatch(Address(data));
+    };
 
-    function checkValidation() {
-        const allFields = Object.values(address).every((field) => field);
-        setIsValid(allFields);
-    }
-    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        e.preventDefault();
-        dispatch(Address(address));
-        console.log(address);
-    }
-    
     return (
         <div
             className={
@@ -51,62 +40,66 @@ const Form = () => {
                     CLose
                 </button>
             </div>
-            <form onSubmit={handleSubmit} className='flex flex-col'>
+            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
                 <input
-                    required
+                    {...register('name')}
                     placeholder='Full Name'
-                    type='text'
-                    name='name'
-                    value={address.name}
-                    onChange={handleChange}
+                    type='name'
                     className='mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black'
                 />
+                {errors.name && (
+                    <p className='text-red-500'>{errors.name.message}</p>
+                )}
+
                 <input
-                    required
+                    {...register('street')}
                     placeholder='Street'
-                    type='text'
-                    name='street'
-                    value={address.street}
-                    onChange={handleChange}
+                    type='street'
                     className='mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black'
                 />
+                {errors.street && (
+                    <p className='text-red-500'>{errors.street.message}</p>
+                )}
+
                 <input
-                    required
+                    {...register('city')}
                     placeholder='City'
-                    type='text'
-                    name='city'
-                    value={address.city}
-                    onChange={handleChange}
+                    type='city'
                     className='mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black'
                 />
+                {errors.city && (
+                    <p className='text-red-500'>{errors.city.message}</p>
+                )}
+
                 <input
-                    required
+                    {...register('pincode')}
                     placeholder='Pincode'
-                    type='number'
-                    name='pincode'
-                    value={address.pincode}
-                    onChange={handleChange}
+                    type='pincode'
                     className='mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black'
                 />
+                {errors.pincode && (
+                    <p className='text-red-500'>{errors.pincode.message}</p>
+                )}
+
                 <input
-                    required
+                    {...register('phone')}
                     placeholder='Contact Number'
-                    type='number'
-                    name='phone'
-                    value={address.phone}
-                    onChange={handleChange}
+                    type='phone'
                     className='mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black'
                 />
+                {errors.phone && (
+                    <p className='text-red-500'>{errors.phone.message}</p>
+                )}
                 <input
-                    required
+                    {...register('state')}
                     placeholder='State'
-                    type='text'
-                    name='state'
-                    value={address.state}
-                    onChange={handleChange}
+                    type='state'
                     className='mb-2 bg-white px-4 py-2 rounded focus:outline-none  border hover:border-black placeholder:text-black'
                 />
-                <PaymentButton isValid={isValid} />
+                {errors.state && (
+                    <p className='text-red-500'>{errors.state.message}</p>
+                )}
+                <PaymentButton isSubmitting={isSubmitting} />
             </form>
         </div>
     );
