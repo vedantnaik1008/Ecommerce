@@ -30,6 +30,8 @@ export const POST = async (request: NextRequest) => {
             cancel_url: `${process.env.NEXT_PUBLIC_URL}` + `/cancel`,
         });
 
+        
+
         return NextResponse.json({
             message: 'Connection is Active!',
             success: true,
