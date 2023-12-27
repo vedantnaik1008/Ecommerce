@@ -18,7 +18,7 @@ const Cancel = () => {
                 <h1>Unfortunately Your payment was cancel! </h1>
                 <h4 className=''>Want to buy your desired products!</h4>
 
-                <button className=' px-4 py-2 text-white rounded-md mt-8 capitalize group bg-black'>
+                <button className=' px-4 py-2 text-white rounded-md mt-4 capitalize group bg-black'>
                     <Link href='/Shop'>click here</Link>
                 </button>
             </div>

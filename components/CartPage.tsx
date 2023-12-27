@@ -26,11 +26,11 @@ const CartPage = () => {
         <>
             {products.length === 0 ? (
                 <div className='flex flex-col gap-y-2 items-center justify-center bg-white h-[100vh] px-4'>
-                    <p className='w-full p-2 text-center font-bold'>
+                    <p className='font-extrabold text-center text-xl mb-5'>
                         Your product cart is currently empty
                     </p>
                     <Link href={'/Shop'}>
-                        <button className='text-white py-2 px-6 rounded-md bg-black duration-200'>
+                        <button className='text-white py-4 px-6 rounded-md bg-black duration-200'>
                             Return to Shop
                         </button>
                     </Link>
