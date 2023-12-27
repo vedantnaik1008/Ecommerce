@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-}
-
 hanko-auth,
 hanko-profile {
     /* Color Scheme */
