@@ -4,7 +4,7 @@ import {
     BsGithub,
     BsLinkedin,
     BsFacebook,
-    BsReddit,
+    BsReddit
 } from 'react-icons/bs';
 import payment from '@/images/payment.png';
 import Link from 'next/link';
@@ -32,31 +32,21 @@ const Footer = () => {
                         consectetur maxime quidem veniam, corporis.
                     </p>
                     <div className='flex items-center gap-x-4'>
-                        <a href='#' target='_blank'>
-                            <span className='socialLink'>
-                                <BsYoutube />
-                            </span>
-                        </a>
-                        <a href='#' target='_blank'>
-                            <span className='socialLink'>
-                                <BsGithub />
-                            </span>
-                        </a>
-                        <a href='#' target='_blank'>
-                            <span className='socialLink'>
-                                <BsLinkedin />
-                            </span>
-                        </a>
-                        <a href='#' target='_blank'>
-                            <span className='socialLink'>
-                                <BsFacebook />
-                            </span>
-                        </a>
-                        <a href='#' target='_blank'>
-                            <span className='socialLink'>
-                                <BsReddit />
-                            </span>
-                        </a>
+                        <Link href='#'>
+                            <BsYoutube />
+                        </Link>
+                        <Link href='#'>
+                            <BsGithub />
+                        </Link>
+                        <Link href='#'>
+                            <BsLinkedin />
+                        </Link>
+                        <Link href='#'>
+                            <BsFacebook />
+                        </Link>
+                        <Link href='#'>
+                            <BsReddit />
+                        </Link>
                     </div>
                 </div>
                 <div>
@@ -99,16 +89,13 @@ const Footer = () => {
                 <div>
                     <p className='text-lg'>Links</p>
                     <ul className='text-base font-medium mt-2 flex flex-col gap-y-2'>
-                        <Link href={'/dashboard'}>
-                            <li className='hover:text-orange-500 cursor-pointer duration-200'>
-                                Home
-                            </li>
-                        </Link>
-                        <Link href={'/cart'}>
-                            <li className='hover:text-orange-500 cursor-pointer duration-200'>
-                                Cart
-                            </li>
-                        </Link>
+                        <li className='hover:text-orange-500 cursor-pointer duration-200'>
+                            <Link href={'/dashboard'}>Home</Link>
+                        </li>
+
+                        <li className='hover:text-orange-500 cursor-pointer duration-200'>
+                            <Link href={'/cart'}>Cart</Link>
+                        </li>
                     </ul>
                 </div>
                 <div>

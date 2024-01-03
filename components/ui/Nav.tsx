@@ -43,7 +43,9 @@ const Nav = () => {
                         </li>
                     ))}
                     {order.length > 0 ? orderLink : ''}
-                    <Cart />
+                    <li>
+                        <Cart />
+                    </li>
                 </ul>
             </div>
 
@@ -65,7 +67,9 @@ const Nav = () => {
                                     </li>
                                 ))}
                                 {order.length > 0 ? orderLink : ''}
-                                <Cart />
+                                <li>
+                                    <Cart />
+                                </li>
                             </ul>
                         </div>
                     </div>

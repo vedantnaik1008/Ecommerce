@@ -11,17 +11,18 @@ const Search = () => {
         <form
             className='sm:w-[100%] md:w-[40%] flex justify-center'
             onSubmit={Submit}>
-            <div
-                className='relative w-full flex items-center gap-3'>
+            <div className='relative w-full flex items-center gap-3'>
                 <input
                     value={input}
-                    type="text"
+                    type='text'
+                    aria-label='Search'
                     onChange={Search}
                     className='border-black border rounded-sm placeholder-black placeholder:Search p-3 w-full'
                 />
                 <button
                     className=' px-[20px] py-[11px] text-white font-semibold rounded-l-none absolute right-[0%] top-[1px] md:top-[5px]'
-                    type='submit'>
+                    type='submit'
+                    name='Search'>
                     <FcSearch size='26px' />
                 </button>
             </div>
