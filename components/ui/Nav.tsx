@@ -1,8 +1,7 @@
 'use client';
-import dynamic from 'next/dynamic';
-const Cart = dynamic(() => import('./Cart'), { ssr: false });
+import Cart from './Cart'
 import Link from 'next/link';
-const Search = dynamic(() => import('./Search'), { ssr: false });
+import Search from './Search'
 import Image from 'next/image';
 import Img from '@/public/appleLaptops/quickkart-high-resolution-logo-color-on-transparent-background.png';
 import { useSelector } from 'react-redux';

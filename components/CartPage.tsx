@@ -1,10 +1,5 @@
-import dynamic from 'next/dynamic';
-const DynamicForm = dynamic(() => import('@/components/ui/Form'), {
-    ssr: false
-});
-const DynamicPriceList = dynamic(() => import('@/components/PriceList'), {
-    ssr: false
-});
+import Form from '@/components/ui/Form';
+import PriceList from '@/components/PriceList';
 import Image from 'next/image';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 import Link from 'next/link';
@@ -126,8 +121,8 @@ const CartPage = () => {
                             ))}
                         </div>
                         <div className='sm:w-full md:w-full lg:w-[30%] flex flex-col  gap-y-5 relative'>
-                            <DynamicPriceList />
-                            <DynamicForm />
+                            <PriceList />
+                            <Form />
                         </div>
                     </div>
                 </>

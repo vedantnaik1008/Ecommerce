@@ -1,7 +1,6 @@
 'use client';
 import Nav from './Nav';
-import dynamic from 'next/dynamic';
-const Search = dynamic(() => import('./Search'), { ssr: false });
+import  Search from './Search'
 
 const Header = () => {
     return (
