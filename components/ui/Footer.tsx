@@ -32,21 +32,11 @@ const Footer = () => {
                         consectetur maxime quidem veniam, corporis.
                     </p>
                     <div className='flex items-center gap-x-4'>
-                        <Link href='#'>
-                            <BsYoutube />
-                        </Link>
-                        <Link href='#'>
-                            <BsGithub />
-                        </Link>
-                        <Link href='#'>
-                            <BsLinkedin />
-                        </Link>
-                        <Link href='#'>
-                            <BsFacebook />
-                        </Link>
-                        <Link href='#'>
-                            <BsReddit />
-                        </Link>
+                        <BsYoutube />
+                        <BsGithub />
+                        <BsLinkedin />
+                        <BsFacebook />
+                        <BsReddit />
                     </div>
                 </div>
                 <div>

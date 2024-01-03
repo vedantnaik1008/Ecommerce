@@ -22,7 +22,7 @@ const Search = () => {
                 <button
                     className=' px-[20px] py-[11px] text-white font-semibold rounded-l-none absolute right-[0%] top-[1px] md:top-[5px]'
                     type='submit'
-                    name='Search'>
+                    aria-label='Search'>
                     <FcSearch size='26px' />
                 </button>
             </div>
