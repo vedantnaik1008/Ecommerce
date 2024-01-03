@@ -17,12 +17,12 @@ const BannerText = ({ title }: Props) => {
                     awesome mid-season sale.
                 </p>
                 <div className='flex gap-x-4 mt-2'>
-                    <button className='min-[320px]:hidden md:block py-3 px-6 rounded-full bg-slate-200 hover:bg-white duration-200 text-sm uppercase font-semibold'>
+                    <button className='py-3 px-6 rounded-full bg-slate-200 hover:bg-white duration-200 text-sm uppercase font-semibold'>
                         Find out more
                     </button>
                     <Link
                         href='/Shop'
-                        className='min-[320px]:hidden md:block py-3 px-6 rounded-full bg-slate-200 hover:bg-white duration-200 text-sm uppercase font-semibold'>
+                        className='py-3 px-6 rounded-full bg-slate-200 hover:bg-white duration-200 text-sm uppercase font-semibold'>
                         Shop Now
                     </Link>
                 </div>

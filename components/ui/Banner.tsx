@@ -14,7 +14,7 @@ const Banner = () => {
                     <Image
                         src={bannerone}
                         alt='bannerone'
-                        className='w-full  min-[320px]:h-[200px] min-[600px]:h-full object-cover md:h-full relative'
+                        className='w-full h-screen object-cover relative'
                         priority
                     />
                     <BannerText title='Outware Picks' />
@@ -23,7 +23,7 @@ const Banner = () => {
                     <Image
                         src={bannertwo}
                         alt='bannertwo'
-                        className='w-full  min-[320px]:h-[200px] object-cover min-[600px]:h-full relative'
+                        className='w-full h-screen object-cover relative'
                     />
                     <BannerText title='Seasonal Offers' />
                 </div>
@@ -31,7 +31,7 @@ const Banner = () => {
                     <Image
                         src={bannerthree}
                         alt='bannerthree'
-                        className='w-full min-[320px]:h-[200px] object-cover min-[600px]:h-full  relative'
+                        className='w-full h-screen object-cover relative'
                     />
                     <BannerText title='Best for men' />
                 </div>
