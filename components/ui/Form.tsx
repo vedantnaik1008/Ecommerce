@@ -1,12 +1,12 @@
 'use client';
+import dynamic from 'next/dynamic';
 import { Address } from '@/redux/reducers/addItems';
 import { RootState } from '@/redux/store';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { useSelector, useDispatch } from 'react-redux';
 import { closeForm } from '../../redux/reducers/formClick';
-import PaymentButton from '../PaymentButton';
-
+const PaymentButton = dynamic(() => import('../PaymentButton'));
 import { z } from "zod";
 
 export const adressSchema = z.object({
