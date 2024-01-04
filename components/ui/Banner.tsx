@@ -14,7 +14,6 @@ const Banner = () => {
                             src={item.img}
                             alt={item.alt}
                             className='w-full h-screen object-cover relative'
-                            priority
                         />
                         <BannerText title='Outware Picks' />
                     </div>
