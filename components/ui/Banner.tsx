@@ -15,7 +15,6 @@ const Banner = () => {
                         src={bannerone}
                         alt='bannerone'
                         className='w-full h-screen object-cover relative'
-                        priority
                     />
                     <BannerText title='Outware Picks' />
                 </div>
