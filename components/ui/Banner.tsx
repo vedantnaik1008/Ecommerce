@@ -15,6 +15,7 @@ const Banner = () => {
                         src={bannerone}
                         alt='bannerone'
                         className='w-full h-screen object-cover relative'
+                        priority
                     />
                     <BannerText title='Outware Picks' />
                 </div>
@@ -23,6 +24,7 @@ const Banner = () => {
                         src={bannertwo}
                         alt='bannertwo'
                         className='w-full h-screen object-cover relative'
+                        priority
                     />
                     <BannerText title='Seasonal Offers' />
                 </div>
@@ -31,6 +33,7 @@ const Banner = () => {
                         src={bannerthree}
                         alt='bannerthree'
                         className='w-full h-screen object-cover relative'
+                        priority
                     />
                     <BannerText title='Best for men' />
                 </div>
