@@ -1,4 +1,5 @@
-import { PiCaretLeftLight, PiCaretRightLight } from 'react-icons/pi';
+import { PiCaretLeftLight, PiCaretRightLight } from "@/lib/ReactIcons";
+
 
 const NextArrow = (props: any) => {
     const { onClick } = props;

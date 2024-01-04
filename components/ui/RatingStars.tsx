@@ -1,5 +1,5 @@
+import { FaStar, FaStarHalf } from '@/lib/ReactIcons';
 import React from 'react';
-import { FaStar, FaStarHalf } from 'react-icons/fa';
 
 interface Props {
     rating: number;

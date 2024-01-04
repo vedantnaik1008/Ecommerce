@@ -1,6 +1,6 @@
 'use client';
-import { FcSearch } from 'react-icons/fc';
 import useSearch from '@/hooks/useSearch';
+import { FcSearch } from '@/lib/ReactIcons';
 import { useRouter } from 'next/navigation';
 
 const Search = () => {

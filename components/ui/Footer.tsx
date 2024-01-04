@@ -1,15 +1,9 @@
 'use client';
-import {
-    BsYoutube,
-    BsGithub,
-    BsLinkedin,
-    BsFacebook,
-    BsReddit
-} from 'react-icons/bs';
 import payment from '@/images/payment.png';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@/images/quickkart-high-resolution-logo-white-on-black-background.png';
+import { BsFacebook, BsGithub, BsLinkedin, BsReddit, BsYoutube } from '@/lib/ReactIcons';
 
 const Footer = () => {
     return (

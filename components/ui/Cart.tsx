@@ -1,7 +1,7 @@
+import { AiOutlineShoppingCart } from '@/lib/ReactIcons';
 import { RootState } from '../../redux/store';
 import Link from 'next/link';
 import React from 'react';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
 const Cart = () => {
     const products = useSelector((state: RootState) => state.addToCart.product);

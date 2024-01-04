@@ -6,9 +6,8 @@ import { resetOrder } from '../redux/reducers/addItems';
 import { RootState } from '@/redux/store';
 import { Product } from '@/hooks/useFetch';
 import { useRouter } from 'next/navigation';
-import { FaBox, FaTruck } from 'react-icons/fa';
-import { FiShoppingBag } from 'react-icons/fi';
 import PaymentAddressDetails from './PaymentAddressDetails';
+import { FaBox, FaTruck, FiShoppingBag } from '@/lib/ReactIcons';
 
 const OrderDetails = () => {
     const { orderData, totalOrderPrice, saveAddress } = useSelector(

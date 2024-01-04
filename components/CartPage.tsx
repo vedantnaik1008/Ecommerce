@@ -1,7 +1,6 @@
 import Form from '@/components/ui/Form';
 import PriceList from '@/components/PriceList';
 import Image from 'next/image';
-import { FaMinus, FaPlus } from 'react-icons/fa';
 import Link from 'next/link';
 import { RootState } from '@/redux/store';
 import { useSelector, useDispatch } from 'react-redux';
@@ -12,6 +11,7 @@ import {
     removeItem
 } from '@/redux/reducers/addItems';
 import { truncateText } from '@/utils/TruncateText';
+import { FaMinus, FaPlus } from '@/lib/ReactIcons';
 
 const CartPage = () => {
     const products = useSelector((state: RootState) => state.addToCart.product);
