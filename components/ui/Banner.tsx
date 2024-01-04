@@ -11,6 +11,8 @@ const Banner = () => {
                 {bannerData.map((item) => (
                     <div key={item.id} className='w-full h-full relative'>
                         <Image
+                            width='1920'
+                            height='762'
                             src={item.img}
                             alt={item.alt}
                             className='w-full h-screen object-cover relative'
