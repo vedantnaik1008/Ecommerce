@@ -16,7 +16,7 @@ const Banner = () => {
                             loading='eager'
                             src={item.img}
                             alt={item.alt}
-                            className='w-full h-screen object-cover relative'
+                            className='w-ful sm:h-[83vh] md:h-screen object-cover relative'
                         />
                         <BannerText title='Outware Picks' />
                     </div>
