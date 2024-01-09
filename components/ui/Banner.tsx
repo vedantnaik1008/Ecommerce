@@ -9,20 +9,20 @@ const Banner = () => {
         <div className='relative pt-[71px] overflow-hidden'>
             <Slider {...settings}>
                 {bannerData.map((item) => (
-                    <div key={item.id} className='w-full h-full relative'>
+                    <div key={item.id} className='w-full md:h-screen relative bg-black'>
                         <Image
                             width='1920'
                             height='762'
                             loading='eager'
                             src={item.img}
                             alt={item.alt}
-                            className='w-ful sm:h-[83vh] md:h-screen object-cover relative'
+                            className='w-full sm:h-[83vh] md:h-screen object-cover relative'
                         />
-                        <BannerText title='Outware Picks' />
+                        <BannerText title={item.title} />
                     </div>
                 ))}
             </Slider>
-            <div className='absolute min-[320px]:hidden  min-[600px]:block w-full h-44 bg-gradient-to-t from-gray-100 to-transparent bottom-0 left-0 z-10' />
+            <div className='absolute   min-[600px]:block w-full h-44 bg-gradient-to-t from-gray-100 to-transparent bottom-0 left-0 z-10' />
         </div>
     );
 };
