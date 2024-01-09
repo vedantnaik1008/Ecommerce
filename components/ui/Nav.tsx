@@ -47,7 +47,7 @@ const Nav = () => {
                     </li>
                 </ul>
             </div>
-
+            
             <>
                 <nav className='fixed z-50 -bottom-0 right-0 h-[40px] w-[100%] bg-white  md:hidden sm:border sm:border-t-1 sm:border-x-0 sm:border-b-0 sm:border-black md:border-none'>
                     <div

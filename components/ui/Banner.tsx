@@ -13,6 +13,7 @@ const Banner = () => {
                         <Image
                             width='1920'
                             height='762'
+                            loading='eager'
                             src={item.img}
                             alt={item.alt}
                             className='w-full h-screen object-cover relative'
