@@ -1,22 +1,14 @@
-'use client';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-const DynamicLottie = dynamic(() => import('lottie-react'), {
-    ssr: false,
-});
-import successAnimation from '../../public/Animation - 1698122931837.json';
+import Image from 'next/image';
+import success from '@/images/payment_success_icon.png';
 
 const Success = () => {
     return (
         <section className='grid place-items-center h-screen w-full bg-white'>
             <div className='p-4 flex flex-col items-center justify-center'>
-                <DynamicLottie
-                    animationData={successAnimation}
-                    loop={false}
-                    className='w-64 mx-auto'
-                />
+                <Image src={success} alt={'success-img'} height={100} width={100} className="mb-5" />
                 <h1 className='font-bold'>Your payment was successfull</h1>
-                <h4 className='font-bold'>
+                <h4 className='font-bold text-center'>
                     Thanks for showing interests in our products
                 </h4>
                 <h5 className='font-bold'>Have a wonderfull day!</h5>
