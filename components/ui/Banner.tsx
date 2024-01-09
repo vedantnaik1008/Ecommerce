@@ -9,15 +9,14 @@ const Banner = () => {
         <div className='relative pt-[71px] overflow-hidden'>
             <Slider {...settings}>
                 {bannerData.map((item) => (
-                    <div key={item.id} className='w-full md:h-screen relative bg-black'>
+                    <div key={item.id} className='w-full  relative bg-black'>
                         <Image
                             width='1920'
                             height='762'
                             loading='eager'
                             src={item.img}
                             alt={item.alt}
-                            placeholder='blur'
-                            className='w-full sm:h-[83vh] md:h-screen object-cover relative'
+                            className='w-full  md:h-screen object-cover relative'
                         />
                         <BannerText title={item.title} />
                     </div>
