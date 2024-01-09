@@ -16,7 +16,7 @@ const Banner = () => {
                             loading='eager'
                             src={item.img}
                             alt={item.alt}
-                            className='w-full  md:h-screen object-cover relative'
+                            className='w-full h-screen object-cover relative'
                         />
                         <BannerText title={item.title} />
                     </div>
