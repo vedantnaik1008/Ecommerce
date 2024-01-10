@@ -7,11 +7,7 @@ const Electronics = dynamic(() => import('@/components/Electronics'), {
 });
 
 const Page = () => {
-    return (
-        <div>
-            <Electronics />
-        </div>
-    );
+    return <Electronics />
 };
 
 export default Page;

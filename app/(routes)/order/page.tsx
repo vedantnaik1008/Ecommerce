@@ -7,11 +7,7 @@ const OrderDetails = dynamic(() => import('@/components/orderDetails'), {
 });
 
 const OrderPage = () => {
-    return (
-        <>
-            <OrderDetails />
-        </>
-    );
+    return <OrderDetails />
 };
 
 export default OrderPage;

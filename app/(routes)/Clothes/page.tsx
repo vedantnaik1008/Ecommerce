@@ -7,11 +7,7 @@ const Products = dynamic(() => import('@/components/Products'), {
 });
 
 const Page = () => {
-    return (
-        <div>
-            <Products />
-        </div>
-    );
+    return <Products />
 };
 
 export default Page;
