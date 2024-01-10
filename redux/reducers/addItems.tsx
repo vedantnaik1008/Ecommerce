@@ -1,3 +1,4 @@
+import { calculateTotalPrice } from '@/utils/calculateTotalPrice';
 import { Product } from '../../hooks/useFetch';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
@@ -31,12 +32,6 @@ const initialState: AllItems = {
         phone: 0,
         pincode: 0,
     },
-};
-
-const calculateTotalPrice = (products: Product[]): number => {
-    return products.reduce((total, product) => {
-        return total + product.price * product.quantity;
-    }, 0);
 };
 
 const addItems = createSlice({
