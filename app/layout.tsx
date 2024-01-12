@@ -3,8 +3,6 @@ import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import StoreProvider from '@/provider/StoreProvider';
 import PersistorProvider from '@/provider/PersistorProvider';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 const roboto = Roboto({
     weight: '400',
