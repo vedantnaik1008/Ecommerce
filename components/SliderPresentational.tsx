@@ -2,11 +2,9 @@ import { Product } from '@/hooks/useFetch';
 import { addItem } from '@/redux/reducers/addItems';
 import Link from 'next/link';
 import React from 'react';
-import Slider from 'react-slick';
 import RatingStars from './ui/RatingStars';
 import Image from 'next/image';
 import { useDispatch } from 'react-redux';
-import { settings } from '@/services/settings';
 import { truncateText } from '@/utils/TruncateText';
 
 type Props = {
@@ -28,10 +26,12 @@ const SliderPresentational = ({ heading, link, data }: Props) => {
                     Show More
                 </Link>
             </div>
-            <Slider {...settings}>
+            <div className='flex w-full snap-x snap-mandatory scrollbar overflow-y-hidden overflow-x-scroll'>
                 {data.map((res) => (
-                    <div key={res._id}>
-                        <div className='p-[20px]  bg-white shadow-2xl border-none rounded-xl  transition-all duration-300 ease-in-out  h-[440px] s mx-auto md:mx-[20px]'>
+                    <div
+                        key={res._id}
+                        className='sm:w-full four:w-[80%] six:w-[50%] lg:w-[40%] xl:w-[30%] flex-shrink-0 snap-center flex flex-col items-center justify-center'>
+                        <div className='p-[20px]  bg-white shadow-2xl border-none rounded-xl  transition-all duration-300 ease-in-out w-[90%] h-[440px] mx-auto md:mx-[20px] mb-10'>
                             <Link
                                 href={`/details/${res._id}?id=${res._id}`}
                                 className=''>
@@ -64,7 +64,7 @@ const SliderPresentational = ({ heading, link, data }: Props) => {
                         </div>
                     </div>
                 ))}
-            </Slider>
+            </div>
         </div>
     );
 };

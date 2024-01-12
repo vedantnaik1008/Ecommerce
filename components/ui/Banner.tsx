@@ -1,39 +1,35 @@
+'use client'
 import BannerText from '@/components/ui/BannerText'
-import Slider from 'react-slick';
 import Image from 'next/image';
-import { settings } from '@/services/bannerSetting';
-import { bannerData } from '@/data/bannerData';
-import bannerone from '@/images/bannerone.webp';
+import { bannerData as images } from '@/data/bannerData';
+import { useCallback, useEffect, useState } from 'react';
 const Banner = () => {
+    const [current, setCurrent] = useState(0);
+    
+ const nextSlide = useCallback(() => {
+     setCurrent((current + 1) % images.length);
+ }, [current]);
+
+ useEffect(() => {
+     const timer = setTimeout(() => {
+        nextSlide()}, 5000); // Change slide every 3 seconds
+     return () => clearTimeout(timer);
+ }, [nextSlide]);
+
+
+  
     return (
         <div className='relative pt-[71px] overflow-hidden'>
-            <Slider {...settings}>
-                <div className='w-full relative'>
-                    <Image
-                        width='1920'
-                        height='762'
-                        priority
-                        src={bannerone}
-                        
-                        alt={'banner-image'}
-                        className='w-full h-screen object-cover relative'
-                    />
-                    <BannerText title={'Outware Picks'} />
-                </div>
-
-                {bannerData.map((item) => (
-                    <div key={item.id} className='w-full relative'>
-                        <Image
-                            width='1920'
-                            height='762'
-                            src={item.img}
-                            alt={item.alt}
-                            className='w-full h-screen object-cover relative'
-                        />
-                        <BannerText title={item.title} />
-                    </div>
-                ))}
-            </Slider>
+            {images.map((image, index) => (
+                <>
+                <Image
+                    key={index}
+                    src={image.img}
+                    alt={image.alt}
+                    className={`${index === current ? 'block object-cover h-[100vh] md:h-screen' : 'hidden'}`} />
+                {index === current ? <BannerText title={image.title} /> : ''}
+                </>
+            ))}
             <div className='absolute   min-[600px]:block w-full h-44 bg-gradient-to-t from-gray-100 to-transparent bottom-0 left-0 z-10' />
         </div>
     );
