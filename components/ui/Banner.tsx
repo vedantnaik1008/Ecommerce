@@ -14,6 +14,7 @@ const Banner = () => {
                         height='762'
                         priority
                         src={bannerone}
+                        
                         alt={'banner-image'}
                         className='w-full h-screen object-cover relative'
                     />
@@ -25,7 +26,6 @@ const Banner = () => {
                         <Image
                             width='1920'
                             height='762'
-                            loading='eager'
                             src={item.img}
                             alt={item.alt}
                             className='w-full h-screen object-cover relative'
