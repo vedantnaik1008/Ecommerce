@@ -12,7 +12,7 @@ const Banner = () => {
                     <Image
                         width='1920'
                         height='762'
-                        fetchPriority='high'
+                        priority
                         src={bannerone}
                         alt={'banner-image'}
                         className='w-full h-screen object-cover relative'
