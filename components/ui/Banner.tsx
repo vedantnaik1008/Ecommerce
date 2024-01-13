@@ -12,7 +12,7 @@ const Banner = () => {
 
  useEffect(() => {
      const timer = setTimeout(() => {
-        nextSlide()}, 5000); // Change slide every 3 seconds
+        nextSlide()}, 5000); // Change slide every 5 seconds
      return () => clearTimeout(timer);
  }, [nextSlide]);
 
@@ -23,6 +23,8 @@ const Banner = () => {
             {images.map((image, index) => (
                 <>
                 <Image
+                    priority={index === 0 ? true : false}
+                    fetchPriority={index === 0 ? 'high' : 'low'}
                     key={index}
                     src={image.img}
                     alt={image.alt}
