@@ -1,13 +1,7 @@
-'use client';
-const SLiderCLothes = dynamic(() => import('@/components/SliderClothes'), {
-    ssr: false
-});
-const SLiderElectronics = dynamic(() => import('@/components/SliderElectronics'),{
-        ssr: false
-});
+import SLiderCLothes from '@/components/SliderClothes'
+import SLiderElectronics from '@/components/SliderElectronics';
 import Trending from '@/components/Trending';
 import Banner from '@/components/ui/Banner';
-import dynamic from 'next/dynamic';
 
 const Dashboard = () => {
     return (

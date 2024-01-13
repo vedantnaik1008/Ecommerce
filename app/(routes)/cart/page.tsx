@@ -1,10 +1,4 @@
-'use client';
-import Loading from '@/components/ui/Loading';
-import dynamic from 'next/dynamic';
-const CartPage = dynamic(() => import('@/components/CartPage'), {
-    ssr: false,
-    loading: () => <Loading />
-});
+import CartPage from '@/components/CartPage' 
 
 const Page = () => {
     return <CartPage />;

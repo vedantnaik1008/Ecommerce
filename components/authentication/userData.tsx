@@ -1,8 +1,5 @@
-'use client';
-import dynamic from 'next/dynamic';
-const DynamicHankoAuth = dynamic(() => import('./HankoAuth'), {
-    ssr: false,
-});
+'use client'
+import DynamicHankoAuth from './HankoAuth'
 import { Hanko } from '@teamhanko/hanko-elements';
 import { redirect } from 'next/navigation';
 import React, { useEffect } from 'react';

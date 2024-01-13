@@ -1,4 +1,6 @@
-import Form from '@/components/ui/Form';
+'use client';
+import dynamic from 'next/dynamic';
+const Form = dynamic(() => import('@/components/ui/Form'));
 import PriceList from '@/components/PriceList';
 import Image from 'next/image';
 import Link from 'next/link';
