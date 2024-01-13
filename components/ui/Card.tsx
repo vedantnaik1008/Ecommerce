@@ -23,8 +23,8 @@ const Card = ({ res }: Props) => {
                 key={res._id}>
                 <div className='flex items-center flex-col justify-center h-[245px]'>
                     <Image
-                        priority={res._id === 1 ? true : false}
-                        fetchPriority={res._id === 1 ? 'high' : 'low'}
+                        priority={res._id === 1 || 21 ? true : false}
+                        fetchPriority={res._id === 1 || 21 ? 'high' : 'low'}
                         src={res.image}
                         sizes='200px'
                         alt='items-image'
