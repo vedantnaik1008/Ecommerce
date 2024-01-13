@@ -2,7 +2,7 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div className='bg-white grid place-content-center relative z-50 h-[100vh]'>
+        <div className='grid place-content-center relative z-40 h-[100vh]'>
             <div className='text-center'>
                 <div role='status'>
                     <svg
