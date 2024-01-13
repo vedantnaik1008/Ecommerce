@@ -6,7 +6,7 @@ import Logo from '@/public/images/quickkart-high-resolution-logo-white-on-black-
 
 const Footer = () => {
     return (
-        <footer className='w-full px-[20px] py-[40px] bg-black text-slate-100 '>
+        <footer className='w-full px-[20px] py-[40px] bg-black text-slate-100 h-full'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
                 <div className='flex flex-col gap-y-4'>
                     <Link href='/' className=''>
