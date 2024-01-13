@@ -23,7 +23,7 @@ const DynamicPage = ({ product }: Props) => {
 
     return (
         <div className='mx-auto min-[320px]:pt-[70px] md:pt-[100px]  text-black'>
-            <div className='bg-white flex min-[320px]:flex-col md:flex-row justify-center items-center gap-14 p-5 min-[320px]:rounded-none md:rounded-xl min-[320px]:w-full md:w-[80%] mx-auto'>
+            <div className='bg-white flex min-[320px]:flex-col md:flex-row justify-center items-center gap-14 p-5 min-[320px]:rounded-none md:rounded-xl min-[320px]:w-full md:w-[90%] lg:w-[80%] mx-auto'>
                 <div className='w-[70%]'>
                     <Image
                         priority
