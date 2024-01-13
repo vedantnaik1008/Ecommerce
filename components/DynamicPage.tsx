@@ -26,6 +26,8 @@ const DynamicPage = ({ product }: Props) => {
             <div className='bg-white flex min-[320px]:flex-col md:flex-row justify-center items-center gap-14 p-5 min-[320px]:rounded-none md:rounded-xl min-[320px]:w-full md:w-[80%] mx-auto'>
                 <div className='w-[70%]'>
                     <Image
+                        priority
+                        fetchPriority={connect?._id === product ? 'high' : 'low'}
                         width={435}
                         height={905}
                         src={productImage}
