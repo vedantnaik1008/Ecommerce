@@ -10,7 +10,7 @@ type Props = {
 
 const FilterProducts = ({ dataFilter, filteredData, handleFilter }: Props) => {
     return (
-        <div className='w-[95%] h-full mx-auto py-[100px]'>
+        <div className={`w-[95%] ${filteredData.length === 0 ? 'h-screen' :'h-full'} mx-auto py-[100px]`}>
             <div className='flex sm:justify-center md:justify-normal gap-4 flex-wrap'>
                 {dataFilter.map((data) => (
                     <button
