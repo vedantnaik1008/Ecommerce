@@ -7,7 +7,7 @@ const Products = () => {
     const { response, loading } = useFetch('/api/fetchData');
     const filteredData = response.filter(
         (res) => res.category !== 'electronics'
-    );
+    ).slice(0, 10);
     if (loading) return <Loading />;
 
     return (
