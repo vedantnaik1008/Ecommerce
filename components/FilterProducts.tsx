@@ -1,6 +1,7 @@
 import { Product } from '@/hooks/useFetch';
 import { DataFilter } from './AllProducts';
 import Card from './ui/Card';
+import Pagination from './Pagination';
 
 type Props = {
     dataFilter: DataFilter[];
@@ -21,12 +22,8 @@ const FilterProducts = ({ dataFilter, filteredData, handleFilter }: Props) => {
                     </button>
                 ))}
             </div>
-            <div className='grid grid-cols-1 six:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-[50px]'>
-                {filteredData.map((res) => (
-                    <div key={res._id}>
-                        <Card res={res} />
-                    </div>
-                ))}
+            <div className=''>
+                <Pagination data={filteredData} />
             </div>
         </div>
     );
