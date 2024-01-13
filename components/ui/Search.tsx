@@ -8,7 +8,7 @@ const Search = () => {
 
     return (
         <form
-            className='sm:w-[100%] md:w-[40%] flex justify-center'
+            className='flex justify-center'
             onSubmit={Submit}>
             <div className='relative w-full flex items-center gap-3'>
                 <input
@@ -57,7 +57,7 @@ const Search = () => {
             </div>
 
             {input && response && response.length > 0 ? (
-                <ul className='absolute top-[60px] z-50 bg-white shadow  sm:w-[88%] md:w-[39%] mx-auto rounded-sm'>
+                <ul className='absolute top-[60px] md:top-[68px] z-50 bg-white shadow  sm:w-[78%] md:w-[33.8%] lg:w-[48.5%] mx-auto rounded-sm'>
                     {response.map((item) => (
                         <li
                             key={item._id}

@@ -1,9 +1,7 @@
 'use client';
 import Cart from './Cart'
 import Link from 'next/link';
-import Search from './Search'
-import Image from 'next/image';
-import Img from '@/public/images/quickkart-high-resolution-logo-color-on-transparent-background.webp';
+
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 
@@ -21,19 +19,9 @@ const Nav = () => {
         </li>
     );
     return (
-        <nav className='md:w-full'>
-            <div className='min-[320px]:hidden md:flex justify-between'>
-                <Link href='/dashboard' className=''>
-                    <Image
-                        src={Img}
-                        alt='items-image'
-                        width={80}
-                        height={100}
-                        className='object-cover'
-                    />
-                </Link>
-                <Search />
-                <ul className='md:flex md:items-center md:justify-center md:gap-8 md:h-16'>
+        <nav className=''>
+            <div className='min-[320px]:hidden md:block'>
+                <ul className='md:flex md:items-center  md:gap-6 lg:gap-8 md:h-16'>
                     {items.map((item) => (
                         <li
                             key={item.id}
@@ -49,7 +37,7 @@ const Nav = () => {
             </div>
             
             <>
-                <nav className='fixed z-50 -bottom-0 right-0 h-[40px] w-[100%] bg-white  md:hidden sm:border sm:border-t-1 sm:border-x-0 sm:border-b-0 sm:border-black md:border-none'>
+                <div className='fixed z-50 -bottom-0 right-0 h-[40px] w-[100%] bg-white  md:hidden sm:border sm:border-t-1 sm:border-x-0 sm:border-b-0 sm:border-black md:border-none'>
                     <div
                         className={
                             ' md:hidden max-w-7xl mx-auto min-[320px]:p-2'
@@ -72,7 +60,7 @@ const Nav = () => {
                             </ul>
                         </div>
                     </div>
-                </nav>
+                </div>
             </>
         </nav>
     );
