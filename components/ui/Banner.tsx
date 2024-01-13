@@ -3,6 +3,7 @@ import BannerText from '@/components/ui/BannerText'
 import Image from 'next/image';
 import { bannerData as images } from '@/data/bannerData';
 import { useCallback, useEffect, useState } from 'react';
+
 const Banner = () => {
     const [current, setCurrent] = useState(0);
     

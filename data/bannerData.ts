@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
-import bannerone from '@/images/bannerone.webp';
-import bannertwo from '@/images/bannertwo.webp';
-import bannerthree from '@/images/bannerthree.webp';
+import bannerone from '@/public/images/bannerone.webp';
+import bannertwo from '@/public/images/bannertwo.webp';
+import bannerthree from '@/public/images/bannerthree.webp';
 
 type bannerProps = {
     id: number;
