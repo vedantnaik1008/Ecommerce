@@ -3,7 +3,7 @@ import Cart from './Cart'
 import Link from 'next/link';
 import Search from './Search'
 import Image from 'next/image';
-import Img from '@/public/appleLaptops/quickkart-high-resolution-logo-color-on-transparent-background.png';
+import Img from '@/public/images/quickkart-high-resolution-logo-color-on-transparent-background.webp';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 

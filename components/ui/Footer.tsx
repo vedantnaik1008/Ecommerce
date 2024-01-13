@@ -1,8 +1,8 @@
 'use client';
-import payment from '@/images/payment.png';
+import payment from '@/public/images/payment.webp';
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '@/images/quickkart-high-resolution-logo-white-on-black-background.png';
+import Logo from '@/public/images/quickkart-high-resolution-logo-white-on-black-background.webp';
 
 const Footer = () => {
     return (
