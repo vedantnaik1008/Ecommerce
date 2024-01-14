@@ -13,7 +13,7 @@ const Header = () => {
                         src={Img}
                         alt='items-image'
                         width={80}
-                        height={100}
+                        height={57}
                         className='object-cover sm:hidden md:block'
                     />
                 </Link>
