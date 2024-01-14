@@ -46,7 +46,7 @@ const DynamicPage = ({ product }: Props) => {
                     <div className='flex items-center gap-5 my-5'>
                         <span className='font-semibold'>{productRating}</span>
                         <RatingStars rating={productRating} />
-                        <p className='text-blue-500 font-semibold'>
+                        <p className='text-blue-800 font-semibold'>
                             500 Reviews
                         </p>
                     </div>
