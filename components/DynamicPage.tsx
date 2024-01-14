@@ -29,7 +29,7 @@ const DynamicPage = ({ product }: Props) => {
                         priority
                         fetchPriority={connect?._id === product ? 'high' : 'low'}
                         width={435}
-                        height={905}
+                        height={435}
                         src={productImage}
                         alt={'product-Image'}
                         className='object-cover rounded-lg w-full'
