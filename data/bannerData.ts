@@ -11,7 +11,7 @@ type bannerProps = {
 };
 
 export const bannerData: bannerProps[] = [
-    { id: 1, title: 'Outware Picks', img: bannerone, alt: 'bannerone' },
-    { id: 2, title: 'Seasonal Offers', img: bannertwo, alt: 'bannertwo' },
-    { id: 3, title: 'Best for men', img: bannerthree, alt: 'bannerthree' }
+    { id: 1, title: 'Seasonal Offers', img: bannertwo, alt: 'bannertwo' },
+    { id: 2, title: 'Best for men', img: bannerthree, alt: 'bannerthree' },
+    { id: 3, title: 'Outware Picks', img: bannerone, alt: 'bannerone' }
 ];

@@ -24,6 +24,7 @@ const Banner = () => {
             {images.map((image, index) => (
                 <>
                 <Image
+                    priority={index === 0 ? true :false}
                     fetchPriority={index === 0 ? 'high' : 'low'}
                     key={index}
                     src={image.img}
