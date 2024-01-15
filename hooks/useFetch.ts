@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 export interface Product {
     _id: number;
     title: string;
+    categoryAll: string;
     category: string;
     description: string;
     image: string;

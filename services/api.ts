@@ -8,6 +8,7 @@ export const electronicsData = [
         description:
             'Apple MacBook Air (M2, 2022) is a macOS laptop with a 13.60-inch display. It is powered by a Apple M2 processor and it comes with 8GB of RAM. The Apple MacBook Air (M2, 2022) packs 512GB of SSD storage.',
         quantity: 1,
+        categoryAll: 'all',
         category: 'electronics',
     },
     {
@@ -19,6 +20,7 @@ export const electronicsData = [
         description:
             'Apple MacBook Air (M1, 2020) is a macOS laptop with a 13.30-inch display that has a resolution of 2560x1600 pixels. It is powered by a Apple M1 processor and it comes with 8GB of RAM. The Apple MacBook Air (M1, 2020) packs 512GB of SSD storage.Connectivity options include Wi-Fi 802.11 a/b/g/n/ac/ax, Bluetooth and it comes with 2 USB ports (2 x Thunderbolt 3 (Type C)), Headphone and Mic Combo Jack ports.',
         quantity: 1,
+        categoryAll: 'all',
         category: 'electronics',
     },
     {
@@ -30,6 +32,7 @@ export const electronicsData = [
         description:
             'The 24-inch iMac has a 4.5K Retina display, an M1 chip, and an 11.5 mm thin aluminum design. It also has 8GB of RAM, 256GB of storage, 2 Thunderbolt 4 ports, 2 USB 3 ports, An Ethernet port, A Magic Keyboard with Touch ID support,A studio-quality three-mic array, A six-speaker sound system, Wi-Fi 6 (802.11ax),Bluetooth 5.0, A user-facing 1080p webcam',
         quantity: 1,
+        categoryAll: 'all',
         category: 'electronics',
     },
     {
@@ -41,6 +44,7 @@ export const electronicsData = [
         description:
             "The Mac mini is a small desktop computer made by Apple. It's one of four current Mac desktop computers, positioned between the consumer all-in-one iMac and the professional Mac Studio and Mac Pro.The Mac mini is 7.7 inches (19.7 centimeters), square and 1.4 inches (3.6 centimeters) high, Made of aluminum , Shipped without a screen, keyboard, or mouse, Has a small speaker for basic sounds, but no microphones or cameras,Has a power button on the back",
         quantity: 1,
+        categoryAll: 'all',
         category: 'electronics',
     },
     {
@@ -52,6 +56,7 @@ export const electronicsData = [
         description:
             'Apple MacBook Pro is a macOS laptop with a 13.30-inch display that has a resolution of 2560x1600 pixels. It is powered by a Core i5 processor and it comes with 12GB of RAM. The Apple MacBook Pro packs 512GB of SSD storage.',
         quantity: 1,
+        categoryAll: 'all',
         category: 'electronics',
     },
     {
@@ -63,6 +68,7 @@ export const electronicsData = [
         description:
             "The Apple iPhone 14 Pro was released on September 16, 2022.It has a 48MP main camera, Dynamic Island, and all-day battery.It's available in four colors:Gold, Silver, Space Black, Deep Purple.The base model has 6 GB of RAM and 128 GB of internal storage",
         quantity: 1,
+        categoryAll: 'all',
         category: 'electronics',
     },
     {
@@ -74,6 +80,7 @@ export const electronicsData = [
         description:
             'The iPhone 15 Pro Max has the following features:, Display: 6.7-inch OLED touchscreen with a 120 Hz refresh rate and 2796 x 1290 pixel resolution, Processor: Apple A17 Pro hexa-core processor ,RAM: 8 GB, Storage: 128, 256, 512, or 1 TB, Cameras: 12 MP front camera, 48 MP + 12 MP + 12 MP primary camera, Battery: 29 hours of video playback, 95 hours of audio playback, Operating system: iOS 17,Colors: Black Titanium, White Titanium, Blue Titanium, and Natural Titanium, Other features: 5x optical telephoto lens, USB-C with speeds up to 10 Gps, Wi-Fi 6E for up to two times faster wireless speeds',
         quantity: 1,
+        categoryAll: 'all',
         category: 'electronics',
     },
     {
@@ -85,6 +92,7 @@ export const electronicsData = [
         description:
             'The most rugged and capable Apple Watch pushes the limits again. Featuring the all-new S9 SiP. A magical new way to use your watch without touching the screen. The brightest Apple display ever. And now you can choose a case and strap combination that is carbon neutral.',
         quantity: 1,
+        categoryAll: 'all',
         category: 'electronics',
     },
     {
@@ -96,6 +104,7 @@ export const electronicsData = [
         description:
             'Apple Watch Series 9 also has a new 4-core Neural Engine that can process machine learning tasks up to twice as fast, when compared with Apple Watch Series 8. The power efficiency of the S9 SiP allows Apple Watch Series 9 to maintain all-day 18-hour battery life',
         quantity: 1,
+        categoryAll: 'all',
         category: 'electronics',
     },
     {
@@ -107,6 +116,7 @@ export const electronicsData = [
         description:
             'From cushion to canopy, AirPods Max are designed for an uncompromising fit that creates the optimal acoustic seal for many different head shapes — fully immersing you in every sound. The canopy spanning the headband is made from a breathable knit mesh, distributing weight to reduce on-head pressure.',
         quantity: 1,
+        categoryAll: 'all',
         category: 'electronics',
     },
 ];
@@ -120,7 +130,8 @@ export const productData = [
         price: 150,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/41L4Eaht0zL.jpg',
         rating: 4,
         quantity: 1,
@@ -133,7 +144,8 @@ export const productData = [
         price: 65,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/71fpHGiDxrL._UY741_.jpg',
         rating: 3,
         quantity: 1,
@@ -146,7 +158,8 @@ export const productData = [
         price: 55.99,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/41Zf1+rmL0L._UX679_.jpg',
         rating: 3,
         quantity: 1,
@@ -159,7 +172,8 @@ export const productData = [
         price: 50,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/61kBiRSFWgL._UY879_.jpg',
         rating: 3,
         quantity: 1,
@@ -172,7 +186,8 @@ export const productData = [
         price: 695,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/610sSMZDBDL._UX679_.jpg',
         rating: 5,
         quantity: 1,
@@ -185,7 +200,8 @@ export const productData = [
         price: 180,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'men',
+        categoryAll: 'all',
+            category: 'men',
         image: 'https://m.media-amazon.com/images/I/71HLzkQvV-L._UX679_.jpg',
         rating: 4,
         quantity: 1,
@@ -198,7 +214,8 @@ export const productData = [
         price: 20,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/51VHATON2UL._UY879_.jpg',
         rating: 2,
         quantity: 1,
@@ -211,7 +228,8 @@ export const productData = [
         price: 350,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/51FaghMJAQL._UX679_.jpg',
         rating: 3,
         quantity: 1,
@@ -224,7 +242,8 @@ export const productData = [
         price: 100,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/61TqPSaoFiL._UY741_.jpg',
         rating: 3,
         quantity: 1,
@@ -237,7 +256,8 @@ export const productData = [
         price: 245,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'men',
+        categoryAll: 'all',
+            category: 'men',
         image: 'https://m.media-amazon.com/images/I/61G1ZLzdBeS._UX679_.jpg',
         rating: 5,
         quantity: 1,
@@ -250,7 +270,8 @@ export const productData = [
         price: 800,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/51jv4aO1hkL._UY741_.jpg',
         rating: 4,
         quantity: 1,
@@ -263,7 +284,8 @@ export const productData = [
         price: 140,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'men',
+        categoryAll: 'all',
+            category: 'men',
         image: 'https://m.media-amazon.com/images/I/61D2ou4BoaL._UY879_.jpg',
         rating: 3,
         quantity: 1,
@@ -276,7 +298,8 @@ export const productData = [
         price: 120,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/51u9oc1gDlL._UX679_.jpg',
         rating: 4,
         quantity: 1,
@@ -289,7 +312,8 @@ export const productData = [
         price: 50,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'kids',
+        categoryAll: 'all',
+            category: 'kids',
         image: 'https://m.media-amazon.com/images/I/81N-Es0RPmL._UY741_.jpg',
         rating: 2,
         quantity: 1,
@@ -302,7 +326,8 @@ export const productData = [
         price: 100,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/61x+w7lNNtL._UX679_.jpg',
         rating: 4,
         quantity: 1,
@@ -315,7 +340,8 @@ export const productData = [
         price: 350,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/71MltIpH47L._UY879_.jpg',
         rating: 4,
         quantity: 1,
@@ -328,7 +354,8 @@ export const productData = [
         price: 120,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/61Gc4lqignL._UY741_.jpg',
         rating: 3,
         quantity: 1,
@@ -341,7 +368,8 @@ export const productData = [
         price: 190,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/61Te9UNzSxL._UY741_.jpg',
         rating: 4,
         quantity: 1,
@@ -354,7 +382,8 @@ export const productData = [
         price: 170,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'women',
+        categoryAll: 'all',
+            category: 'women',
         image: 'https://m.media-amazon.com/images/I/518aR0Pb13L._UY879_.jpg',
         rating: 3,
         quantity: 1,
@@ -367,7 +396,8 @@ export const productData = [
         price: 490,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.',
-        category: 'men',
+        categoryAll: 'all',
+            category: 'men',
         image: 'https://m.media-amazon.com/images/I/71Jwe2kb5pL._UY879_.jpg',
         rating: 5,
         quantity: 1,

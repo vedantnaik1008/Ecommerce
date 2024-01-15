@@ -8,6 +8,7 @@ import { Cookie } from 'next/font/google';
 export const CookieFont = Cookie({
     subsets: ['latin'],
     display: 'swap',
+    fallback: ['system-ui', 'arial'],
     variable: '--font-family',
     weight: '400',
 });
