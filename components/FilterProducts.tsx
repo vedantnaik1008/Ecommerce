@@ -1,6 +1,5 @@
 import { Product } from '@/hooks/useFetch';
 import { DataFilter } from './AllProducts';
-import Card from './ui/Card';
 import Pagination from './Pagination';
 
 type Props = {
@@ -11,7 +10,10 @@ type Props = {
 
 const FilterProducts = ({ dataFilter, filteredData, handleFilter }: Props) => {
     return (
-        <div className={`w-[95%] ${filteredData.length === 0 ? 'h-screen' :'h-full'} mx-auto py-[100px]`}>
+        <div
+            className={`w-[95%] ${
+                filteredData.length === 0 ? 'h-screen' : 'h-full'
+            } mx-auto py-[100px]`}>
             <div className='flex sm:justify-center md:justify-normal gap-4 flex-wrap'>
                 {dataFilter.map((data) => (
                     <button
@@ -21,6 +23,11 @@ const FilterProducts = ({ dataFilter, filteredData, handleFilter }: Props) => {
                         {data.name}
                     </button>
                 ))}
+                <button
+                    className='bg-white hover:bg-gray-100 transition-all duration-300 ease-in-out rounded-lg px-4 py-2'
+                    onClick={() => window.location.reload()}>
+                    all
+                </button>
             </div>
             <div className=''>
                 <Pagination data={filteredData} />
