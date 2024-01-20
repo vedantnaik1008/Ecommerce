@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import cancel from '@/images/fail-img.png';
+import cancel from '@/public/images/fail-img.webp';
 import { useDispatch } from 'react-redux';
 import Image from 'next/image';
 import { resetOrder } from '@/redux/reducers/addItems';

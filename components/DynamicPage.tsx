@@ -23,11 +23,13 @@ const DynamicPage = ({ product }: Props) => {
 
     return (
         <div className='mx-auto min-[320px]:pt-[70px] md:pt-[100px]  text-black'>
-            <div className='bg-white flex min-[320px]:flex-col md:flex-row justify-center items-center gap-14 p-5 min-[320px]:rounded-none md:rounded-xl min-[320px]:w-full md:w-[80%] mx-auto'>
+            <div className='bg-white flex min-[320px]:flex-col md:flex-row justify-center items-center gap-14 p-5 min-[320px]:rounded-none md:rounded-xl min-[320px]:w-full md:w-[90%] lg:w-[80%] mx-auto'>
                 <div className='w-[70%]'>
                     <Image
+                        priority
+                        fetchPriority={connect?._id === product ? 'high' : 'low'}
                         width={435}
-                        height={905}
+                        height={435}
                         src={productImage}
                         alt={'product-Image'}
                         className='object-cover rounded-lg w-full'
@@ -44,7 +46,7 @@ const DynamicPage = ({ product }: Props) => {
                     <div className='flex items-center gap-5 my-5'>
                         <span className='font-semibold'>{productRating}</span>
                         <RatingStars rating={productRating} />
-                        <p className='text-blue-500 font-semibold'>
+                        <p className='text-blue-800 font-semibold'>
                             500 Reviews
                         </p>
                     </div>

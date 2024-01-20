@@ -1,11 +1,4 @@
-'use client';
-import dynamic from 'next/dynamic';
-const DynamicHankoProfile = dynamic(
-    () => import('@/components/authentication/HankoProfile'),
-    {
-        ssr: false,
-    }
-);
+import DynamicHankoProfile from '@/components/authentication/HankoProfile'
 
 const Page = () => {
     return (

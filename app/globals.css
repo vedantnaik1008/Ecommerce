@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+.scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+ 
+/* Track */
+.scrollbar::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+ 
+/* Handle */
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: gray;
+    
+    border-radius: 5px;
+}
+ 
+/* Handle on hover */
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 hanko-auth,
 hanko-profile {
     /* Color Scheme */

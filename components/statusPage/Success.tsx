@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import success from '@/images/payment_success_icon.png';
+import success from '@/public/images/payment_success_icon.webp';
 
 const Success = () => {
     return (

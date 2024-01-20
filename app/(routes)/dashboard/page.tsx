@@ -1,5 +1,4 @@
-'use client';
-import SLiderCLothes from '@/components/SliderClothes';
+import SLiderCLothes from '@/components/SliderClothes'
 import SLiderElectronics from '@/components/SliderElectronics';
 import Trending from '@/components/Trending';
 import Banner from '@/components/ui/Banner';

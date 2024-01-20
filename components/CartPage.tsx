@@ -1,4 +1,6 @@
-import Form from '@/components/ui/Form';
+'use client';
+import dynamic from 'next/dynamic';
+const Form = dynamic(() => import('@/components/ui/Form'));
 import PriceList from '@/components/PriceList';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,7 +13,6 @@ import {
     removeItem
 } from '@/redux/reducers/addItems';
 import { truncateText } from '@/utils/TruncateText';
-import { FaMinus, FaPlus } from '@/lib/ReactIcons';
 
 const CartPage = () => {
     const products = useSelector((state: RootState) => state.addToCart.product);
@@ -81,7 +82,16 @@ const CartPage = () => {
                                                             )
                                                         }
                                                         className='p-2 rounded-l-lg bg-gray-200'>
-                                                        <FaMinus />
+                                                        <svg
+                                                            stroke='currentColor'
+                                                            fill='currentColor'
+                                                            stroke-width='0'
+                                                            viewBox='0 0 448 512'
+                                                            height='1em'
+                                                            width='1em'
+                                                            xmlns='http://www.w3.org/2000/svg'>
+                                                            <path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path>
+                                                        </svg>
                                                     </button>
                                                     <span className='border py-2 px-8 font-extrabold'>
                                                         {res.quantity}
@@ -98,7 +108,16 @@ const CartPage = () => {
                                                             )
                                                         }
                                                         className='p-2 rounded-r-lg bg-gray-200'>
-                                                        <FaPlus />
+                                                        <svg
+                                                            stroke='currentColor'
+                                                            fill='currentColor'
+                                                            stroke-width='0'
+                                                            viewBox='0 0 448 512'
+                                                            height='1em'
+                                                            width='1em'
+                                                            xmlns='http://www.w3.org/2000/svg'>
+                                                            <path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path>
+                                                        </svg>
                                                     </button>
                                                 </div>
                                                 <div>
