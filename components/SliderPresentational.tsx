@@ -27,7 +27,7 @@ const SliderPresentational = ({ heading, link, data }: Props) => {
                 </Link>
             </div>
             <div className='flex w-full snap-x snap-mandatory scrollbar overflow-y-hidden overflow-x-scroll'>
-                {data.map((res) => (
+                {data.slice(5).map((res) => (
                     <div
                         key={res._id}
                         className='sm:w-full four:w-[80%] six:w-[50%] lg:w-[40%] xl:w-[30%] flex-shrink-0 snap-center flex flex-col items-center justify-center'>
