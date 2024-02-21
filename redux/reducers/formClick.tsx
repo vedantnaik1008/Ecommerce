@@ -25,9 +25,14 @@ const formReducer = createSlice({
         },
         comment: (state, action: PayloadAction<comments>) => {
             state.comment.push(action.payload)
+        },
+        removeReview: (state, action: PayloadAction<number>) => {
+            state.comment = state.comment.filter(
+                (item) => item.id !== action.payload
+            ); 
         }
     },
 });
 
-export const { openForm, closeForm, comment } = formReducer.actions;
+export const { openForm, closeForm, comment, removeReview } = formReducer.actions;
 export default formReducer.reducer;
