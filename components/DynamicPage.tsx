@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { addItem } from '../redux/reducers/addItems';
 import SimilarProducts from '@/components/SimilarProducts'
 import RatingStars from '@/components/ui/RatingStars'
+import Comments from './Comments';
 
 interface Props {
     product: number;
@@ -65,6 +66,7 @@ const DynamicPage = ({ product }: Props) => {
                 </div>
             </div>
             <SimilarProducts categories={productCategory} />
+            <Comments id={connect?._id}/>
         </div>
     );
 };
