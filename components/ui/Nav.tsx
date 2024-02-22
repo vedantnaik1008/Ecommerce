@@ -4,11 +4,11 @@ import Link from 'next/link';
 
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
+import UserProfileAcc from '../authentication/UserProfile';
 
 const items = [
     { id: 1, name: 'Home', link: '/dashboard' },
     { id: 2, name: 'Shop', link: '/Shop' },
-    { id: 3, name: 'Profile', link: '/user' },
 ];
 
 const Nav = () => {
@@ -31,11 +31,14 @@ const Nav = () => {
                     ))}
                     {order.length > 0 ? orderLink : ''}
                     <li>
+                        <UserProfileAcc />
+                    </li>
+                    <li>
                         <Cart />
                     </li>
                 </ul>
             </div>
-            
+
             <>
                 <div className='fixed z-50 -bottom-0 right-0 h-[40px] w-[100%] bg-white  md:hidden sm:border sm:border-t-1 sm:border-x-0 sm:border-b-0 sm:border-black md:border-none'>
                     <div
@@ -54,6 +57,9 @@ const Nav = () => {
                                     </li>
                                 ))}
                                 {order.length > 0 ? orderLink : ''}
+                                <li>
+                                    <UserProfileAcc />
+                                </li>
                                 <li>
                                     <Cart />
                                 </li>
