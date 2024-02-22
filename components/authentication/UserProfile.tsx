@@ -5,7 +5,7 @@ import React from 'react';
 const UserProfileAcc = () => {
     return (
         <>
-            <UserButton afterSignOutUrl='/' />
+            <UserButton afterSignOutUrl='/dashboard' />
         </>
     );
 };
