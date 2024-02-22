@@ -21,7 +21,7 @@ const CartPage = () => {
     return (
         <>
             {products.length === 0 ? (
-                <div className='flex flex-col gap-y-2 items-center justify-center bg-white h-[100vh] px-4'>
+                <div className='flex flex-col gap-y-2 items-center justify-center h-[100vh] px-4'>
                     <p className='font-extrabold text-center text-xl mb-5'>
                         Your product cart is currently empty
                     </p>

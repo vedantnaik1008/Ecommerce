@@ -2,11 +2,14 @@
 import payment from '@/public/images/payment.webp';
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '@/public/images/quickkart-high-resolution-logo-white-on-black-background.webp';
+import Logo from '@/public/images/quickkart-high-resolution-logo-color-on-transparent-background.webp';
+import { usePathname } from 'next/navigation';
 
 const Footer = () => {
+    const pathname = usePathname()
+    const dynamicStyles = pathname === '/order' ? 'border-t-2 border-black' : '';
     return (
-        <footer className='w-full px-[20px] py-[40px] bg-black text-slate-100 h-full'>
+        <footer className={`${dynamicStyles} w-full px-[20px] py-[40px] bg-white text-black h-full`}>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
                 <div className='flex flex-col gap-y-4'>
                     <Link href='/' className=''>
@@ -121,7 +124,12 @@ const Footer = () => {
                         <li className='hover:text-orange-500 cursor-pointer duration-200'>
                             <Link href={'/dashboard'}>Home</Link>
                         </li>
-
+                        <li className='hover:text-orange-500 cursor-pointer duration-200'>
+                            <Link href={'/Shop'}>Shop</Link>
+                        </li>
+                        <li className='hover:text-orange-500 cursor-pointer duration-200'>
+                            <Link href={'/order'}>Order</Link>
+                        </li>
                         <li className='hover:text-orange-500 cursor-pointer duration-200'>
                             <Link href={'/cart'}>Cart</Link>
                         </li>
