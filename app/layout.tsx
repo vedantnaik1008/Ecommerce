@@ -25,7 +25,7 @@ export default function RootLayout({
         <ClerkProvider>
             <StoreProvider>
                 <html lang='en'>
-                    <body className={`${roboto.className} bg-gray-300`}>
+                    <body className={`${roboto.className} bg-white`}>
                         <PersistorProvider>{children}</PersistorProvider>
                     </body>
                 </html>

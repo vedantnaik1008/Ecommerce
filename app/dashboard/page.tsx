@@ -8,14 +8,12 @@ import Header from '@/components/ui/Header';
 const Dashboard = () => {
     return (
         <>
-            <div className='bg-gray-300'>
                 <Header />
                 <Banner />
                 <Trending />
                 <SLiderCLothes />
                 <SLiderElectronics />
                 <Footer />
-            </div>
         </>
     );
 };

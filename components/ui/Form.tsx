@@ -39,7 +39,7 @@ const Form = () => {
         <div
             className={
                 isOpen
-                    ? 'bg-white rounded-lg p-[20px] absolute top-0 left-0 z-10 w-full'
+                    ? 'bg-gray-200 rounded-lg p-[20px] absolute top-0 left-0 z-10 w-full'
                     : 'hidden'
             }>
             <div className='flex justify-between items-center'>
@@ -53,7 +53,7 @@ const Form = () => {
                 </button>
             </div>
             <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
-            <input
+                <input
                     {...register('name')}
                     placeholder='Full Name'
                     type='name'

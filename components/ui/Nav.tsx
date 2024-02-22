@@ -12,7 +12,7 @@ const items = [
 const Nav = () => {
     const { user} = useUser()
     const orderLink = (
-        <li className='text-black hover:underline underline-offset-1 font-bold'>
+        <li className='text-black hover:underline underline-offset-1 font-medium'>
             <Link href={'/order'}>Order</Link>
         </li>
     );
@@ -23,7 +23,7 @@ const Nav = () => {
                     {items.map((item) => (
                         <li
                             key={item.id}
-                            className='text-black hover:underline underline-offset-1 font-bold'>
+                            className='text-black hover:underline underline-offset-1 font-medium'>
                             <Link href={item.link}>{item.name}</Link>
                         </li>
                     ))}
@@ -33,9 +33,9 @@ const Nav = () => {
                             <UserProfileAcc />
                         </li>
                     )}
-                        <li>
-                            <Cart />
-                        </li>
+                    <li>
+                        <Cart />
+                    </li>
                 </ul>
             </div>
 
@@ -47,7 +47,7 @@ const Nav = () => {
                                 {items.map((item) => (
                                     <li
                                         key={item.id}
-                                        className='text-black hover:underline underline-offset-1 font-bold'>
+                                        className='text-black hover:underline underline-offset-1 font-medium'>
                                         <Link href={item.link}>
                                             {item.name}
                                         </Link>
@@ -59,10 +59,10 @@ const Nav = () => {
                                         <UserProfileAcc />
                                     </li>
                                 )}
-                                
-                                    <li>
-                                        <Cart />
-                                    </li>
+
+                                <li>
+                                    <Cart />
+                                </li>
                             </ul>
                         </div>
                     </div>

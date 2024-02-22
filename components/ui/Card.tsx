@@ -16,7 +16,7 @@ const Card = ({ res }: Props) => {
     const dispatch = useDispatch();
 
     return (
-        <div className='p-[20px] bg-white shadow-2xl border-none rounded-xl h-full'>
+        <div className='p-[20px] bg-gray-200 rounded-xl h-full'>
             <Link
                 href={`/details/${res._id}?id=${res._id}`}
                 className=''
@@ -34,7 +34,7 @@ const Card = ({ res }: Props) => {
                         alt='items-image'
                         width={200}
                         height={245}
-                        className='md:hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden object-cover'
+                        className='md:hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden object-cover rounded-lg'
                     />
                 </div>
             </Link>

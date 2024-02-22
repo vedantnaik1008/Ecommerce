@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Img from '@/public/images/quickkart-high-resolution-logo-color-on-transparent-background.webp';
 const Header = () => {
     return (
-        <header className='fixed z-50 w-full py-[10px] sm:px-[10px] md:px-[20px] bg-white shadow-2xl'>
+        <header className='w-full py-[10px] sm:px-[10px] md:px-[20px] bg-white'>
             <div className='flex items-center justify-between'>
                 <Link href='/dashboard' className=''>
                     <Image

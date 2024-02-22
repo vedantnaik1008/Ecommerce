@@ -38,7 +38,7 @@ const Pagination = ({data}: Props) => {
                               disabled={current === index + 1}
                               className={`${
                                   current === index + 1
-                                      ? 'bg-white text-black'
+                                      ? 'bg-gray-200 text-black'
                                       : 'bg-black text-white'
                               }  px-8 py-4 rounded-lg`}
                               key={index + 1}

@@ -40,15 +40,15 @@ const CartPage = () => {
                     </div>
 
                     <div className='relative sm:flex sm:flex-col sm:items-center lg:flex lg:flex-row lg:items-start justify-between  w-[90%] mx-auto my-20'>
-                        <div className='grid grid-cols-1 bg-gray-300 sm:w-full md:w-full lg:w-[65%]'>
+                        <div className='grid grid-cols-1  sm:w-full md:w-full lg:w-[65%]'>
                             {products.map((res) => (
                                 <div className='' key={res._id}>
                                     <button
                                         onClick={() => dispatch(clearItems())}
-                                        className='py-2 px-4 rounded-lg border  font-semibold bg-red-500 text-white border-red-500 absolute -top-[60px] left-0'>
+                                        className='py-2 px-4 rounded-lg  font-semibold bg-black text-white absolute -top-[60px] left-0'>
                                         Clear All
                                     </button>
-                                    <div className='sm:p-[15px] four:p-[20px]  bg-white shadow-2xl rounded-xl    mb-[30px] flex  justify-between items-center flex-col lg:flex-row'>
+                                    <div className='sm:p-[15px] four:p-[20px] rounded-xl  bg-gray-200  mb-[30px] flex  justify-between items-center flex-col lg:flex-row'>
                                         <Link
                                             href={`/details/${res._id}?id=${res._id}`}>
                                             <div className='flex items-center flex-col justify-center '>
@@ -57,7 +57,7 @@ const CartPage = () => {
                                                     alt='items-image'
                                                     width={'200'}
                                                     height={'200'}
-                                                    className='flex overflow-hidden rounded-sm  object-cover'
+                                                    className='flex overflow-hidden rounded-lg  object-cover aspect-square'
                                                 />
                                             </div>
                                         </Link>
@@ -66,8 +66,8 @@ const CartPage = () => {
                                                 {truncateText(res.title, 20)}
                                             </h2>
                                             <div className='flex gap-4 my-5 max-four:flex-wrap max-four:items-center'>
-                                                <span className='bg-gray-300 py-2 px-4 border-none rounded-md text-black font-bold relative z-20'>
-                                                    ${res.price}
+                                                <span className='bg-black py-2 px-4 border-none rounded-md text-white font-bold relative z-20'>
+                                                    $ {res.price.toFixed(0)}
                                                 </span>
                                                 <div className='flex border border-gray-500 rounded-lg'>
                                                     <button
@@ -81,7 +81,7 @@ const CartPage = () => {
                                                                 )
                                                             )
                                                         }
-                                                        className='p-2 rounded-l-lg bg-gray-200'>
+                                                        className='p-2 rounded-l-lg bg-white'>
                                                         <svg
                                                             stroke='currentColor'
                                                             fill='currentColor'
@@ -93,7 +93,7 @@ const CartPage = () => {
                                                             <path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path>
                                                         </svg>
                                                     </button>
-                                                    <span className='border py-2 px-8 font-extrabold'>
+                                                    <span className=' bg-black text-white py-2 px-8 font-extrabold'>
                                                         {res.quantity}
                                                     </span>
                                                     <button
@@ -107,7 +107,7 @@ const CartPage = () => {
                                                                 )
                                                             )
                                                         }
-                                                        className='p-2 rounded-r-lg bg-gray-200'>
+                                                        className='p-2 rounded-r-lg bg-white'>
                                                         <svg
                                                             stroke='currentColor'
                                                             fill='currentColor'
@@ -129,7 +129,7 @@ const CartPage = () => {
                                                                 )
                                                             )
                                                         }
-                                                        className='py-2 px-4 rounded-lg border border-gray-500 text-black font-semibold hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-300 ease-in-out'>
+                                                        className='py-2 px-4 rounded-lg bg-black text-white font-semibold '>
                                                         Delete
                                                     </button>
                                                 </div>

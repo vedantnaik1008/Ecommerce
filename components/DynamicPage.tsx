@@ -4,8 +4,8 @@ import Loading from './ui/Loading';
 import { useFetch } from '../hooks/useFetch';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../redux/reducers/addItems';
-import SimilarProducts from '@/components/SimilarProducts'
-import RatingStars from '@/components/ui/RatingStars'
+import SimilarProducts from '@/components/SimilarProducts';
+import RatingStars from '@/components/ui/RatingStars';
 import Comments from './Comments';
 
 interface Props {
@@ -24,16 +24,18 @@ const DynamicPage = ({ product }: Props) => {
 
     return (
         <div className='mx-auto min-[320px]:pt-[70px] md:pt-[100px]  text-black'>
-            <div className='bg-white flex min-[320px]:flex-col md:flex-row justify-center items-center gap-14 p-5 min-[320px]:rounded-none md:rounded-xl min-[320px]:w-full md:w-[90%] lg:w-[80%] mx-auto'>
-                <div className='w-[70%]'>
+            <div className='bg-gray-200 flex min-[320px]:flex-col md:flex-row justify-center items-center gap-14 p-5 min-[320px]:rounded-none md:rounded-xl min-[320px]:w-full md:w-[90%] lg:w-[80%] mx-auto'>
+                <div className='w-[100%]'>
                     <Image
                         priority
-                        fetchPriority={connect?._id === product ? 'high' : 'low'}
+                        fetchPriority={
+                            connect?._id === product ? 'high' : 'low'
+                        }
                         width={435}
                         height={435}
                         src={productImage}
                         alt={'product-Image'}
-                        className='object-cover rounded-lg w-full'
+                        className='object-cover rounded-lg w-full aspect-square'
                         sizes='(min-width: 780px) calc(32.97vw - 40px), (min-width: 340px) calc(70vw - 28px), calc(900vw - 2684px)'
                     />
                 </div>
@@ -66,7 +68,7 @@ const DynamicPage = ({ product }: Props) => {
                 </div>
             </div>
             <SimilarProducts categories={productCategory} />
-            <Comments id={connect?._id}/>
+            <Comments id={connect?._id} />
         </div>
     );
 };
