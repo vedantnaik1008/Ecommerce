@@ -53,7 +53,7 @@ const Comments = ({ id }: Props) => {
                 {review ? (
                     <form
                         onSubmit={onSubmitHandle}
-                        className='flex flex-col w-[95%] md:w-[50%] gap-4 py-10 px-5 border-2 border-black rounded-lg mx-auto md:ml-8 bg-white'>
+                        className='flex flex-col w-[95%] md:w-[50%] gap-4 py-10 px-5 rounded-lg mx-auto md:ml-8 bg-white'>
                         <input
                             className='rounded-md px-2 border border-black'
                             placeholder='write review'
@@ -88,14 +88,28 @@ const Comments = ({ id }: Props) => {
                         .filter((item) => id === item.productId)
                         .map((res) => (
                             <>
-                                <div className='bg-white border-black border-2 rounded-md my-5 p-5 w-[95%] mx-auto relative'>
+                                <div className='bg-white rounded-md my-5 p-5 w-[95%] mx-auto relative'>
                                     <button
                                         onClick={() =>
                                             dispatch(removeReview(res.id))
                                         }
                                         type='button'
-                                        className='flex-start px-4 my-4 py-2 ml-8 text-white font-semibold bg-black rounded-full absolute top-0 right-4'>
-                                        X
+                                        className='flex-start p-2 my-4 ml-8 text-white font-semibold bg-black rounded-full absolute top-0 right-4'>
+                                        <svg
+                                            stroke='currentColor'
+                                            fill='currentColor'
+                                            stroke-width='0'
+                                            viewBox='0 0 512 512'
+                                            height='20px'
+                                            width='20px'
+                                            xmlns='http://www.w3.org/2000/svg'>
+                                            <path
+                                                fill='none'
+                                                stroke-linecap='round'
+                                                stroke-linejoin='round'
+                                                stroke-width='32'
+                                                d='M368 368 144 144m224 0L144 368'></path>
+                                        </svg>
                                     </button>
                                     <div className='flex items-center gap-4 '>
                                         <Image
@@ -106,6 +120,8 @@ const Comments = ({ id }: Props) => {
                                             className='rounded-full border-black border-2'
                                         />
                                         <p className=''>vedant naik</p>
+                                    </div>
+                                    <div className='mt-4'>
                                         {res.ratings === 0 ? null : (
                                             <RatingStars rating={res.ratings} />
                                         )}
