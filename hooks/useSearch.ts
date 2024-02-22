@@ -2,7 +2,6 @@ import { combinedData } from '@/services/api';
 import React, { useEffect, useState } from 'react'
 import { useDebounce } from './useDebounce';
 import { useFetch } from './useFetch';
-
 const useSearch = () => {
     const [input, setInput] = useState('');
     const { response, setResponse } = useFetch('/api/fetchData');
