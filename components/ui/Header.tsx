@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <header className='w-full py-[10px] px-[10px] md:px-[20px] bg-white'>
             <div className='flex items-center justify-between'>
-                <Link href='/dashboard' className=''>
+                <Link href='/' className=''>
                     <Image
                         src={Img}
                         alt='items-image'

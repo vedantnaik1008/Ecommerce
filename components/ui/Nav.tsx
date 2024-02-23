@@ -5,7 +5,7 @@ import UserProfileAcc from '../authentication/UserProfile';
 import { useUser } from '@clerk/nextjs';
 
 const items = [
-    { id: 1, name: 'Home', link: '/dashboard' },
+    { id: 1, name: 'Home', link: '/' },
     { id: 2, name: 'Shop', link: '/Shop' },
 ];
 

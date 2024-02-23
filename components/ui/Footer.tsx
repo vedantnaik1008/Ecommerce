@@ -118,7 +118,7 @@ const Footer = () => {
                     <p className='text-lg'>Links</p>
                     <ul className='text-base font-medium mt-2 flex flex-col gap-y-2'>
                         <li className='hover:text-orange-500 cursor-pointer duration-200'>
-                            <Link href={'/dashboard'}>Home</Link>
+                            <Link href={'/'}>Home</Link>
                         </li>
                         <li className='hover:text-orange-500 cursor-pointer duration-200'>
                             <Link href={'/Shop'}>Shop</Link>

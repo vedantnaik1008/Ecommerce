@@ -126,7 +126,7 @@ const OrderDetails = () => {
                     <button
                         onClick={() => {
                             dispatch(resetOrder());
-                            router.push('/dashboard');
+                            router.push('/');
                         }}
                         className='mt-5  text-white bg-black py-1 px-4 font-semibold rounded-md cursor-pointer duration-200'>
                         Reset Order
