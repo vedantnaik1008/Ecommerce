@@ -3,13 +3,11 @@ import payment from '@/public/images/payment.webp';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@/public/images/quickkart-high-resolution-logo-color-on-transparent-background.webp';
-import { usePathname } from 'next/navigation';
+
 
 const Footer = () => {
-    const pathname = usePathname()
-    const dynamicStyles = pathname === '/order' ? 'border-t-2 border-black' : '';
     return (
-        <footer className={`${dynamicStyles} w-full px-[20px] py-[40px] bg-gray-200 text-black h-full`}>
+        <footer className={` w-[95%] mx-auto my-4 shadow-sm shadow-black rounded-xl px-[20px] py-[40px] bg-white text-black h-full`}>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
                 <div className='flex flex-col gap-y-4'>
                     <Link href='/' className=''>
@@ -23,9 +21,7 @@ const Footer = () => {
                     </Link>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Ipsa in sint incidunt, minima quos voluptates,
-                        nobis autem laborum earum est pariatur aperiam. Delectus
-                        consectetur maxime quidem veniam, corporis.
+                        elit. Ipsa in sint incidunt, minima quos voluptates
                     </p>
                     <div className='flex items-center gap-x-4'>
                         <svg
