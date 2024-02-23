@@ -15,9 +15,9 @@ const OrderDetails = () => {
     const dispatch = useDispatch();
     const router = useRouter();
     return (
-        <div className='h-full bg-white pb-40'>
+        <div className='h-full bg-white py-20'>
             {orderData.length > 0 ? (
-                <div className='pt-48 w-[90%] mx-auto'>
+                <div className='w-[90%] mx-auto'>
                     <div className='flex flex-col justify-center items-center mb-20'>
                         <h2 className='text-orange-600 text-3xl md:text-5xl lg:text-6xl mb-5'>
                             Thanks for shopping!
@@ -29,8 +29,8 @@ const OrderDetails = () => {
                             it&apos;s on its way!
                         </p>
                     </div>
-                    <div className='flex sm:flex-col md:flex-row justify-between items-center w-full md:mx-auto md:w-[70%] mb-28 relative'>
-                        <hr className='bg-gray-400 sm:w-[70%] four:w-[50%] six:w-[40%] overflow-hidden md:w-[90%] sm:rotate-90 md:rotate-180 top-[40%] z-[1] sm:bottom-0 md:right-[22px] h-[2px] absolute' />
+                    <div className='flex flex-col md:flex-row justify-between items-center w-full md:mx-auto md:w-[70%] mb-28 relative'>
+                        <hr className='bg-gray-400 w-[70%] four:w-[50%] six:w-[40%] overflow-hidden md:w-[90%] rotate-90 md:rotate-180 top-[40%] z-[1] bottom-0 md:right-[22px] h-[2px] absolute' />
                         <div className='flex flex-col justify-between items-center z-[2]'>
                             <svg
                                 stroke='currentColor'

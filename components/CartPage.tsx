@@ -33,14 +33,14 @@ const CartPage = () => {
                 </div>
             ) : (
                 <>
-                    <div className='pt-[100px] flex items-center justify-center w-full relative'>
+                    <div className='pt-[80px] flex items-center justify-center w-full relative'>
                         <h2 className='text-black text-5xl font-extrabold'>
                             Your Cart
                         </h2>
                     </div>
 
-                    <div className='relative sm:flex sm:flex-col sm:items-center lg:flex lg:flex-row lg:items-start justify-between  w-[90%] mx-auto my-20'>
-                        <div className='grid grid-cols-1  sm:w-full md:w-full lg:w-[65%]'>
+                    <div className='relative flex flex-col items-center lg:flex lg:flex-row lg:items-start justify-between  w-[90%] mx-auto my-20'>
+                        <div className='grid grid-cols-1  w-full md:w-full lg:w-[65%]'>
                             {products.map((res) => (
                                 <div className='' key={res._id}>
                                     <button
@@ -48,7 +48,7 @@ const CartPage = () => {
                                         className='py-2 px-4 rounded-lg  font-semibold bg-black text-white absolute -top-[60px] left-0'>
                                         Clear All
                                     </button>
-                                    <div className='sm:p-[15px] four:p-[20px] rounded-xl  bg-gray-200  mb-[30px] flex  justify-between items-center flex-col lg:flex-row'>
+                                    <div className='p-[15px] four:p-[20px] rounded-xl  bg-gray-200  mb-[30px] flex  justify-between items-center flex-col lg:flex-row'>
                                         <Link
                                             href={`/details/${res._id}?id=${res._id}`}>
                                             <div className='flex items-center flex-col justify-center '>
@@ -139,7 +139,7 @@ const CartPage = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className='sm:w-full md:w-full lg:w-[30%] flex flex-col  gap-y-5 relative'>
+                        <div className='w-full md:w-full lg:w-[30%] flex flex-col  gap-y-5 relative'>
                             <PriceList />
                             <Form />
                         </div>

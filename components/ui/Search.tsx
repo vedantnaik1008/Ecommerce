@@ -46,7 +46,7 @@ const Search = () => {
             </div>
 
             {input && response && response.length > 0 ? (
-                <ul className='absolute top-[60px] md:top-[68px] z-50 bg-white shadow  sm:w-[78%] md:w-[33.8%] lg:w-[48.5%] mx-auto rounded-sm'>
+                <ul className='absolute top-[60px] md:top-[68px] z-50 bg-white shadow  w-[95%] md:w-[33.8%] lg:w-[48.5%] mx-auto rounded-sm'>
                     {response.slice(0, 10).map((item) => (
                         <li
                             key={item._id}

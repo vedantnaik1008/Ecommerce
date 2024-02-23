@@ -30,7 +30,7 @@ const SliderPresentational = ({ heading, link, data }: Props) => {
                 {data.slice(5).map((res) => (
                     <div
                         key={res._id}
-                        className='sm:w-full four:w-[80%] six:w-[50%] lg:w-[40%] xl:w-[30%] flex-shrink-0 snap-center flex flex-col items-center justify-center'>
+                        className='w-full four:w-[80%] six:w-[50%] lg:w-[40%] xl:w-[30%] flex-shrink-0 snap-center flex flex-col items-center justify-center'>
                         <div className='p-[20px]  bg-gray-200  rounded-xl  transition-all duration-300 ease-in-out w-[90%] h-[440px] mx-auto md:mx-[20px] mb-10'>
                             <Link
                                 href={`/details/${res._id}?id=${res._id}`}

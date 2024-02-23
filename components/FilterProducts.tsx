@@ -14,7 +14,7 @@ const FilterProducts = ({ dataFilter, filteredData, handleFilter }: Props) => {
             className={`w-[95%] ${
                 filteredData.length === 0 ? 'h-screen' : 'h-full'
             } mx-auto py-[60px]`}>
-            <div className='flex sm:justify-center md:justify-normal gap-4 flex-wrap'>
+            <div className='flex justify-center md:justify-normal gap-4 flex-wrap'>
                 {dataFilter.map((data) => (
                     <button
                         key={data.id}
