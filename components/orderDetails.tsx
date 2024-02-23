@@ -30,8 +30,8 @@ const OrderDetails = () => {
                         </p>
                     </div>
                     <div className='flex flex-col md:flex-row justify-between items-center w-full md:mx-auto md:w-[70%] mb-28 relative'>
-                        <hr className='bg-gray-400 w-[70%] four:w-[50%] six:w-[40%] overflow-hidden md:w-[90%] rotate-90 md:rotate-180 top-[40%] z-[1] bottom-0 md:right-[22px] h-[2px] absolute' />
-                        <div className='flex flex-col justify-between items-center z-[2]'>
+                        <hr className='bg-gray-400 hidden md:block four:w-[50%] six:w-[40%] overflow-hidden md:w-[90%] rotate-90 md:rotate-180 top-[40%] z-[1] bottom-0 md:right-[22px] h-[2px] absolute' />
+                        <div className='flex gap-x-4 md:flex-col justify-between items-center z-[2]'>
                             <svg
                                 stroke='currentColor'
                                 fill='none'
@@ -50,7 +50,7 @@ const OrderDetails = () => {
                             </svg>
                             <p className='text-orange-600'>Order confirmed</p>
                         </div>
-                        <div className='flex flex-col justify-between items-center z-[2]'>
+                        <div className='flex gap-x-4 md:flex-col justify-between items-center z-[2]'>
                             <svg
                                 stroke='currentColor'
                                 fill='currentColor'
@@ -65,7 +65,7 @@ const OrderDetails = () => {
                             </svg>
                             <p className=''>Order shipment</p>
                         </div>
-                        <div className='flex flex-col justify-between items-center z-[2]'>
+                        <div className='flex gap-x-4 md:flex-col justify-between items-center z-[2]'>
                             <svg
                                 stroke='currentColor'
                                 fill='currentColor'
