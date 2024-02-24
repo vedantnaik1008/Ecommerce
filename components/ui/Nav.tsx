@@ -1,20 +1,18 @@
 'use client';
 import Cart from './Cart'
 import Link from 'next/link';
-
-import { useSelector } from 'react-redux';
-import { RootState } from '@/redux/store';
+import UserProfileAcc from '../authentication/UserProfile';
+import { useUser } from '@clerk/nextjs';
 
 const items = [
-    { id: 1, name: 'Home', link: '/dashboard' },
+    { id: 1, name: 'Home', link: '/' },
     { id: 2, name: 'Shop', link: '/Shop' },
-    { id: 3, name: 'Profile', link: '/user' },
 ];
 
 const Nav = () => {
-    const order = useSelector((state: RootState) => state.addToCart.orderData);
+    const { user} = useUser()
     const orderLink = (
-        <li className='text-black hover:underline underline-offset-1 font-bold'>
+        <li className='text-black hover:underline underline-offset-1 font-medium'>
             <Link href={'/order'}>Order</Link>
         </li>
     );
@@ -25,35 +23,43 @@ const Nav = () => {
                     {items.map((item) => (
                         <li
                             key={item.id}
-                            className='text-black hover:underline underline-offset-1 font-bold'>
+                            className='text-black hover:underline underline-offset-1 font-medium'>
                             <Link href={item.link}>{item.name}</Link>
                         </li>
                     ))}
-                    {order.length > 0 ? orderLink : ''}
+                    {user && orderLink}
+                    {user && (
+                        <li>
+                            <UserProfileAcc />
+                        </li>
+                    )}
                     <li>
                         <Cart />
                     </li>
                 </ul>
             </div>
-            
+
             <>
-                <div className='fixed z-50 -bottom-0 right-0 h-[40px] w-[100%] bg-white  md:hidden sm:border sm:border-t-1 sm:border-x-0 sm:border-b-0 sm:border-black md:border-none'>
-                    <div
-                        className={
-                            ' md:hidden max-w-7xl mx-auto min-[320px]:p-2'
-                        }>
+                <div className='fixed z-50 bottom-0 right-0 h-[40px] w-[100%] bg-white  md:hidden border border-t-1 border-x-0 border-b-0 border-black md:border-none'>
+                    <div className={' md:hidden px-2 py-1'}>
                         <div className=''>
                             <ul className='flex items-center justify-between gap-4'>
                                 {items.map((item) => (
                                     <li
                                         key={item.id}
-                                        className='text-black hover:underline underline-offset-1 font-bold'>
+                                        className='text-black hover:underline underline-offset-1 font-medium'>
                                         <Link href={item.link}>
                                             {item.name}
                                         </Link>
                                     </li>
                                 ))}
-                                {order.length > 0 ? orderLink : ''}
+                                {user && orderLink}
+                                {user && (
+                                    <li>
+                                        <UserProfileAcc />
+                                    </li>
+                                )}
+
                                 <li>
                                     <Cart />
                                 </li>

@@ -45,16 +45,23 @@ import {
   };
   
   const persistedReducer = persistReducer(persistConfig, addItems);
-
+  const persistedReducerForm = persistReducer(persistConfig, formClick);
   export const store = configureStore({
-    reducer: { addToCart: persistedReducer, form: formClick },
+      reducer: { addToCart: persistedReducer, form: persistedReducerForm },
 
-    middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware({
-        serializableCheck: {
-          ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-        },
-      }),
+      middleware: (getDefaultMiddleware) =>
+          getDefaultMiddleware({
+              serializableCheck: {
+                  ignoredActions: [
+                      FLUSH,
+                      REHYDRATE,
+                      PAUSE,
+                      PERSIST,
+                      PURGE,
+                      REGISTER
+                  ]
+              }
+          })
   });
 
   export let persistor = persistStore(store);

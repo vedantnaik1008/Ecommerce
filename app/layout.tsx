@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import StoreProvider from '@/provider/StoreProvider';
 import PersistorProvider from '@/provider/PersistorProvider';
+import { ClerkProvider } from '@clerk/nextjs';
 
 const roboto = Roboto({
     weight: '400',
@@ -21,12 +22,14 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <StoreProvider>
-            <html lang='en'>
-                <body className={`${roboto.className} bg-gray-300`}>
-                    <PersistorProvider>{children}</PersistorProvider>
-                </body>
-            </html>
-        </StoreProvider>
+        <ClerkProvider>
+            <StoreProvider>
+                <html lang='en'>
+                    <body className={`${roboto.className} bg-white`}>
+                        <PersistorProvider>{children}</PersistorProvider>
+                    </body>
+                </html>
+            </StoreProvider>
+        </ClerkProvider>
     );
 }

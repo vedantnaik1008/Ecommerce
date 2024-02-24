@@ -7,115 +7,18 @@
     height: 8px;
 }
  
-/* Track */
 .scrollbar::-webkit-scrollbar-track {
     border-radius: 5px;
 }
  
-/* Handle */
 .scrollbar::-webkit-scrollbar-thumb {
     background-color: gray;
     
     border-radius: 5px;
 }
  
-/* Handle on hover */
 .scrollbar::-webkit-scrollbar-thumb:hover {
     background: #555;
-}
-
-hanko-auth,
-hanko-profile {
-    /* Color Scheme */
-    --color: #111827;
-    --color-shade-1: #d1d5db;
-    --color-shade-2: #e5e6ef;
-
-    --brand-color: #111827;
-    --brand-color-shade-1: #111827;
-    --brand-contrast-color: white;
-
-    --background-color: #ffffff;
-    --error-color: #e82020;
-    --link-color: #1c73e8;
-
-    /* Font Styles */
-    --font-weight: 400;
-    --font-size: 18px;
-
-    /* Border Styles */
-    --border-radius: 6px;
-    --border-style: solid;
-    --border-width: 1px;
-
-    /* Item Styles */
-    --item-height: 36px;
-    --item-margin: 0.5rem 0;
-
-    /* Container Styles */
-    --container-padding: 30px;
-    --container-max-width: 410px;
-
-    /* Headline Styles */
-    --headline1-font-size: 29px;
-    --headline1-font-weight: 600;
-    --headline1-margin: 10px 40px;
-
-    --headline2-font-size: 16px;
-    --headline2-font-weight: 600;
-    --headline2-margin: 1rem 0 0.5rem;
-
-    /* Divider Styles */
-    --divider-padding: 0 15px;
-    --divider-visibility: visible;
-
-    /* Link Styles */
-    --link-text-decoration: none;
-    --link-text-decoration-hover: underline;
-
-    /* Input Styles */
-    --input-min-width: 14em;
-
-    /* Button Styles */
-    --button-min-width: max-content;
-}
-
-hanko-profile {
-    --container-max-width: 550px;
-    --container-padding: 15px;
-}
-
-hanko-auth::part(container),
-hanko-profile::part(container) {
-    border: solid 1px white;
-    border-radius: 6px;
-}
-
-hanko-auth::part(headline1),
-hanko-profile::part(headline1),
-hanko-auth::part(headline2),
-hanko-profile::part(headline2) {
-    color: #1f2328;
-    line-height: 36px;
-    text-align: center;
-}
-
-hanko-auth::part(form-item) {
-    min-width: 100%;
-}
-
-hanko-auth::part(input),
-hanko-profile::part(input) {
-    background-color: #ffffff;
-    margin-bottom: 12px;
-}
-
-hanko-auth::part(secondary-button) {
-    border-color: var(--color-shade-1);
-}
-
-hanko-auth::part(divider) {
-    margin: 24px 0;
 }
 
 .right{

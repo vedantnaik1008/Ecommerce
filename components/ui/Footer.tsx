@@ -2,11 +2,12 @@
 import payment from '@/public/images/payment.webp';
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '@/public/images/quickkart-high-resolution-logo-white-on-black-background.webp';
+import Logo from '@/public/images/quickkart-high-resolution-logo-color-on-transparent-background.webp';
+
 
 const Footer = () => {
     return (
-        <footer className='w-full px-[20px] py-[40px] bg-black text-slate-100 h-full'>
+        <footer className={` w-[95%] mx-auto my-4 shadow-sm shadow-black rounded-xl px-[20px] py-[40px] bg-white text-black h-full`}>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
                 <div className='flex flex-col gap-y-4'>
                     <Link href='/' className=''>
@@ -20,9 +21,7 @@ const Footer = () => {
                     </Link>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Ipsa in sint incidunt, minima quos voluptates,
-                        nobis autem laborum earum est pariatur aperiam. Delectus
-                        consectetur maxime quidem veniam, corporis.
+                        elit. Ipsa in sint incidunt, minima quos voluptates
                     </p>
                     <div className='flex items-center gap-x-4'>
                         <svg
@@ -119,9 +118,14 @@ const Footer = () => {
                     <p className='text-lg'>Links</p>
                     <ul className='text-base font-medium mt-2 flex flex-col gap-y-2'>
                         <li className='hover:text-orange-500 cursor-pointer duration-200'>
-                            <Link href={'/dashboard'}>Home</Link>
+                            <Link href={'/'}>Home</Link>
                         </li>
-
+                        <li className='hover:text-orange-500 cursor-pointer duration-200'>
+                            <Link href={'/Shop'}>Shop</Link>
+                        </li>
+                        <li className='hover:text-orange-500 cursor-pointer duration-200'>
+                            <Link href={'/order'}>Order</Link>
+                        </li>
                         <li className='hover:text-orange-500 cursor-pointer duration-200'>
                             <Link href={'/cart'}>Cart</Link>
                         </li>

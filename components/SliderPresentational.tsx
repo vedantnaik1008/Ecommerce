@@ -30,8 +30,8 @@ const SliderPresentational = ({ heading, link, data }: Props) => {
                 {data.slice(5).map((res) => (
                     <div
                         key={res._id}
-                        className='sm:w-full four:w-[80%] six:w-[50%] lg:w-[40%] xl:w-[30%] flex-shrink-0 snap-center flex flex-col items-center justify-center'>
-                        <div className='p-[20px]  bg-white shadow-2xl border-none rounded-xl  transition-all duration-300 ease-in-out w-[90%] h-[440px] mx-auto md:mx-[20px] mb-10'>
+                        className='w-full four:w-[80%] six:w-[50%] lg:w-[40%] xl:w-[30%] flex-shrink-0 snap-center flex flex-col items-center justify-center'>
+                        <div className='p-[20px]  bg-gray-200  rounded-xl  transition-all duration-300 ease-in-out w-[90%] h-[440px] mx-auto md:mx-[20px] mb-10'>
                             <Link
                                 href={`/details/${res._id}?id=${res._id}`}
                                 className=''>
@@ -41,7 +41,7 @@ const SliderPresentational = ({ heading, link, data }: Props) => {
                                         alt='items-image'
                                         width={200}
                                         height={200}
-                                        className='hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden rounded-sm   object-cover'
+                                        className='hover:scale-110 transition-all duration-300 ease-in-out flex overflow-hidden rounded-lg   object-cover'
                                     />
                                 </div>
                             </Link>

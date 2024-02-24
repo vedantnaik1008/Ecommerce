@@ -20,7 +20,7 @@ const Banner = () => {
 
   
     return (
-        <div className='relative pt-[71px] overflow-hidden'>
+        <div className='relative pt-5 overflow-hidden'>
             {images.map((image, index) => (
                 <>
                 <Image
@@ -29,11 +29,11 @@ const Banner = () => {
                     key={index}
                     src={image.img}
                     alt={image.alt}
-                    className={`${index === current ? 'block object-cover h-[100vh] md:h-screen' : 'hidden'}`} />
+                    className={`${index === current ? 'block object-cover h-[80vh] md:h-[80vh] rounded-xl w-[95%] mx-auto' : 'hidden'}`} />
                 {index === current ? <BannerText title={image.title} /> : ''}
                 </>
             ))}
-            <div className='absolute   min-[600px]:block w-full h-44 bg-gradient-to-t from-gray-100 to-transparent bottom-0 left-0 z-10' />
+            {/* <div className='absolute   min-[600px]:block w-full h-44 bg-gradient-to-t from-gray-100 to-transparent bottom-0 left-0 z-10' /> */}
         </div>
     );
 };
